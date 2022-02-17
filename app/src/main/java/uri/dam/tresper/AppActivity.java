@@ -27,8 +27,6 @@ public class AppActivity extends AppCompatActivity {
         binding = ActivityAppBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -79,6 +77,10 @@ public class AppActivity extends AppCompatActivity {
         }
         if (id == R.id.action_help) {
             navController.navigate(R.id.action_go_to_helpFragment2);
+            return true;
+        }
+        if(id == R.id.home){
+            onBackPressed();
             return true;
         }
         if (id== R.id.action_exit){
