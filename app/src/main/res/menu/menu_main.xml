@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="uri.dam.tresper.MainActivity">
+
+    <item
+        android:id="@+id/action_crear_equip"
+        android:orderInCategory="101"
+        android:title="Crear equip"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_crear_torneig"
+        android:orderInCategory="101"
+        android:title="Crear torneig"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="101"
+        android:title="Help"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="101"
+        android:title="Exit"
+        app:showAsAction="never" />
+
+</menu>
