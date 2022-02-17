@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/logInFragment">
 
-    <fragment
+<!--    <fragment
         android:id="@+id/FirstFragment"
         android:name="uri.dam.tresper.FirstFragment"
         android:label="@string/first_fragment_label"
@@ -17,8 +17,8 @@
         <action
             android:id="@+id/action_FirstFragment_to_helpFragment"
             app:destination="@id/helpFragment" />
-    </fragment>
-    <fragment
+    </fragment>-->
+    <!--<fragment
         android:id="@+id/SecondFragment"
         android:name="uri.dam.tresper.SecondFragment"
         android:label="@string/second_fragment_label"
@@ -28,11 +28,36 @@
             app:destination="@id/helpFragment" />
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+            app:destination="@id/logInFragment" />
+    </fragment>-->
     <fragment
         android:id="@+id/helpFragment"
         android:name="uri.dam.tresper.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="uri.dam.tresper.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+
+        <action
+            android:id="@+id/action_log_in_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="uri.dam.tresper.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_SecondFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
 </navigation>

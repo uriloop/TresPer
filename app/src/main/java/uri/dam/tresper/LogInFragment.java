@@ -2,19 +2,22 @@ package uri.dam.tresper;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import uri.dam.tresper.databinding.FragmentFirstBinding;
+import uri.dam.tresper.databinding.FragmentLogInBinding;
 
-public class FirstFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+public class LogInFragment extends Fragment {
+
+    private FragmentLogInBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +25,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentLogInBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -30,14 +33,14 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-       /* binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+        binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                NavHostFragment.findNavController(LogInFragment.this)
+                        .navigate(R.id.action_log_in_to_register);
             }
         });
-        binding.googleButton.setOnClickListener(new View.OnClickListener() {
+        binding.google.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Akí canvi d'activitat
@@ -45,7 +48,7 @@ public class FirstFragment extends Fragment {
 
             }
         });
-*/
+
 
     }
 
