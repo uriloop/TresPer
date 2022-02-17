@@ -7,7 +7,9 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,6 +28,11 @@ public class AppActivity extends AppCompatActivity {
 
         binding = ActivityAppBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        // fer-li coses a la action bar, investigar
+
 
 
 
@@ -67,7 +74,12 @@ public class AppActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-
+        /*// aixó per a que segueixi funcionant el back button
+        if (R.id.home==id){
+            this.finish();
+            return true;
+         }
+*/
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_crear_equip) {
             navController.navigate(R.id.action_go_to_helpFragment2);

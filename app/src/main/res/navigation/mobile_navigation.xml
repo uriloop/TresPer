@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
+            app:destination="@id/appHelpFragment" />
 
     </fragment>
 
@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_dashboard" >
         <action
             android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
+            app:destination="@id/appHelpFragment" />
 
     </fragment>
 
@@ -34,14 +34,19 @@
         tools:layout="@layout/fragment_notifications" >
         <action
             android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
+            app:destination="@id/appHelpFragment" />
 
     </fragment>
+
     <fragment
-        android:id="@+id/helpFragment2"
-        android:name="uri.dam.tresper.HelpFragment"
-        android:label="fragment_help"
-        tools:layout="@layout/fragment_help" >
+        android:id="@+id/appHelpFragment"
+        android:name="uri.dam.tresper.AppHelpFragment"
+        android:label="fragment_app_help"
+        tools:layout="@layout/fragment_app_help" >
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/appHelpFragment" />
 
     </fragment>
+
 </navigation>
