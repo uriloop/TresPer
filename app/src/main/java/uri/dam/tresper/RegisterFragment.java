@@ -33,8 +33,6 @@ public class RegisterFragment extends Fragment {
 
 
 
-
-
         binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,8 +44,7 @@ public class RegisterFragment extends Fragment {
 
 
                 if (binding.editTextEmailAddress.getText().length() < 1 ) {
-                    binding.editTextEmailAddress.setHintTextColor(getResources().getColor(R.color.purple_700, getActivity().getTheme()));
-                    binding.editTextEmailAddress.setHint("Requerit!");
+                    binding.editTextEmailAddress.setError("Required.");
                     Snackbar.make(view, "Completa els camps per registrar-te", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                 } else if (noEsMail==0) {
                     Snackbar.make(view, "Format del mail incorrecte", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
@@ -56,13 +53,11 @@ public class RegisterFragment extends Fragment {
 
                 else if (binding.editTextPassword.getText().length() < 1) {
                     Snackbar.make(view, "Introdueix un nou password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
-                    binding.editTextPassword.setHintTextColor(getResources().getColor(R.color.purple_700, getActivity().getTheme()));
-                    binding.editTextPassword.setHint("Requerit!");
+                    binding.editTextPassword.setError("Requerit!");
                 }
                 else if (binding.editTextPassword2.getText().length() < 1) {
                     Snackbar.make(view, "Repeteix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
-                    binding.editTextPassword2.setHintTextColor(getResources().getColor(R.color.purple_700, getActivity().getTheme()));
-                    binding.editTextPassword2.setHint("Requerit!");
+                    binding.editTextPassword2.setError("Requerit!");
                 } else {
 
                     binding.progressBar.setVisibility(View.VISIBLE);

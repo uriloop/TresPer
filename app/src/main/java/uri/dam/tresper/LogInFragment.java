@@ -2,6 +2,7 @@ package uri.dam.tresper;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -118,7 +119,6 @@ public class LogInFragment extends Fragment {
                 }
                 */
 
-
                 binding.progressBar.setVisibility(View.VISIBLE);
                 new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                     @Override
@@ -139,6 +139,7 @@ public class LogInFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+
                 int noEsMail = 0;
                 noEsMail = 0;
                 String email = binding.editTextEmailAddress.getText().toString();
@@ -148,8 +149,7 @@ public class LogInFragment extends Fragment {
 
 
                 if (binding.editTextEmailAddress.getText().length() < 1) {
-                    binding.editTextEmailAddress.setHintTextColor(getResources().getColor(R.color.purple_700, getActivity().getTheme()));
-                    binding.editTextEmailAddress.setHint("Requerit!");
+                    binding.editTextEmailAddress.setError("Requerit!");
                     Snackbar.make(view, "Completa els camps per entrar", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                 } else if (noEsMail == 0) {
                     Snackbar.make(view, "Format del mail incorrecte", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
@@ -157,8 +157,7 @@ public class LogInFragment extends Fragment {
                 //mostrar error doble;
                 else if (binding.editTextPassword.getText().length() < 1) {
                     Snackbar.make(view, "Introdueix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
-                    binding.editTextPassword.setHintTextColor(getResources().getColor(R.color.purple_700, getActivity().getTheme()));
-                    binding.editTextPassword.setHint("Requerit!");
+                    binding.editTextPassword.setError("Requerit!");
                 } else {
 
                     binding.progressBar.setVisibility(View.VISIBLE);
