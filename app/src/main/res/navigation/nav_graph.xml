@@ -5,31 +5,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/logInFragment">
 
-<!--    <fragment
-        android:id="@+id/FirstFragment"
-        android:name="uri.dam.tresper.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-        <action
-            android:id="@+id/action_FirstFragment_to_helpFragment"
-            app:destination="@id/helpFragment" />
-    </fragment>-->
-    <!--<fragment
-        android:id="@+id/SecondFragment"
-        android:name="uri.dam.tresper.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_SecondFragment_to_helpFragment"
-            app:destination="@id/helpFragment" />
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/logInFragment" />
-    </fragment>-->
     <fragment
         android:id="@+id/helpFragment"
         android:name="uri.dam.tresper.HelpFragment"
@@ -45,7 +20,7 @@
             android:id="@+id/action_log_in_to_register"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_helpFragment"
+            android:id="@+id/action_to_helpFragment"
             app:destination="@id/helpFragment" />
     </fragment>
     <fragment
@@ -54,10 +29,10 @@
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_SecondFragment_to_helpFragment"
+            android:id="@+id/action_to_helpFragment"
             app:destination="@id/helpFragment" />
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_to_logInFragment"
             app:destination="@id/logInFragment" />
     </fragment>
 </navigation>

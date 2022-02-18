@@ -76,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            navController.navigate(R.id.action_FirstFragment_to_helpFragment);
+            navController.navigate(R.id.action_to_helpFragment);
             return true;
         }
         if (id== R.id.action_exit){
             // akí acció .  log out i tancar app
-            /*navController.navigate(R.id.action_FirstFragment_to_helpFragment);*/
+            this.finishAffinity();
             return true;
         }
 

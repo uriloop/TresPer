@@ -14,16 +14,6 @@
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
 
-    </fragment>-->
-    <fragment
-        android:id="@+id/navigation_torneigs"
-        android:name="uri.dam.tresper.TorneigsFragment"
-        android:label="fragment_torneigs"
-        tools:layout="@layout/fragment_torneigs"  >
-        <action
-            android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
-
     </fragment>
 
     <fragment
@@ -47,6 +37,18 @@
             app:destination="@id/helpFragment2" />
 
     </fragment>
+    -->
+    <fragment
+        android:id="@+id/navigation_torneigs"
+        android:name="uri.dam.tresper.TorneigsFragment"
+        android:label="fragment_torneigs"
+        tools:layout="@layout/fragment_torneigs"  >
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+
+    </fragment>
+
     <fragment
         android:id="@+id/helpFragment2"
         android:name="uri.dam.tresper.HelpFragment"
@@ -54,4 +56,57 @@
         tools:layout="@layout/fragment_help" >
 
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_social"
+        android:name="uri.dam.tresper.SocialFragment"
+        android:label="fragment_social"
+        tools:layout="@layout/fragment_social" >
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_personal"
+        android:name="uri.dam.tresper.PersonalFragment"
+        android:label="fragment_personal"
+        tools:layout="@layout/fragment_personal"  >
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+    </fragment>
+<!--            -->
+
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="uri.dam.tresper.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="uri.dam.tresper.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+
+        <action
+            android:id="@+id/action_log_in_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="uri.dam.tresper.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+
+
 </navigation>

@@ -1,5 +1,7 @@
 package uri.dam.tresper;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -31,19 +33,24 @@ public class AppActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_torneigs, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_torneigs, R.id.navigation_social, R.id.navigation_personal)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_app);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
 
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_app, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
@@ -56,7 +63,12 @@ public class AppActivity extends AppCompatActivity {
         return super.onPrepareOptionsMenu(menu);
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        startActivity(new Intent(this, MainActivity.class));
 
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -69,6 +81,7 @@ public class AppActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_crear_equip) {
             navController.navigate(R.id.action_go_to_helpFragment2);
+
             return true;
         }
         if (id == R.id.action_crear_torneig) {
@@ -79,13 +92,14 @@ public class AppActivity extends AppCompatActivity {
             navController.navigate(R.id.action_go_to_helpFragment2);
             return true;
         }
-        if(id == R.id.home){
-            onBackPressed();
+        if (id == R.id.home) {
+            navController.popBackStack();
             return true;
         }
-        if (id== R.id.action_exit){
+        if (id == R.id.action_exit) {
             // akí acció .  log out i tancar app
-            /*navController.navigate(R.id.action_FirstFragment_to_helpFragment);*/
+            this.finishAffinity();
+
             return true;
         }
 

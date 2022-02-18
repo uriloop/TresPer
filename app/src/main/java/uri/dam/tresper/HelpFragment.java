@@ -2,6 +2,8 @@ package uri.dam.tresper;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -28,19 +30,21 @@ public class HelpFragment extends Fragment {
 
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
         binding= FragmentHelpBinding.inflate(inflater, container, false);
         return inflater.inflate(R.layout.fragment_help, container, false);
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public void onPause() {
+        super.onPause();
+        getActivity().getFragmentManager().popBackStack();
     }
+
+
 }
