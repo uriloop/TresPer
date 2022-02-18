@@ -5,39 +5,6 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_torneigs">
 
-    <!--<fragment
-        android:id="@+id/navigation_home"
-        android:name="uri.dam.tresper.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="uri.dam.tresper.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
-        <action
-            android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="uri.dam.tresper.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" >
-        <action
-            android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
-
-    </fragment>
-    -->
     <fragment
         android:id="@+id/navigation_torneigs"
         android:name="uri.dam.tresper.TorneigsFragment"
