@@ -159,7 +159,6 @@ public class LogInFragment extends Fragment {
                     Snackbar.make(view, "Introdueix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                     binding.editTextPassword.setError("Requerit!");
                 } else {
-
                     binding.progressBar.setVisibility(View.VISIBLE);
                     new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                         @Override
