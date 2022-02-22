@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_tab">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tab"
+    app:startDestination="@id/infoTorneigFragment">
 
+    <fragment
+        android:id="@+id/infoTorneigFragment"
+        android:name="uri.dam.tresper.InfoTorneigFragment"
+        android:label="fragment_info_torneig"
+        tools:layout="@layout/fragment_info_torneig">
+        <action
+            android:id="@+id/action_go_info"
+            app:destination="@+id/infoTorneigFragment" />
+        <action
+            android:id="@+id/action_go_classi"
+            app:destination="@+id/classiTorneigFragment" />
+        <action
+            android:id="@+id/action_go_equips"
+            app:destination="@+id/equipsTorneigFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classiTorneigFragment"
+        android:name="uri.dam.tresper.ClassiTorneigFragment"
+        android:label="fragment_classi_torneig"
+        tools:layout="@layout/fragment_classi_torneig" >
+        <action
+            android:id="@+id/action_go_info"
+            app:destination="@+id/infoTorneigFragment" />
+        <action
+            android:id="@+id/action_go_classi"
+            app:destination="@+id/classiTorneigFragment" />
+        <action
+            android:id="@+id/action_go_equips"
+            app:destination="@+id/equipsTorneigFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipsTorneigFragment"
+        android:name="uri.dam.tresper.EquipsTorneigFragment"
+        android:label="fragment_equips_torneig"
+        tools:layout="@layout/fragment_equips_torneig" >
+        <action
+            android:id="@+id/action_go_info"
+            app:destination="@+id/infoTorneigFragment" />
+        <action
+            android:id="@+id/action_go_classi"
+            app:destination="@+id/classiTorneigFragment" />
+        <action
+            android:id="@+id/action_go_equips"
+            app:destination="@+id/equipsTorneigFragment" />
+    </fragment>
 </navigation>
