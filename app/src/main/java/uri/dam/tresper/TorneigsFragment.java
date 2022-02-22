@@ -18,9 +18,7 @@ import android.widget.ImageSwitcher;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.ramotion.cardslider.BuildConfig;
-import com.ramotion.cardslider.CardSliderLayoutManager;
-import com.ramotion.cardslider.CardSnapHelper;
+
 
 import java.util.List;
 

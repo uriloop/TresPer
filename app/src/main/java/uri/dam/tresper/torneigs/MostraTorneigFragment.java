@@ -13,25 +13,33 @@ import android.view.ViewGroup;
 import android.widget.RatingBar;
 
 import uri.dam.tresper.R;
+import uri.dam.tresper.databinding.FragmentHelpBinding;
 import uri.dam.tresper.databinding.FragmentMostraTorneigBinding;
 
 public class MostraTorneigFragment extends Fragment {
     TorneigsViewModel torneigsViewModel;
     FragmentMostraTorneigBinding binding;
 
+
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        torneigsViewModel.seleccionat().observe(getViewLifecycleOwner(), new Observer<TorneigElement>() {
-            @Override
-            public void onChanged(TorneigElement torneigElement) {
-                binding.nomTorneig.setText(torneigElement.nombre);
-                binding.imatgeTorneig.setText(torneigElement.descripcion);
-                binding.valoracion.setRating(torneigElement.valoracion);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
 
-            }
-        });
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        binding= FragmentMostraTorneigBinding.inflate(inflater, container, false);
+        return inflater.inflate(R.layout.fragment_mostra_torneig, container, false);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        getActivity().getFragmentManager().popBackStack();
     }
 }
