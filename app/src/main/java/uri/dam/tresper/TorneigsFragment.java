@@ -45,12 +45,12 @@ public class TorneigsFragment extends Fragment {
 
         TorneigsAdapter torneigsAdapter = new TorneigsAdapter();
         binding.recyclerView.setAdapter(torneigsAdapter);
-        CardSliderLayoutManager csLayoutManager=new CardSliderLayoutManager(getContext());
+        /*CardSliderLayoutManager csLayoutManager=new CardSliderLayoutManager(getContext());
 
 
 
         recyclerView.setLayoutManager(csLayoutManager);
-        new CardSnapHelper().attachToRecyclerView(recyclerView);
+        new CardSnapHelper().attachToRecyclerView(recyclerView);*/
 
 
 
@@ -83,6 +83,8 @@ public class TorneigsFragment extends Fragment {
     }
 
 
+
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -112,6 +114,10 @@ public class TorneigsFragment extends Fragment {
             return new TorneigViewHolder(uri.dam.tresper.databinding.ViewholderTorneigBinding.inflate(getLayoutInflater(), parent, false));
         }
 
+        public TorneigElement obtenirTorneig(int posicion){
+            return torneigElementList.get(posicion);
+        }
+
         @Override
         public void onBindViewHolder(@NonNull TorneigViewHolder holder, int position) {
 
@@ -124,7 +130,15 @@ public class TorneigsFragment extends Fragment {
                     .into(holder.binding.cartellView);
             /*
             holder.binding.cartellView.load(torneigElement.getDiaIhora());
+
 */
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    torneigsViewModel.seleccionar(torneigElement);
+                    navController.navigate(R.id.action_go_to_mostra_torneig);
+                }
+            });
         }
 
         @Override

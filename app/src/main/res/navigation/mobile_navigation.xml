@@ -16,6 +16,8 @@
 
     </fragment>
 
+
+
     <fragment
         android:id="@+id/helpFragment2"
         android:name="uri.dam.tresper.HelpFragment"
@@ -73,6 +75,16 @@
         <action
             android:id="@+id/action_to_logInFragment"
             app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mostraTorneigFragment"
+        android:name="uri.dam.tresper.torneigs.MostraTorneigFragment"
+        android:label="fragment_mostra_torneig"
+        tools:layout="@layout/fragment_mostra_torneig" >
+        <action
+            android:id="@+id/action_go_to_mostra_torneig"
+            app:destination="@+id/mostraTorneigFragment"/>
+
     </fragment>
 
 

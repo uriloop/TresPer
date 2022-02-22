@@ -25,14 +25,15 @@ public class TorneigsViewModel extends AndroidViewModel {
     public MutableLiveData<List<TorneigElement>> obtener(){
         return listTorneigsMutableLiveData;
     }
-    void seleccionar(TorneigElement torneigElement){
+
+
+    public void seleccionar(TorneigElement torneigElement){
         torneigSeleccionat.setValue(torneigElement);
     }
 
-    MutableLiveData<TorneigElement> seleccionado(){
+    MutableLiveData<TorneigElement> seleccionat(){
         return torneigSeleccionat;
     }
-
 
     /*void insertar(TorneigElement torneigElement){
         repositoriTorneigs.insertar(torneigElement, new RepositoriTorneigs.Callback() {
