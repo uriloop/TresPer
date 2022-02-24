@@ -19,28 +19,40 @@
             android:id="@+id/info_button"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Informació"
             android:layout_marginHorizontal="1dp"
+            android:paddingBottom="10dp"
+
             android:layout_marginStart="2dp"
-            />
+            android:layout_marginTop="-7dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:text="Informació" />
+
         <Button
             android:id="@+id/equips_button"
+            android:paddingBottom="10dp"
 
             android:layout_width="1dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="1dp"
-            android:text="Equips"
-            />
+
+            android:layout_marginTop="-7dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:text="Equips" />
+
         <Button
-android:id="@+id/partits_button"
+            android:id="@+id/partits_button"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="1dp"
-            android:text="Partits"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="-10dp"
+
             android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:text="Partits"
             android:textColor="@color/purple_700"
 
             />
