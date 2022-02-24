@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        >
 
     <item
+        android:title="Torneigs"
         android:id="@+id/navigation_torneigs"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Torneigs"/>
-
-    <item
-        android:id="@+id/navigation_social"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Social"/>
-
+        android:icon="@drawable/ic_home_black_24dp"/>
     <item
         android:id="@+id/navigation_personal"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Personal" />
+        android:title="Personal"
+        />
+
+    <item
+    android:id="@+id/navigation_social"
+    android:icon="@drawable/ic_dashboard_black_24dp"
+    android:title="Social"/>
+
+
 
 </menu>

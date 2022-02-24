@@ -4,139 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
->
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="15dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="15dp">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_weight="4"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Welcome back!"
-            android:textAlignment="center"
-            android:textSize="28sp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:orientation="horizontal"
-            android:paddingVertical="20dp">
+            android:layout_height="1dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/benvinguda"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/sym_action_email" />
+                android:layout_weight="6"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Welcome back!"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textColorHint="@color/purple_200"/>
 
-            <EditText
-                android:id="@+id/editTextEmailAddress"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:orientation="horizontal"
+                android:paddingVertical="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/sym_action_email" />
+
+                <EditText
+                    android:id="@+id/editTextEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="Email adress:"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="5dp"
+                    android:backgroundTint="@color/purple_200"
+
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/purple_200"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="Email adress:"
-                android:inputType="textEmailAddress"
-                android:paddingLeft="5dp" />
+                android:layout_weight="0.1"
+
+
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_lock_idle_lock" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:textColorHint="@color/purple_200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="Password"
+                    android:backgroundTint="@color/purple_200"
+                    android:textColor="@color/teal_700"
+
+                    android:inputType="textPassword"
+                    android:paddingLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forgetPasswd"
+                style="@style/Widget.AppCompat.Light.ActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:paddingStart="25dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="forget password"
+                android:textColor="@color/teal_700"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.1"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-
-            android:orientation="horizontal"
-            android:paddingVertical="20dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_lock_idle_lock" />
-
-            <EditText
-                android:id="@+id/editTextPassword"
+            <Button
+                android:id="@+id/buttonLogIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:maxHeight="20dp"
+                android:minHeight="15dp"
+                android:text="Log in"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="20dp"
+                android:minHeight="15dp"
+                android:text="Register"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="- or -"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:paddingLeft="5dp" />
+                android:layout_weight="0.8"
+                android:src="@drawable/google_button"
+
+                />
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/forgetPasswd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center_vertical"
-            android:paddingStart="25dp"
-            android:text="forget password"
-            android:textColor="@color/teal_700"
-            android:textSize="16sp" />
-
-
-        <Button
-            android:id="@+id/buttonLogIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:maxHeight="20dp"
-            android:minHeight="15dp"
-            android:text="Log in"
-            android:textSize="18sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2" />
-
-        <Button
-            android:id="@+id/buttonRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:maxHeight="20dp"
-            android:minHeight="15dp"
-            android:text="Register"
-            android:textSize="18sp"
-
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center"
-            android:text="- or -"
-            android:textAlignment="center"
-
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/google"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.8"
-            android:src="@drawable/google_button"
-
-            />
 
 
     </LinearLayout>
@@ -147,16 +182,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:background="@color/purple_200"
+        android:background="@color/black"
         android:fitsSystemWindows="true"
-        android:visibility="gone"
         android:outlineSpotShadowColor="@color/black"
         android:padding="20dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:mk_color="@color/purple_700"
+        app:mk_color="@color/teal_700"
         app:mk_type="Whirlpool" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

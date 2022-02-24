@@ -2,6 +2,7 @@ package uri.dam.tresper.login;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -54,7 +56,23 @@ public class LogInFragment extends Fragment {
         for (int i = 0; i < views.getChildCount(); i++) {
             try{views.getChildAt(i).setVisibility(View.VISIBLE);}catch (Exception e){}
         }*/
-        TextView recuperaPassword= binding.forgetPasswd;
+
+        ////////controlar coses cuan cambiem a portrait o landscape
+
+       /* if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+            binding.linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+
+        }else{
+
+            binding.linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+
+
+        }*/
+ /*       binding.editTextEmailAddress.setHighlightColor(getResources().getColor(R.color.teal_700));*/
+
+        TextView recuperaPassword = binding.forgetPasswd;
 
         binding.forgetPasswd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +92,7 @@ public class LogInFragment extends Fragment {
                         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
 
-                                recuperarContrasenaGoogle(view,input);
+                                recuperarContrasenaGoogle(view, input);
                             }
                         });
 
@@ -126,7 +144,7 @@ public class LogInFragment extends Fragment {
                         }
                         binding.progressBar.setVisibility(View.GONE); */
                     }
-                }, 1700);
+                }, 500);
             }
 
         });
@@ -163,15 +181,15 @@ public class LogInFragment extends Fragment {
                             getActivity().finish();
                             startActivity(new Intent(getActivity(), AppActivity.class));
                         }
-                    }, 1700);
+                    }, 500);
                 }
             }
         });
     }
 
-    private void recuperarContrasenaGoogle(View view,EditText input) {
+    private void recuperarContrasenaGoogle(View view, EditText input) {
 
-        Snackbar.make(view, "S'ha enviat un email de recuperació a:\n "+input.getText().toString(), Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+        Snackbar.make(view, "S'ha enviat un email de recuperació a:\n " + input.getText().toString(), Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
 
 
     }

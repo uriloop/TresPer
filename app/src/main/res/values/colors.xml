@@ -24,11 +24,11 @@
 
     Paleta 3
     -->
-      <color name="purple_200">#E3CD9B</color>
-    <color name="purple_500">#E89110</color>
-    <color name="purple_700">#943112</color>
-    <color name="teal_200">#FFB747</color>
-    <color name="teal_700">#BF760A</color>
+      <color name="purple_200">#FFDE96</color>
+    <color name="purple_500">#FFB13E</color>
+    <color name="purple_700">#DC6700</color>
+    <color name="teal_200">#FF9800</color>
+    <color name="teal_700">#2196F3</color>
     <color name="black">#271800</color>
     <color name="white">#F9ECD4</color>
 

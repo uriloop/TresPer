@@ -27,7 +27,8 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
+       /* binding.editTextEmailAddress.setHighlightColor(getResources().getColor(R.color.teal_700));
+        binding.editTextEmailAddress.setTextColor(getResources().getColor(R.color.teal_700));*/
 
         binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +58,7 @@ public class RegisterFragment extends Fragment {
                 } else {
 
                     binding.progressBar.setVisibility(View.VISIBLE);
+                    binding.linearLayout.setVisibility(View.GONE);
                     new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                         @Override
                         public void run() {
@@ -65,7 +67,7 @@ public class RegisterFragment extends Fragment {
                             Snackbar.make(view, "T'has registrat amb l'email " + binding.editTextEmailAddress.getText() + "\nBenvingut !!!", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
 
                         }
-                    }, 1700);
+                    }, 500);
                 }
 
 

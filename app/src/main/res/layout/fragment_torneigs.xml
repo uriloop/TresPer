@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/viewholder_torneig"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="10dp"
         />
     <com.tuyenmonkey.mkloader.MKLoader
         android:id="@+id/progress_bar"
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:background="@color/purple_200"
+        android:background="@color/black"
         android:fitsSystemWindows="true"
         android:visibility="gone"
 
@@ -30,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:mk_color="@color/purple_700"
+        app:mk_color="@color/teal_700"
         app:mk_type="Whirlpool" />
 
 </LinearLayout>

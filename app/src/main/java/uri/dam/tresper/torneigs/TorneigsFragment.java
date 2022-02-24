@@ -16,6 +16,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
@@ -131,7 +132,7 @@ public class TorneigsFragment extends Fragment {
                             NavHostFragment.findNavController(TorneigsFragment.this)
                                     .navigate(R.id.action_go_to_Info);
                         }
-                    }, 1700);
+                    }, 500);
                 }
             });
             /*
