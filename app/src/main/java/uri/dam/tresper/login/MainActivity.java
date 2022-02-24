@@ -1,4 +1,4 @@
-package uri.dam.tresper;
+package uri.dam.tresper.login;
 
 import android.os.Bundle;
 
@@ -14,6 +14,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.ActivityMainBinding;
 
 import android.view.Menu;

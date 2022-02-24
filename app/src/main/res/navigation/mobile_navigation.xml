@@ -7,53 +7,75 @@
 
     <fragment
         android:id="@+id/navigation_torneigs"
-        android:name="uri.dam.tresper.TorneigsFragment"
+        android:name="uri.dam.tresper.torneigs.TorneigsFragment"
         android:label="fragment_torneigs"
-        tools:layout="@layout/fragment_torneigs"  >
+        tools:layout="@layout/fragment_torneigs">
         <action
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_Info"
+            app:destination="@id/infoTorneigFragment" />
+
 
     </fragment>
 
     <fragment
         android:id="@+id/helpFragment2"
-        android:name="uri.dam.tresper.HelpFragment"
+        android:name="uri.dam.tresper.options.HelpFragment"
         android:label="fragment_help"
-        tools:layout="@layout/fragment_help" >
+        tools:layout="@layout/fragment_help">
 
     </fragment>
 
     <fragment
         android:id="@+id/navigation_social"
-        android:name="uri.dam.tresper.SocialFragment"
+        android:name="uri.dam.tresper.social.SocialFragment"
         android:label="fragment_social"
-        tools:layout="@layout/fragment_social" >
+        tools:layout="@layout/fragment_social">
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
         <action
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
     </fragment>
     <fragment
         android:id="@+id/navigation_personal"
-        android:name="uri.dam.tresper.PersonalFragment"
+        android:name="uri.dam.tresper.personal.PersonalFragment"
         android:label="fragment_personal"
-        tools:layout="@layout/fragment_personal"  >
+        tools:layout="@layout/fragment_personal">
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
         <action
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
     </fragment>
-<!--            -->
+    <!--            -->
 
     <fragment
         android:id="@+id/helpFragment"
-        android:name="uri.dam.tresper.HelpFragment"
+        android:name="uri.dam.tresper.options.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/logInFragment"
-        android:name="uri.dam.tresper.LogInFragment"
+        android:name="uri.dam.tresper.login.LogInFragment"
         android:label="fragment_log_in"
-        tools:layout="@layout/fragment_log_in" >
+        tools:layout="@layout/fragment_log_in">
 
         <action
             android:id="@+id/action_log_in_to_register"
@@ -64,15 +86,100 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="uri.dam.tresper.RegisterFragment"
+        android:name="uri.dam.tresper.login.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_to_helpFragment"
             app:destination="@id/helpFragment" />
         <action
             android:id="@+id/action_to_logInFragment"
             app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoTorneigFragment"
+        android:name="uri.dam.tresper.torneigs.InfoTorneigFragment"
+        android:label="fragment_info_torneig"
+        tools:layout="@layout/fragment_info_torneig">
+        <action
+            android:id="@+id/action_go_to_classi"
+            app:destination="@id/classiTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_equips"
+            app:destination="@id/equipsTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/classiTorneigFragment"
+        android:name="uri.dam.tresper.torneigs.ClassiTorneigFragment"
+        android:label="fragment_classi_torneig"
+        tools:layout="@layout/fragment_classi_torneig">
+        <action
+            android:id="@+id/action_go_to_Info"
+            app:destination="@id/infoTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_equips"
+            app:destination="@id/equipsTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/equipsTorneigFragment"
+        android:name="uri.dam.tresper.torneigs.EquipsTorneigFragment"
+        android:label="fragment_equips_torneig"
+        tools:layout="@layout/fragment_equips_torneig">
+        <action
+            android:id="@+id/action_go_to_classi"
+            app:destination="@id/classiTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_Info"
+            app:destination="@id/infoTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/crearTorneigFragment"
+        android:name="uri.dam.tresper.options.CrearTorneigFragment"
+        android:label="fragment_crear_torneig"
+        tools:layout="@layout/fragment_crear_torneig">
+        <action
+            android:id="@+id/action_go_to_torneigs"
+            app:destination="@+id/navigation_torneigs" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/crearEquipFragment"
+        android:name="uri.dam.tresper.options.CrearEquipFragment"
+        android:label="fragment_crear_equip"
+        tools:layout="@layout/fragment_crear_equip">
+        <action
+            android:id="@+id/action_go_to_personal"
+            app:destination="@+id/navigation_personal" />
     </fragment>
 
 

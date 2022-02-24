@@ -1,4 +1,4 @@
-package uri.dam.tresper;
+package uri.dam.tresper.social;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import uri.dam.tresper.R;
 
 /**
  * A simple {@link Fragment} subclass.

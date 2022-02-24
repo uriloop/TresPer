@@ -1,4 +1,4 @@
-package uri.dam.tresper;
+package uri.dam.tresper.options;
 
 import android.os.Bundle;
 
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentHelpBinding;
 import uri.dam.tresper.databinding.FragmentTorneigsBinding;
 

@@ -1,6 +1,5 @@
-package uri.dam.tresper;
+package uri.dam.tresper.torneigs;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,21 +9,20 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentTorneigsBinding;
-import uri.dam.tresper.torneigs.TorneigElement;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
 
 public class TorneigsFragment extends Fragment {
 
@@ -118,6 +116,24 @@ public class TorneigsFragment extends Fragment {
             Glide.with(getContext()).load(torneigElement.getImatgeCartell())
                     .centerInside()
                     .into(holder.binding.cartellView);
+
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    binding.progressBar.setVisibility(View.VISIBLE);
+                    binding.recyclerView.setVisibility(View.GONE);
+                    new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
+                        @Override
+                        public void run() {
+                            torneigsViewModel.seleccionar(torneigElement);
+                            NavHostFragment.findNavController(TorneigsFragment.this)
+                                    .navigate(R.id.action_go_to_Info);
+                        }
+                    }, 1700);
+                }
+            });
             /*
             holder.binding.cartellView.load(torneigElement.getDiaIhora());
 */

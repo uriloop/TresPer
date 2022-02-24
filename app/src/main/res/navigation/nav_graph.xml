@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/helpFragment"
-        android:name="uri.dam.tresper.HelpFragment"
+        android:name="uri.dam.tresper.options.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/logInFragment"
-        android:name="uri.dam.tresper.LogInFragment"
+        android:name="uri.dam.tresper.login.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" >
 
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="uri.dam.tresper.RegisterFragment"
+        android:name="uri.dam.tresper.login.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action

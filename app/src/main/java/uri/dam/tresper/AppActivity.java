@@ -1,9 +1,7 @@
 package uri.dam.tresper;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -16,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import uri.dam.tresper.databinding.ActivityAppBinding;
+import uri.dam.tresper.login.MainActivity;
 
 public class AppActivity extends AppCompatActivity {
 
@@ -80,12 +79,12 @@ public class AppActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_crear_equip) {
-            navController.navigate(R.id.action_go_to_helpFragment2);
 
+            navController.navigate(R.id.action_go_to_crear_equip);
             return true;
         }
         if (id == R.id.action_crear_torneig) {
-            navController.navigate(R.id.action_go_to_helpFragment2);
+            navController.navigate(R.id.action_go_to_crear_torneig);
             return true;
         }
         if (id == R.id.action_help) {

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TorneigsFragment">
+    tools:context=".torneigs.TorneigsFragment"
+    android:orientation="vertical">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -13,4 +14,23 @@
         tools:listitem="@layout/viewholder_torneig"
         android:layout_marginBottom="20dp"
         />
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@color/purple_200"
+        android:fitsSystemWindows="true"
+        android:visibility="gone"
+
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mk_color="@color/purple_700"
+        app:mk_type="Whirlpool" />
+
 </LinearLayout>
