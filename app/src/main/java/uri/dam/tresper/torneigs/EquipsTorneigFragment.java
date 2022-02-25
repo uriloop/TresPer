@@ -49,6 +49,13 @@ public class EquipsTorneigFragment extends Fragment {
             }
         });
 
+        ///////////////////////////////////////////////////
+
+
+
+
+
+
 
     }
 
