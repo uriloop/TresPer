@@ -1,12 +1,20 @@
 package uri.dam.tresper;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -20,18 +28,19 @@ public class AppActivity extends AppCompatActivity {
 
     private ActivityAppBinding binding;
     NavController navController;
-
+    BottomNavigationView navView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityAppBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-
+/*
+        navView.setItemIconTintList(ColorStateList.valueOf(Color.parseColor("#F9ECD4")));
+*/
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_torneigs, R.id.navigation_social, R.id.navigation_personal)
                 .build();
@@ -42,6 +51,12 @@ public class AppActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
+        return super.onCreateView(name, context, attrs);
     }
 
     @Override
@@ -62,6 +77,7 @@ public class AppActivity extends AppCompatActivity {
         menu.removeItem(R.id.action_crear_torneig);
 */
 
+
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -80,7 +96,6 @@ public class AppActivity extends AppCompatActivity {
         int id = item.getItemId();
 
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_crear_equip) {
 
             navController.navigate(R.id.action_go_to_crear_equip);

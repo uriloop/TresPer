@@ -8,72 +8,22 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/info_button"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="1dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="-10dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/purple_500"
-            android:paddingTop="20dp"
-
-            android:paddingBottom="10dp"
-            android:text="Info"
-            android:textColor="@color/black" />
-
-        <Button
-            android:id="@+id/equips_button"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="1dp"
-            android:layout_marginTop="-7dp"
-
-            android:layout_weight="1"
-            android:backgroundTint="@color/teal_200"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:text="Equips" />
-
-        <Button
-            android:id="@+id/partits_button"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="1dp"
-            android:layout_marginTop="-7dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/teal_200"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:text="Partits"
-
-            />
-
-
-    </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="707dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp"
         android:background="@color/purple_500"
-        android:fillViewport="true"
-        android:translationY="40dp">
+        android:translationY="40dp"
+
+        >
 
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/flexBox"
             android:layout_width="match_parent"
-
+android:layout_marginTop="10dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="55dp"
             android:nestedScrollingEnabled="true"
@@ -100,7 +50,11 @@
                     android:text="Text de prova que tal funciona"
                     android:textAlignment="center"
                     android:textColor="@color/purple_700"
-                    android:textSize="32sp" />
+                    android:textSize="32sp"
+                    android:shadowDy="2"
+                    android:shadowDx="2"
+                    android:shadowColor="@color/teal_700"
+                    android:shadowRadius="4"/>
 
                 <ImageView
                     android:id="@+id/fotoTorneig"
@@ -243,31 +197,7 @@ android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
-                    android:text="1. f. tira (‖ pieza delgada de tela o papel).
-
-2. f. Señal larga y estrecha o línea que, por combinación de un color con otro, se forma artificial o naturalmente en un cuerpo cualquiera, y con especialidad en telas o tejidos.
-
-3. f. Enumeración, generalmente en forma de columna, de personas, cosas, cantidades, etc., que se hace con determinado propósito.
-
-lista civil
-
-1. f. Dotación asignada al monarca y a su familia en el presupuesto del Estado.
-
-lista de boda, o lista de bodas
-
-1. f. Relación de objetos y enseres que interesan a los futuros contrayentes, la cual se entrega en un establecimiento comercial a fin de orientar a los invitados a la boda en la elección de sus obsequios.
-
-lista de cartería
-
-1. f. Oficina a la que llegan los envíos postales que no han sido entregados en el domicilio del destinatario.
-
-lista de correos
-
-1. f. En las casas de correos, oficina a la cual se dirigen las cartas y paquetes cuyos destinatarios han de ir a ella a recogerlos.
-
-lista de raya
-
-1. f. Méx. nómina (‖ relación de individuos que perciben haberes)."
+                    android:text="@string/text_llarg"
                     android:textAlignment="center"
                     android:textColor="@color/purple_700"
                     android:textSize="18sp" />
@@ -306,6 +236,49 @@ lista de raya
 
                 <TextView
                     android:id="@+id/textPremis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_maxWidth="300dp"
+                android:minWidth="280dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/titolInscripcio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxWidth="300dp"
+                    android:padding="20dp"
+                    android:text="Inscripcio: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:id="@+id/imatgeinscripcio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxHeight="200dp"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_menu_myplaces" />
+
+
+                <TextView
+                    android:id="@+id/textInscripcio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
@@ -387,6 +360,58 @@ lista de raya
 
         </com.google.android.flexbox.FlexboxLayout>
     </ScrollView>
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/info_button"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/purple_500"
+            android:paddingTop="20dp"
+
+            android:paddingBottom="10dp"
+            android:text="Info"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/equips_button"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="-7dp"
+
+            android:layout_weight="1"
+            android:backgroundTint="@color/teal_200"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Equips" />
+
+        <Button
+            android:id="@+id/partits_button"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="-7dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/teal_200"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Partits"
+
+            />
+
+
+    </LinearLayout>
 </FrameLayout>
 
 
