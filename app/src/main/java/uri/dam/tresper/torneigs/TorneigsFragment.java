@@ -19,7 +19,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
+import com.google.android.flexbox.AlignItems;
+import com.google.android.flexbox.FlexDirection;
+import com.google.android.flexbox.FlexWrap;
+import com.google.android.flexbox.FlexboxLayoutManager;
+import com.google.android.flexbox.JustifyContent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import uri.dam.tresper.R;
@@ -32,12 +38,19 @@ public class TorneigsFragment extends Fragment {
     private FragmentTorneigsBinding binding;
     TorneigsViewModel torneigsViewModel;
     RecyclerView recyclerView;
+    ArrayList<String> arrayList = new ArrayList<>();
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         recyclerView = binding.recyclerView;
-
+        FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this.getContext());
+        layoutManager.setFlexDirection(FlexDirection.ROW);
+        layoutManager.setJustifyContent(JustifyContent.SPACE_AROUND);
+        layoutManager.setAlignItems(AlignItems.CENTER);
+        layoutManager.setFlexWrap(FlexWrap.WRAP);
+        recyclerView.setLayoutManager(layoutManager);
 
         TorneigsAdapter torneigsAdapter = new TorneigsAdapter();
         binding.recyclerView.setAdapter(torneigsAdapter);

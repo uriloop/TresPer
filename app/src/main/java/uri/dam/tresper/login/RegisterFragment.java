@@ -1,5 +1,6 @@
 package uri.dam.tresper.login;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -27,8 +29,19 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-       /* binding.editTextEmailAddress.setHighlightColor(getResources().getColor(R.color.teal_700));
-        binding.editTextEmailAddress.setTextColor(getResources().getColor(R.color.teal_700));*/
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+
+
+
+        }else{
+
+            /*binding.spacer.setVisibility(View.GONE);*/
+            binding.registerText.setVisibility(View.GONE);
+
+
+
+        }
 
         binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +71,10 @@ public class RegisterFragment extends Fragment {
                 } else {
 
                     binding.progressBar.setVisibility(View.VISIBLE);
-                    binding.linearLayout.setVisibility(View.GONE);
+                    binding.emailLayout.setVisibility(View.GONE);
+                    binding.pass1Layout.setVisibility(View.GONE);
+                    binding.pass2Layout.setVisibility(View.GONE);
+                    binding.buttonRegister.setVisibility(View.GONE);
                     new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                         @Override
                         public void run() {

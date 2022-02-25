@@ -1,129 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-
-    android:layout_height="match_parent">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:id="@+id/linearLayout"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="15dp"
-        android:orientation="vertical"
-        >
+    android:layout_height="match_parent"
+    app:alignItems="center"
+    app:flexDirection="row"
+    app:flexWrap="wrap"
+    app:justifyContent="space_around">
 
 
-        <TextView
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:text="Register"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textSize="28sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:paddingVertical="10dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/sym_action_email" />
-
-            <EditText
-                android:textColor="@color/teal_700"
-                android:backgroundTint="@color/purple_200"
-
-                android:id="@+id/editTextEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Email adress"
-                android:inputType="textEmailAddress"
-                android:paddingLeft="5dp"
-                android:textColorHint="@color/purple_200"/>
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:minWidth="300dp"
+        android:padding="10dp"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textSize="28sp" />
 
 
-        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="wrap_content"
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingVertical="20dp">
+            android:src="@android:drawable/sym_action_email" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_lock_idle_lock" />
-
-            <EditText
-                android:id="@+id/editTextPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:paddingLeft="5dp"
-                android:textColor="@color/teal_700"
-                android:backgroundTint="@color/purple_200"
-
-                android:textColorHint="@color/purple_200"/>
-
-        </LinearLayout>
-        <LinearLayout
+        <EditText
+            android:id="@+id/editTextEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingVertical="20dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_lock_idle_lock" />
-
-            <EditText
-android:backgroundTint="@color/purple_200"
-                android:id="@+id/editTextPassword2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Repeat password"
-                android:inputType="textPassword"
-                android:paddingLeft="5dp"
-                android:textColor="@color/teal_700"
-
-                android:textColorHint="@color/purple_200"/>
-
-        </LinearLayout>
-
-
-
-        <Button
-            android:id="@+id/buttonRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="20dp"
-            android:paddingVertical="15dp"
-            android:text="Register"
-            android:textSize="18sp"
-            />
+            android:backgroundTint="@color/purple_200"
+            android:hint="Email adress"
+            android:inputType="textEmailAddress"
+            android:minWidth="260dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/purple_200" />
 
 
     </LinearLayout>
+
+   <!-- <Space
+        android:id="@+id/spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp" />-->
+
+    <LinearLayout
+        android:id="@+id/pass1Layout"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minWidth="300dp"
+        android:orientation="horizontal"
+        android:paddingVertical="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_lock_idle_lock" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/purple_200"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minWidth="260dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/teal_700"
+
+            android:textColorHint="@color/purple_200" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pass2Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minWidth="300dp"
+
+        android:paddingVertical="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_lock_idle_lock" />
+
+        <EditText
+            android:id="@+id/editTextPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/purple_200"
+            android:hint="Repeat password"
+            android:inputType="textPassword"
+            android:minWidth="260dp"
+            android:paddingLeft="5dp"
+
+            android:textColor="@color/teal_700"
+
+            android:textColorHint="@color/purple_200" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:minWidth="300dp"
+        android:paddingVertical="15dp"
+        android:text="Register"
+
+        android:textSize="18sp" />
+
+
     <com.tuyenmonkey.mkloader.MKLoader
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
@@ -132,9 +145,9 @@ android:backgroundTint="@color/purple_200"
         android:layout_margin="20dp"
         android:background="@color/black"
         android:fitsSystemWindows="true"
-        android:visibility="gone"
         android:outlineSpotShadowColor="@color/teal_700"
         android:padding="20dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,4 +155,4 @@ android:backgroundTint="@color/purple_200"
         app:mk_color="@color/teal_700"
         app:mk_type="Whirlpool" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.flexbox.FlexboxLayout>

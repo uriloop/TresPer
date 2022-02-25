@@ -59,17 +59,18 @@ public class LogInFragment extends Fragment {
 
         ////////controlar coses cuan cambiem a portrait o landscape
 
-       /* if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-            binding.linearLayout.setOrientation(LinearLayout.VERTICAL);
+
 
 
         }else{
 
-            binding.linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+           binding.benvinguda.setVisibility(View.GONE);
+           binding.or.setVisibility(View.GONE);
 
 
-        }*/
+        }
  /*       binding.editTextEmailAddress.setHighlightColor(getResources().getColor(R.color.teal_700));*/
 
         TextView recuperaPassword = binding.forgetPasswd;
@@ -134,6 +135,14 @@ public class LogInFragment extends Fragment {
                 */
 
                 binding.progressBar.setVisibility(View.VISIBLE);
+                binding.emailLayout.setVisibility(View.GONE);
+                binding.passLayout.setVisibility(View.GONE);
+                binding.forgetPasswd.setVisibility(View.GONE);
+                binding.buttonLogIn.setVisibility(View.GONE);
+                binding.buttonRegister.setVisibility(View.GONE);
+                binding.google.setVisibility(View.GONE);
+                binding.or.setVisibility(View.GONE);
+
                 new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                     @Override
                     public void run() {
