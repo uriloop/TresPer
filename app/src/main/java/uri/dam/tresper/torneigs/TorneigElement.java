@@ -7,6 +7,7 @@ public class TorneigElement {
     String diaIhora;
     String imatgeCartell;
     String mapaGoogle;
+    String localitzacio;
 
 
 
@@ -16,6 +17,10 @@ public class TorneigElement {
         this.diaIhora=diaIhora;
         this.imatgeCartell = imatgeCartell;
         this.mapaGoogle = mapaGoogle;
+    }
+
+    public String getDescripcio() {
+        return descripcio;
     }
 
     public String getNomTorneig() {

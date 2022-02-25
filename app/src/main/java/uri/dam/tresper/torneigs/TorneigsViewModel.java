@@ -11,6 +11,7 @@ import java.util.List;
 public class TorneigsViewModel extends AndroidViewModel {
 
     RepositoriTorneigs repositoriTorneigs;
+    TorneigElement torneigElement;
 
     MutableLiveData<List<TorneigElement>> listTorneigsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<TorneigElement> torneigSeleccionat = new MutableLiveData<>();
@@ -29,6 +30,11 @@ public class TorneigsViewModel extends AndroidViewModel {
 
     public void seleccionar(TorneigElement torneigElement) {
         torneigSeleccionat.setValue(torneigElement);
+        this.torneigElement=torneigElement;
+    }
+
+    public TorneigElement getTorneigElement() {
+        return torneigElement;
     }
 
     MutableLiveData<TorneigElement> seleccionat() {

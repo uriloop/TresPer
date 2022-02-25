@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".torneigs.TorneigsFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="10dp">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
         tools:listitem="@layout/viewholder_torneig"
+        android:layout_marginBottom="55dp"
         android:orientation="vertical"
         />
+
     <com.tuyenmonkey.mkloader.MKLoader
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"

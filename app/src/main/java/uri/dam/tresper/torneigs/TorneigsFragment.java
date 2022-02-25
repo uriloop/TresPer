@@ -50,6 +50,7 @@ public class TorneigsFragment extends Fragment {
         layoutManager.setJustifyContent(JustifyContent.SPACE_AROUND);
         layoutManager.setAlignItems(AlignItems.CENTER);
         layoutManager.setFlexWrap(FlexWrap.WRAP);
+
         recyclerView.setLayoutManager(layoutManager);
 
         TorneigsAdapter torneigsAdapter = new TorneigsAdapter();

@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_marginBottom="35dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/info_button"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
             android:layout_marginHorizontal="1dp"
             android:layout_marginStart="2dp"
+            android:layout_marginTop="-10dp"
             android:layout_weight="1"
-            android:paddingBottom="10dp"
             android:backgroundTint="@color/purple_500"
-
             android:paddingTop="20dp"
+
+            android:paddingBottom="10dp"
             android:text="Info"
             android:textColor="@color/black" />
 
         <Button
             android:id="@+id/equips_button"
             android:layout_width="1dp"
-            android:layout_marginTop="-7dp"
-            android:paddingBottom="10dp"
-            android:backgroundTint="@color/teal_200"
-
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="-7dp"
+
             android:layout_weight="1"
+            android:backgroundTint="@color/teal_200"
             android:paddingTop="20dp"
+            android:paddingBottom="10dp"
             android:text="Equips" />
 
         <Button
@@ -47,44 +47,346 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="-7dp"
             android:layout_marginEnd="2dp"
             android:layout_weight="1"
-            android:paddingTop="20dp"
-            android:text="Partits"
-            android:layout_marginTop="-7dp"
-            android:paddingBottom="10dp"
             android:backgroundTint="@color/teal_200"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Partits"
 
             />
 
 
     </LinearLayout>
 
-
     <ScrollView
-        android:id="@+id/scrollview"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabs">
+        android:layout_height="707dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/purple_500"
+        android:fillViewport="true"
+        android:translationY="40dp">
 
-
-        <TextView
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Nom del torneig seleccionat"
-            android:textAlignment="center"
-            android:textFontWeight="700"
-            android:textSize="26dp" />
+
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            android:nestedScrollingEnabled="true"
+            android:padding="10dp"
+            app:alignContent="space_between"
+            app:alignItems="center"
+            app:flexDirection="column"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_maxWidth="300dp"
+                android:minWidth="250dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nomTorneig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="300dp"
+                    android:padding="20dp"
+                    android:text="Text de prova que tal funciona"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="32sp" />
+
+                <ImageView
+                    android:id="@+id/fotoTorneig"
+android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="30dp"
+                    android:padding="5dp"
+                    android:src="@drawable/background" />
+            </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                app:layout_maxWidth="300dp"
+                android:minWidth="280dp"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Localització: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/textLloc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+
+                    android:text="Institut Puig Castellar"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_maxWidth="250dp"
+                android:minWidth="250dp"
+
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Dia: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/textData"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_maxWidth="250dp"
+                android:minWidth="200dp"
+                >
+
+                <TextView
+                    android:id="@+id/titolPresentacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxWidth="300dp"
+                    android:padding="20dp"
+                    android:text="Presentació: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/textBenvinguda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="300dp"
+                    android:minWidth="250dp"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/mapa"
+                android:layout_width="wrap_content"
+                app:layout_maxWidth="300dp"
+
+                android:minWidth="280dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_maxWidth="300dp"
+                android:minWidth="300dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/titolNormes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxWidth="300dp"
+
+                    android:padding="20dp"
+                    android:text="Normes: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="28sp" />
+                <!--
+                Aki igual una llista o un recycler
+                -->
+                <TextView
+                    android:id="@+id/textNormes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="1. f. tira (‖ pieza delgada de tela o papel).
+
+2. f. Señal larga y estrecha o línea que, por combinación de un color con otro, se forma artificial o naturalmente en un cuerpo cualquiera, y con especialidad en telas o tejidos.
+
+3. f. Enumeración, generalmente en forma de columna, de personas, cosas, cantidades, etc., que se hace con determinado propósito.
+
+lista civil
+
+1. f. Dotación asignada al monarca y a su familia en el presupuesto del Estado.
+
+lista de boda, o lista de bodas
+
+1. f. Relación de objetos y enseres que interesan a los futuros contrayentes, la cual se entrega en un establecimiento comercial a fin de orientar a los invitados a la boda en la elección de sus obsequios.
+
+lista de cartería
+
+1. f. Oficina a la que llegan los envíos postales que no han sido entregados en el domicilio del destinatario.
+
+lista de correos
+
+1. f. En las casas de correos, oficina a la cual se dirigen las cartas y paquetes cuyos destinatarios han de ir a ella a recogerlos.
+
+lista de raya
+
+1. f. Méx. nómina (‖ relación de individuos que perciben haberes)."
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_maxWidth="300dp"
+                android:minWidth="280dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/titolPremi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxWidth="300dp"
+                    android:padding="20dp"
+                    android:text="Premis: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:id="@+id/imatgeTrofeu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxHeight="200dp"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_menu_myplaces" />
+
+
+                <TextView
+                    android:id="@+id/textPremis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_maxWidth="300dp"
+                android:minWidth="280dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/titolHoraris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxWidth="300dp"
+                    android:padding="20dp"
+                    android:text="Horaris: "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:id="@+id/imatgeCalendari"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxHeight="200dp"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_menu_today" />
+
+                <!-- aki un calendari seria genial -->
+
+                <TextView
+                    android:id="@+id/textHoraris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+            <!--AL FINAL UN RECYCLER HORITZONTAL DE IMATGES QUE VULGUIN PENJAR ELS QUE CREIN EL TORNEIG I QUE PUGUIN ACTUALITZAR-->
+            <!--  <WebView
+                  android:id="@+id/webView"
+
+                  android:layout_width="368dp"
+
+                  android:layout_height="495dp"
+                  tools:layout_editor_absoluteX="8dp"
+                  tools:layout_editor_absoluteY="8dp" />-->
+
+
+            <!--Final que fa de marge inferior-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </Space>
+
+
+        </com.google.android.flexbox.FlexboxLayout>
     </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
 
 
