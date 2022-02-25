@@ -224,6 +224,7 @@ android:layout_gravity="center"
                     android:textColor="@color/purple_700"
                     android:textSize="28sp" />
 
+
                 <ImageView
                     android:id="@+id/imatgeTrofeu"
                     android:layout_width="wrap_content"
@@ -232,7 +233,6 @@ android:layout_gravity="center"
                     android:maxHeight="200dp"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_myplaces" />
-
 
                 <TextView
                     android:id="@+id/textPremis"

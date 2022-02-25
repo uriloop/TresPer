@@ -8,6 +8,8 @@ import uri.dam.tresper.torneigs.TorneigElement;
 public class RepositoriEquips {
 
 
+
+
     List<EquipElement> equipsList = new ArrayList<>();
 
     interface Callback {
@@ -15,12 +17,12 @@ public class RepositoriEquips {
     }
 
     RepositoriEquips(){
+    /*    equipsList.add(new EquipElement("The Winners", "Los mejores sin dudarlo. ","uriloop","https://brandemia.org/sites/default/files/sites/default/files/milwaukee_bucks_logo_nuevo_logo.png","user1","user2","user3"));
         equipsList.add(new EquipElement("The Winners", "Los mejores sin dudarlo. ","uriloop","https://brandemia.org/sites/default/files/sites/default/files/milwaukee_bucks_logo_nuevo_logo.png","user1","user2","user3"));
         equipsList.add(new EquipElement("The Winners", "Los mejores sin dudarlo. ","uriloop","https://brandemia.org/sites/default/files/sites/default/files/milwaukee_bucks_logo_nuevo_logo.png","user1","user2","user3"));
         equipsList.add(new EquipElement("The Winners", "Los mejores sin dudarlo. ","uriloop","https://brandemia.org/sites/default/files/sites/default/files/milwaukee_bucks_logo_nuevo_logo.png","user1","user2","user3"));
         equipsList.add(new EquipElement("The Winners", "Los mejores sin dudarlo. ","uriloop","https://brandemia.org/sites/default/files/sites/default/files/milwaukee_bucks_logo_nuevo_logo.png","user1","user2","user3"));
-        equipsList.add(new EquipElement("The Winners", "Los mejores sin dudarlo. ","uriloop","https://brandemia.org/sites/default/files/sites/default/files/milwaukee_bucks_logo_nuevo_logo.png","user1","user2","user3"));
-
+*/
     }
 
     public List<EquipElement> obtener() {

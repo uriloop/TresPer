@@ -1,8 +1,26 @@
 package uri.dam.tresper.equips;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EquipElement {
 
-    public EquipElement(String nom, String descripcio, String creador, String imatge, String user1, String user2, String user3) {
+    List<User> participants= new ArrayList<>();
+    String nom, descripcio, imatge;
+    User creador;
+
+    public EquipElement(String nom, String descripcio, User creador, String imatge, List<User> users) {
+
+        this.nom= nom;
+        this.descripcio= descripcio;
+        this.creador= creador;
+        this.imatge= imatge;
+        for (User user:
+             users) {
+            participants.add(user);
+        }
+
+
     }
 
 
