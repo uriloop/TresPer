@@ -24,15 +24,33 @@
 
     Paleta 3
     -->
-      <color name="purple_200">#FFDE96</color>
-    <color name="purple_500">#FFB13E</color>
-    <color name="purple_700">#DC6700</color>
+
+    <color name="text_fosc">#252525</color>
+    <color name="text_clar">#363636</color>
+    <color name="text_tronja">#BAFF6F00</color>
+    <color name="text_especial">#2196F3</color>
+
+    <color name="background">#BAFFFFFF</color>
+    <color name="targeta">#F9ECD4</color>
+    <color name="vermell_tauler">#F7BD0000</color>
+
+    <color name="purple_200">#252525</color>
+    <color name="purple_500">#3BFF8333</color>
+    <color name="purple_700">#F29C15</color>
     <color name="teal_200">#FF9800</color>
     <color name="teal_700">#2196F3</color>
-    <color name="black">#3C2808</color>
+    <color name="black">#AD000000</color>
     <color name="white">#F9ECD4</color>
-
-
+    <color name="tab_pulsat_text">#F7BF3D3D</color>
+    <color name="tab_no_pulsat_text">#121212</color>
+    <color name="tab_pulsat">#F8CA50</color>
+    <color name="tab_no_pulsat">#F39A15</color>
+    <color name="bottom_text">#252525</color>
+    <color name="bottom_text_focus">#F7BD0000</color>
+    <color name="bottom_icono">#363636</color>
+    <color name="bottom_icono_focus">#F7BD0000</color>
+    <color name="bottom_fons">#FF9800</color>
+    <color name="bottom_fons_focus">#2196F3</color>
 
 
 

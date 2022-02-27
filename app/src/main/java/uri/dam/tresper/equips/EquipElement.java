@@ -23,6 +23,23 @@ public class EquipElement {
 
     }
 
+    public List<User> getParticipants() {
+        return participants;
+    }
 
+    public String getNom() {
+        return nom;
+    }
 
+    public String getDescripcio() {
+        return descripcio;
+    }
+
+    public String getImatge() {
+        return imatge;
+    }
+
+    public User getCreador() {
+        return creador;
+    }
 }

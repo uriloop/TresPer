@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginBottom="35dp"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-
+    android:layout_marginBottom="35dp"
+    android:orientation="vertical">
 
 
     <ScrollView
@@ -15,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="5dp"
-        android:background="@color/purple_500"
+        android:background="@color/background"
         android:translationY="40dp"
 
         >
@@ -23,23 +21,23 @@
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/flexBox"
             android:layout_width="match_parent"
-android:layout_marginTop="10dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="55dp"
             android:nestedScrollingEnabled="true"
             android:padding="10dp"
-            app:alignContent="space_between"
-            app:alignItems="center"
-            app:flexDirection="column"
+            app:alignContent="stretch"
+            app:alignItems="flex_start"
+            app:flexDirection="row"
             app:flexWrap="wrap"
             app:justifyContent="space_around">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_maxWidth="300dp"
                 android:minWidth="250dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_maxWidth="320dp">
 
                 <TextView
                     android:id="@+id/nomTorneig"
@@ -47,92 +45,35 @@ android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:maxWidth="300dp"
                     android:padding="20dp"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
                     android:text="Text de prova que tal funciona"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
-                    android:textSize="32sp"
-                    android:shadowDy="2"
-                    android:shadowDx="2"
-                    android:shadowColor="@color/teal_700"
-                    android:shadowRadius="4"/>
+                    android:textColor="@color/text_tronja"
+                    android:textSize="32sp" />
 
                 <ImageView
                     android:id="@+id/fotoTorneig"
-android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
+                    android:layout_gravity="center"
                     android:layout_marginBottom="30dp"
                     android:padding="5dp"
                     android:src="@drawable/background" />
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                app:layout_maxWidth="300dp"
-                android:minWidth="280dp"
 
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:text="Localització: "
-                    android:textAlignment="center"
-                    android:textColor="@color/purple_700"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/textLloc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-
-                    android:text="Institut Puig Castellar"
-                    android:textAlignment="center"
-                    android:textColor="@color/purple_700"
-                    android:textSize="18sp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_maxWidth="250dp"
-                android:minWidth="250dp"
-
-
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:text="Dia: "
-                    android:textAlignment="center"
-                    android:textColor="@color/purple_700"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/textData"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/purple_700"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_maxWidth="250dp"
                 android:minWidth="200dp"
-                >
+                android:orientation="vertical"
+                app:layout_wrapBefore="true"
+
+                app:layout_maxWidth="320dp">
 
                 <TextView
                     android:id="@+id/titolPresentacio"
@@ -143,38 +84,42 @@ android:layout_gravity="center"
                     android:padding="20dp"
                     android:text="Presentació: "
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_tronja"
                     android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/textBenvinguda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxWidth="300dp"
+                    android:maxWidth="320dp"
                     android:minWidth="250dp"
                     android:padding="20dp"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_clar"
                     android:textSize="18sp" />
             </LinearLayout>
 
 
+
+<!--
+
             <ImageView
                 android:id="@+id/mapa"
                 android:layout_width="wrap_content"
-                app:layout_maxWidth="300dp"
-
-                android:minWidth="280dp"
                 android:layout_height="wrap_content"
-                android:padding="5dp" />
+                app:layout_wrapBefore="true"
+
+                />
+-->
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_maxWidth="300dp"
                 android:minWidth="300dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_maxWidth="320dp"
+                >
 
 
                 <TextView
@@ -182,12 +127,12 @@ android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:maxWidth="300dp"
+                    android:maxWidth="320dp"
 
                     android:padding="20dp"
                     android:text="Normes: "
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_tronja"
                     android:textSize="28sp" />
                 <!--
                 Aki igual una llista o un recycler
@@ -199,29 +144,30 @@ android:layout_gravity="center"
                     android:padding="2dp"
                     android:text="@string/text_llarg"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_clar"
                     android:textSize="18sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                app:layout_maxWidth="300dp"
-                android:minWidth="280dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:minWidth="280dp"
+                android:orientation="vertical"
+                app:layout_maxWidth="320dp">
 
 
                 <TextView
                     android:id="@+id/titolPremi"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:maxWidth="300dp"
                     android:padding="20dp"
                     android:text="Premis: "
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_tronja"
+
                     android:textSize="28sp" />
 
 
@@ -241,30 +187,33 @@ android:layout_gravity="center"
                     android:padding="2dp"
                     android:text="A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_clar"
+                    android:maxWidth="320dp"
+
                     android:textSize="18sp" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                app:layout_maxWidth="300dp"
-                android:minWidth="280dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:minWidth="280dp"
+                android:orientation="vertical"
+                app:layout_maxWidth="320dp">
 
 
                 <TextView
                     android:id="@+id/titolInscripcio"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:maxWidth="300dp"
                     android:padding="20dp"
                     android:text="Inscripcio: "
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_tronja"
+
                     android:textSize="28sp" />
 
                 <ImageView
@@ -284,30 +233,32 @@ android:layout_gravity="center"
                     android:padding="2dp"
                     android:text="A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_clar"
+                    android:maxWidth="320dp"
+
                     android:textSize="18sp" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                app:layout_maxWidth="300dp"
-                android:minWidth="280dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:minWidth="280dp"
+                android:orientation="vertical"
+                app:layout_maxWidth="320dp">
 
 
                 <TextView
                     android:id="@+id/titolHoraris"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:maxWidth="300dp"
                     android:padding="20dp"
                     android:text="Horaris: "
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_tronja"
                     android:textSize="28sp" />
 
                 <ImageView
@@ -326,9 +277,11 @@ android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
+                    android:maxWidth="320dp"
+
                     android:text="A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/text_clar"
                     android:textSize="18sp" />
 
 
@@ -349,7 +302,7 @@ android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:src="@drawable/pilota" />
 
             <Space
                 android:layout_width="match_parent"
@@ -360,12 +313,12 @@ android:layout_gravity="center"
 
         </com.google.android.flexbox.FlexboxLayout>
     </ScrollView>
+
     <LinearLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/info_button"
@@ -375,12 +328,12 @@ android:layout_gravity="center"
             android:layout_marginStart="2dp"
             android:layout_marginTop="-10dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/purple_500"
             android:paddingTop="20dp"
 
             android:paddingBottom="10dp"
             android:text="Info"
-            android:textColor="@color/black" />
+            android:backgroundTint="@color/tab_pulsat"
+            android:textColor="@color/tab_pulsat_text" />
 
         <Button
             android:id="@+id/equips_button"
@@ -390,7 +343,8 @@ android:layout_gravity="center"
             android:layout_marginTop="-7dp"
 
             android:layout_weight="1"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/tab_no_pulsat"
+            android:textColor="@color/tab_no_pulsat_text"
             android:paddingTop="20dp"
             android:paddingBottom="10dp"
             android:text="Equips" />
@@ -403,7 +357,8 @@ android:layout_gravity="center"
             android:layout_marginTop="-7dp"
             android:layout_marginEnd="2dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/tab_no_pulsat"
+            android:textColor="@color/tab_no_pulsat_text"
             android:paddingTop="20dp"
             android:paddingBottom="10dp"
             android:text="Partits"

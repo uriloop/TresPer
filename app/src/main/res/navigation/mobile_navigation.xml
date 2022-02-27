@@ -142,9 +142,12 @@
     </fragment>
     <fragment
         android:id="@+id/equipsTorneigFragment"
-        android:name="uri.dam.tresper.torneigs.EquipsTorneigFragment"
+        android:name="uri.dam.tresper.equips.EquipsTorneigFragment"
         android:label="fragment_equips_torneig"
         tools:layout="@layout/fragment_equips_torneig">
+        <action
+            android:id="@+id/action_go_to_participants"
+            app:destination="@+id/equipFragment"/>
         <action
             android:id="@+id/action_go_to_classi"
             app:destination="@id/classiTorneigFragment" />
@@ -180,6 +183,24 @@
         <action
             android:id="@+id/action_go_to_personal"
             app:destination="@+id/navigation_personal" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipFragment"
+        android:name="uri.dam.tresper.equips.EquipFragment"
+        android:label="fragment_equip"
+        tools:layout="@layout/fragment_equip">
+        <action
+            android:id="@+id/action_go_to_equips"
+            app:destination="@id/equipsTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
     </fragment>
 
 

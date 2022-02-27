@@ -20,20 +20,21 @@
     <com.tuyenmonkey.mkloader.MKLoader
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:background="@color/black"
+        android:background="@color/background"
         android:fitsSystemWindows="true"
         android:visibility="gone"
 
-        android:outlineSpotShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/background"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:mk_color="@color/teal_700"
+
+        app:mk_color="@color/text_especial"
         app:mk_type="Whirlpool" />
 
 </LinearLayout>

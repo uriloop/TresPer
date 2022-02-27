@@ -62,9 +62,10 @@ public class InfoTorneigFragment extends Fragment {
 
         binding.nomTorneig.setText(torneigsViewModel.seleccionat().getValue().getNomTorneig());
         binding.textBenvinguda.setText(torneigsViewModel.seleccionat().getValue().getDescripcio());
-        binding.textData.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());
-       /* binding.mapa.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());*/
+/*        binding.textData.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());
+       *//* binding.mapa.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());*//*
 
+        binding.textLloc.setText(torneigsViewModel.seleccionat().getValue().getLocalitzacio());*/
 /*
         binding.webView.loadDataWithBaseURL(null, "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1645763192800!6m8!1m7!1s8S_phpY9th7ILk73H-Xhdg!2m2!1d41.45588230455805!2d2.201101338185295!3f133.03038376116046!4f1.182737709026739!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>", "text/html", "utf-8", null);
 */
@@ -73,9 +74,9 @@ public class InfoTorneigFragment extends Fragment {
                 .centerInside()
                 .into(binding.fotoTorneig);
 
-        Glide.with(getContext()).load("https://www.google.es/maps/@41.4558823,2.2011013,3a,75y,133.03h,91.18t/data=!3m6!1e1!3m4!1s8S_phpY9th7ILk73H-Xhdg!2e0!7i16384!8i8192")
+        /*Glide.with(getContext()).load("https://www.google.es/maps/@41.4558823,2.2011013,3a,75y,133.03h,91.18t/data=!3m6!1e1!3m4!1s8S_phpY9th7ILk73H-Xhdg!2e0!7i16384!8i8192")
                 .centerInside()
-                .into(binding.mapa);
+                .into(binding.mapa);*/
 
         binding.equipsButton.setOnClickListener(new View.OnClickListener() {
             @Override

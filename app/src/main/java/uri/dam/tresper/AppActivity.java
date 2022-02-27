@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.AttributeSet;
@@ -48,7 +49,15 @@ public class AppActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
+getWindow().setNavigationBarColor(getResources().getColor(R.color.tab_no_pulsat_text));
 
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }else{
+            //binding.navView.setItemIconSize(0);
+
+
+        }
 
 
     }
@@ -69,6 +78,7 @@ public class AppActivity extends AppCompatActivity {
 
 
 
+
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
 
@@ -76,7 +86,7 @@ public class AppActivity extends AppCompatActivity {
 /*
         menu.removeItem(R.id.action_crear_torneig);
 */
-
+        menu.setQwertyMode(true);
 
         return super.onPrepareOptionsMenu(menu);
     }

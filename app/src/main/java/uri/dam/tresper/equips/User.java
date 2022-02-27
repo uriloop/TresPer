@@ -8,4 +8,12 @@ public class User {
         this.nom = nom;
         this.imatge = imatge;
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getImatge() {
+        return imatge;
+    }
 }

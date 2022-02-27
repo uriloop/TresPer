@@ -1,5 +1,6 @@
 package uri.dam.tresper.torneigs;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.bumptech.glide.Glide;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentClassiTorneigBinding;
@@ -32,6 +35,17 @@ public class ClassiTorneigFragment extends Fragment {
 
         torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
         navController = Navigation.findNavController(view);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }else{
+            binding.imatgeView.setVisibility(View.GONE);
+        }
+
+
+        Glide.with(getContext()).load(torneigsViewModel.torneigElement.getImatgeCartell())
+                .centerInside()
+                .into(binding.imatgeView);
+        binding.nomTorneig.setText(torneigsViewModel.seleccionat().getValue().getNomTorneig());
 
         binding.infoButton.setOnClickListener(new View.OnClickListener() {
             @Override

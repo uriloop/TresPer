@@ -38,7 +38,6 @@ public class TorneigsFragment extends Fragment {
     private FragmentTorneigsBinding binding;
     TorneigsViewModel torneigsViewModel;
     RecyclerView recyclerView;
-    ArrayList<String> arrayList = new ArrayList<>();
 
 
     @Override
@@ -127,6 +126,8 @@ public class TorneigsFragment extends Fragment {
             TorneigElement torneigElement = torneigElementList.get(position);
 
             holder.binding.nomTorneigView.setText(torneigElement.getNomTorneig());
+            holder.binding.llocTorneigView.setText(torneigElement.getLocalitzacio());
+
             holder.binding.dataView.setText(torneigElement.getDiaIhora());
             Glide.with(getContext()).load(torneigElement.getImatgeCartell())
                     .centerInside()

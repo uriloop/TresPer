@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+android:layout_marginBottom="50dp"    tools:context=".equips.EquipFragment"
+    >
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       >
+
+
+       <TextView
+
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:textAlignment="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Nom de l'equip"
+           android:layout_marginTop="10dp"
+           android:id="@+id/nomEquipView"
+           android:paddingVertical="15dp"
+           android:layout_gravity="center_horizontal"
+           app:layout_constraintTop_toBottomOf="@id/recyclerUsers"
+           android:textSize="32dp"
+           android:textColor="@color/text_fosc"
+
+
+           />
+       <TextView
+           android:textColor="@color/text_fosc"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:textAlignment="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Descripcio equip"
+           android:id="@+id/descripcioEquipView"
+           android:layout_gravity="center_horizontal"
+           app:layout_constraintTop_toBottomOf="@id/recyclerUsers"
+           android:textSize="18dp"
+
+
+           />
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerUsers"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+           tools:listitem="@layout/viewholder_user"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toTopOf="@+id/nomEquipView"
+           />
+
+
+
+       <Space
+           android:layout_width="match_parent"
+           android:layout_height="200dp"
+           />
+
+   </LinearLayout>
+
+</ScrollView>
+

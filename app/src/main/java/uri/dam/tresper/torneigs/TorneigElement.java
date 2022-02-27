@@ -6,6 +6,7 @@ import uri.dam.tresper.equips.EquipElement;
 
 public class TorneigElement {
 
+
     String nomTorneig;
     String descripcio;
     String diaIhora;
@@ -21,7 +22,7 @@ public class TorneigElement {
     List<EquipElement> equipsParticipants;
 
 
-    public TorneigElement(String nomTorneig, String descripcio,String diaIhora,String imatgeCartell,String mapaGoogle,String horaris,String premis, String inscripcio,String normes, List<String> imatges, List<EquipElement> equipsParticipants) {
+    public TorneigElement(String nomTorneig, String descripcio,String diaIhora,String imatgeCartell,String mapaGoogle,String localitzacio,String premis, String inscripcio,String normes, List<String> imatges, List<EquipElement> equipsParticipants) {
                this.nomTorneig = nomTorneig;
         this.descripcio = descripcio;
         this.diaIhora=diaIhora;
@@ -32,6 +33,7 @@ public class TorneigElement {
         this.premis= premis;
         this.normes= normes;
         this.imatgesTorneig= imatges;
+        this.localitzacio=localitzacio;
 
     }
 
