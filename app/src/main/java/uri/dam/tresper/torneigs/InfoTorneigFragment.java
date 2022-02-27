@@ -1,6 +1,7 @@
 package uri.dam.tresper.torneigs;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -68,7 +69,15 @@ public class InfoTorneigFragment extends Fragment {
         binding.textLloc.setText(torneigsViewModel.seleccionat().getValue().getLocalitzacio());*/
 /*
         binding.webView.loadDataWithBaseURL(null, "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1645763192800!6m8!1m7!1s8S_phpY9th7ILk73H-Xhdg!2m2!1d41.45588230455805!2d2.201101338185295!3f133.03038376116046!4f1.182737709026739!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>", "text/html", "utf-8", null);
-*/
+*/    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }else{
+            binding.fotoTorneig.setMinimumHeight(300);
+            binding.fotoTorneig.setMaxHeight(300);
+         /*   binding.equipImatge.setScaleX(0.5f);
+            binding.equipImatge.setScaleY(0.5f);*/
+        }
+
 
         Glide.with(getContext()).load(torneigsViewModel.seleccionat().getValue().getImatgeCartell())
                 .centerInside()

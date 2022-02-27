@@ -12,46 +12,83 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="5dp"
         android:background="@color/background"
         android:translationY="40dp"
 
         >
 
+
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/flexBox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="55dp"
             android:nestedScrollingEnabled="true"
-            android:padding="10dp"
             app:alignContent="stretch"
             app:alignItems="flex_start"
             app:flexDirection="row"
             app:flexWrap="wrap"
             app:justifyContent="space_around">
+            <ImageView
+                android:id="@+id/fotoTorneig"
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minWidth="250dp"
-                android:orientation="vertical"
-                app:layout_maxWidth="320dp">
+                android:cropToPadding="false"
+                android:minHeight="300dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-42dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="20dp"
+                    android:elevation="2dp"
+                    android:src="@drawable/separador_llarg" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:elevation="5dp"
+                    android:scaleY="1.4"
+                    android:scaleX="1.5"
+                    android:src="@drawable/titol_torneig_frame" />
 
                 <TextView
                     android:id="@+id/nomTorneig"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxWidth="300dp"
-                    android:padding="20dp"
-                    android:shadowDx="2"
-                    android:shadowDy="2"
-                    android:shadowRadius="4"
-                    android:text="Text de prova que tal funciona"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="6dp"
+                    android:paddingVertical="10dp"
+                    android:text="Nom del torneig"
+                    android:fontFamily="@font/chunk_five_regular"
+
                     android:textAlignment="center"
                     android:textColor="@color/text_tronja"
-                    android:textSize="32sp" />
+                    android:textSize="36dp" />
+
+
+            </FrameLayout>
+          <!--  <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="250dp"
+                android:paddingTop="40dp"
+                android:orientation="vertical"
+                app:layout_maxWidth="320dp">
+
+
 
                 <ImageView
                     android:id="@+id/fotoTorneig"
@@ -61,8 +98,20 @@
                     android:layout_marginBottom="30dp"
                     android:padding="5dp"
                     android:src="@drawable/background" />
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/nomTorneig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="300dp"
+                    android:padding="5dp"
 
+                    android:shadowRadius="4"
+                    android:text="Text de prova que tal funciona"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_tronja"
+                    android:textSize="32sp" />
+            </LinearLayout>
+-->
 
 
 
@@ -71,16 +120,16 @@
                 android:layout_height="wrap_content"
                 android:minWidth="200dp"
                 android:orientation="vertical"
-                app:layout_wrapBefore="true"
 
                 app:layout_maxWidth="320dp">
 
+
                 <TextView
-                    android:id="@+id/titolPresentacio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:maxWidth="300dp"
+                    android:maxWidth="320dp"
+
                     android:padding="20dp"
                     android:text="Presentació: "
                     android:textAlignment="center"
@@ -97,6 +146,12 @@
                     android:textAlignment="center"
                     android:textColor="@color/text_clar"
                     android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/separador_frame"
+                    />
             </LinearLayout>
 
 
@@ -114,6 +169,8 @@
 
 
             <LinearLayout
+                app:layout_wrapBefore="true"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="300dp"
@@ -146,6 +203,13 @@
                     android:textAlignment="center"
                     android:textColor="@color/text_clar"
                     android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:src="@drawable/separador_frame"
+                    />
 
             </LinearLayout>
 
@@ -191,6 +255,12 @@
                     android:maxWidth="320dp"
 
                     android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/separador_frame"
+                    />
 
 
             </LinearLayout>
@@ -238,6 +308,12 @@
 
                     android:textSize="18sp" />
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/separador_frame"
+                    />
+
 
             </LinearLayout>
 
@@ -283,6 +359,12 @@
                     android:textAlignment="center"
                     android:textColor="@color/text_clar"
                     android:textSize="18sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/separador_frame"
+                    />
+
 
 
             </LinearLayout>
@@ -302,6 +384,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
+                android:paddingBottom="50dp"
                 android:src="@drawable/pilota" />
 
             <Space

@@ -1,127 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="340dp"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/viewholderBackground"
-    android:fitsSystemWindows="true"
-    android:background="@color/background"
-    android:orientation="horizontal"
-    android:padding="10dp"
-    android:layout_margin="10dp"
-    android:layout_marginHorizontal="5dp"
-    android:maxWidth="340dp"
-    android:minWidth="340dp">
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp">
+
+    <TextView
+        android:id="@+id/nomTorneigView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="22dp"
+        android:maxLines="1"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="7dp"
+        android:fontFamily="@font/chunk_five_regular"
+
+        android:text="text mostra blabla"
+        android:textAlignment="center"
+
+        android:textColor="@color/text_tronja"
+        android:textSize="22sp" />
 
     <ImageView
-        android:id="@+id/cartellView"
-        android:layout_width="160dp"
-        android:maxWidth="120dp"
-        android:layout_height="170dp"
-        android:layout_gravity="center_horizontal"
-        android:paddingEnd="10dp" />
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:elevation="1dp"
+        android:src="@drawable/frame_torneig" />
 
-        <TextView
-            android:id="@+id/nomTorneigView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:padding="5dp"
-            android:textColor="@color/text_tronja"
-            android:textAlignment="center"
-            android:textSize="22sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:elevation="10dp"
+
+        android:src="@drawable/titol_torneig_frame" />
+
+    <LinearLayout
+        android:id="@+id/viewholderBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="3dp"
+        android:fitsSystemWindows="true"
+        android:maxWidth="340dp"
+        android:minWidth="340dp"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cartellView"
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:elevation="10dp"
+
+            android:padding="10dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="@color/text_especial"
+            app:civ_border_overlay="true"
+            app:civ_border_width="2dp" />
+        <!--    <ImageView
+                android:id="@+id/cartellView"
+                android:layout_width="145dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:maxWidth="120dp" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minWidth="250dp"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-            app:layout_maxWidth="250dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:text="Dia: "
-                android:textAlignment="center"
-                android:textColor="@color/text_tronja"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/dataView"
-                android:text="10-04-2022"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:textAlignment="center"
-                android:textColor="@color/text_clar"
-                android:textSize="13sp" />
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:paddingTop="3dp"
+                android:paddingEnd="15dp"
+
+                app:layout_maxWidth="250dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dia: "
+                    android:textAlignment="center"
+                    android:textColor="@color/text_tronja"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/dataView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10-04-2022"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_clar"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="280dp"
+                android:orientation="vertical"
+android:layout_marginTop="10dp"
+                android:paddingEnd="15dp"
+                app:layout_maxWidth="320dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lloc: "
+android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_tronja"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/llocTorneigView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Institut Puig Castellar"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_clar"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+            <!--    <TextView
+                    android:id="@+id/llocTorneigView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="@color/text_clar"
+
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:textColor="@color/text_clar"
+
+                    android:id="@+id/dataView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />-->
+
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minWidth="280dp"
-
-            android:orientation="vertical"
-            app:layout_maxWidth="320dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:text="Lloc: "
-                android:textAlignment="center"
-                android:textColor="@color/text_tronja"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/llocTorneigView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:text="Institut Puig Castellar"
-                android:textAlignment="center"
-                android:textColor="@color/text_clar"
-                android:textSize="13sp" />
-        </LinearLayout>
-
-
-        <!--    <TextView
-                android:id="@+id/llocTorneigView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:padding="2dp"
-                android:textColor="@color/text_clar"
-
-                android:textAlignment="center"
-                android:textSize="14sp" />
-
-            <TextView
-                android:textColor="@color/text_clar"
-
-                android:id="@+id/dataView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:padding="2dp"
-                android:textAlignment="center"
-                android:textSize="14sp" />-->
-
 
     </LinearLayout>
 
-</LinearLayout>
 
-
+</FrameLayout>

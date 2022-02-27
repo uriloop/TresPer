@@ -16,7 +16,6 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.google.android.flexbox.AlignItems;
@@ -25,11 +24,11 @@ import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentTorneigsBinding;
+import uri.dam.tresper.models.TorneigElement;
 
 public class TorneigsFragment extends Fragment {
 

@@ -20,6 +20,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:minWidth="300dp"
+        android:fontFamily="@font/chunk_five_regular"
+
         android:padding="10dp"
         android:text="Welcome back!"
         android:textAlignment="center"

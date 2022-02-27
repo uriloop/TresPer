@@ -4,71 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
     android:orientation="vertical"
-android:layout_marginBottom="50dp"    tools:context=".equips.EquipFragment"
-    >
+    tools:context=".equips.EquipFragment">
 
-   <LinearLayout
-       android:orientation="vertical"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/equipImatge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cropToPadding="false"
+            android:minHeight="300dp"
 
-       <TextView
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
 
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           android:textAlignment="center"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Nom de l'equip"
-           android:layout_marginTop="10dp"
-           android:id="@+id/nomEquipView"
-           android:paddingVertical="15dp"
-           android:layout_gravity="center_horizontal"
-           app:layout_constraintTop_toBottomOf="@id/recyclerUsers"
-           android:textSize="32dp"
-           android:textColor="@color/text_fosc"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-42dp">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
 
-           />
-       <TextView
-           android:textColor="@color/text_fosc"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           android:textAlignment="center"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Descripcio equip"
-           android:id="@+id/descripcioEquipView"
-           android:layout_gravity="center_horizontal"
-           app:layout_constraintTop_toBottomOf="@id/recyclerUsers"
-           android:textSize="18dp"
+                android:layout_marginTop="20dp"
+                android:elevation="2dp"
+                android:src="@drawable/separador_llarg" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:elevation="5dp"
+                android:scaleX="1.5"
+                android:scaleY="1.4"
+                android:src="@drawable/titol_torneig_frame" />
 
-           />
-       <androidx.recyclerview.widget.RecyclerView
-           android:id="@+id/recyclerUsers"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical"
-           app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-           tools:listitem="@layout/viewholder_user"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintBottom_toTopOf="@+id/nomEquipView"
-           />
+            <TextView
+                android:id="@+id/nomEquipView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:elevation="6dp"
+                android:paddingVertical="10dp"
+                android:fontFamily="@font/chunk_five_regular"
+                android:text="Nom de l'equip"
+                android:textAlignment="center"
+                android:textColor="@color/text_tronja"
+                android:textSize="32dp" />
 
 
+        </FrameLayout>
 
-       <Space
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           />
+        <TextView
+            android:id="@+id/descripcioEquipView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            android:text="Descripcio equip"
+            android:textAlignment="center"
+            android:textColor="@color/text_fosc"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerUsers"
 
-   </LinearLayout>
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/separador_frame" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/nomEquipView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/viewholder_user" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </LinearLayout>
 
 </ScrollView>
 

@@ -1,4 +1,4 @@
-package uri.dam.tresper.equips;
+package uri.dam.tresper.models;
 
 public class User {
 

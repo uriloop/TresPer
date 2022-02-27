@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="240dp"
+    android:padding="10dp"
+    android:layout_margin="20dp"
+    android:orientation="horizontal"
+    >
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    >
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/equip1Imatge"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+
+        android:elevation="5dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:src="@drawable/ic_launcher_background"
+        app:civ_border_color="@color/text_clar"
+        app:civ_border_overlay="true"
+        app:civ_border_width="2dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom Equip1"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/equip2Imatge"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:elevation="5dp"
+
+            android:padding="10dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="@color/text_clar"
+            app:civ_border_overlay="true"
+            app:civ_border_width="2dp"
+
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom Equip"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/crono"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        >
+
+        <ImageView
+            android:elevation="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/crono_frame"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/crono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quart: "
+            android:layout_marginTop="18dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="88dp"
+            />
+
+        <ImageView
+            android:elevation="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/quart_frame"/>
+
+
+    </FrameLayout>
+
+
+  <!--  <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:src="@drawable/ic_launcher_background"
+>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imatgeEquip1"
+                    android:layout_gravity="center"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pilota" />
+
+                <TextView
+                    android:id="@+id/nomEquip1"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="Text Mostra" />
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+-->
+
+
+<!--
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/crono"
+            android:text="Text Mostra"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/quart"
+            android:text="Text Mostra"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/punts1"
+            android:text="Text Mostra"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/punts2"
+            android:text="Text Mostra"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/pista"
+android:text="Text Mostra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/hora"
+            android:text="Text Mostra"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:elevation="12dp"
+            android:layout_width="120dp"
+
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_height="120dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/text_especial"
+            app:civ_border_overlay="true"
+        android:id="@+id/thumbEquip1"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:elevation="12dp"
+            android:layout_width="120dp"
+
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_height="120dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/text_especial"
+            app:civ_border_overlay="true"
+        android:id="@+id/thumbEquip2"/>
+
+    </FrameLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

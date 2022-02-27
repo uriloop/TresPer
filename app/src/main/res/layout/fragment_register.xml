@@ -18,6 +18,8 @@
         android:minWidth="300dp"
         android:padding="10dp"
         android:text="Register"
+        android:fontFamily="@font/chunk_five_regular"
+
         android:textAlignment="center"
         android:textColor="@color/purple_200"
         android:textSize="28sp" />

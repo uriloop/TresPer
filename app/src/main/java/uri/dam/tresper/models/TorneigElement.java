@@ -1,8 +1,8 @@
-package uri.dam.tresper.torneigs;
+package uri.dam.tresper.models;
 
 import java.util.List;
 
-import uri.dam.tresper.equips.EquipElement;
+import uri.dam.tresper.models.EquipElement;
 
 public class TorneigElement {
 

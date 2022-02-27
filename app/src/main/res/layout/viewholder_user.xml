@@ -10,13 +10,13 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:elevation="12dp"
-        android:layout_width="120dp"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
         android:id="@+id/imatgeUser"
-
+        android:paddingBottom="30dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_launcher_background"
-        android:layout_height="120dp"
+        android:layout_height="match_parent"
         app:civ_border_width="2dp"
         app:civ_border_color="@color/text_especial"
         app:civ_border_overlay="true"/>
@@ -42,6 +42,15 @@
             android:src="@drawable/ic_launcher_background"
             android:scaleType="centerCrop"/>
     </androidx.cardview.widget.CardView>-->
+
+    <ImageView
+        android:src="@drawable/frame_equip_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_user_text"
+        android:elevation="8dp"
+
+        />
     <TextView
         android:id="@+id/nomUser"
         android:layout_width="match_parent"
@@ -49,10 +58,13 @@
         android:layout_gravity="center_horizontal|bottom"
         android:textSize="20dp"
         android:text="Nom jugador"
+        android:layout_marginHorizontal="12dp"
+        android:elevation="10dp"
+        android:shadowColor="@color/background"
         android:textColor="@color/text_tronja"
-        android:background="@color/background"
         android:textAlignment="center"
-        android:padding="10dp"
+        android:layout_marginBottom="12dp"
+
         />
 
 </FrameLayout>

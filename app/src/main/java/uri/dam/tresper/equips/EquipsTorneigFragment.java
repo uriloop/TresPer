@@ -1,6 +1,5 @@
 package uri.dam.tresper.equips;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -29,7 +28,7 @@ import java.util.List;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentEquipsTorneigBinding;
-import uri.dam.tresper.torneigs.TorneigsFragment;
+import uri.dam.tresper.models.EquipElement;
 import uri.dam.tresper.torneigs.TorneigsViewModel;
 
 

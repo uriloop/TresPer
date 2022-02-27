@@ -1,4 +1,4 @@
-package uri.dam.tresper.torneigs;
+package uri.dam.tresper.partits;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentClassiTorneigBinding;
+import uri.dam.tresper.torneigs.TorneigsViewModel;
 
 
 public class ClassiTorneigFragment extends Fragment {
@@ -38,7 +39,10 @@ public class ClassiTorneigFragment extends Fragment {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
         }else{
-            binding.imatgeView.setVisibility(View.GONE);
+            binding.imatgeView.setMinimumHeight(300);
+            binding.imatgeView.setMaxHeight(300);
+         /*   binding.equipImatge.setScaleX(0.5f);
+            binding.equipImatge.setScaleY(0.5f);*/
         }
 
 

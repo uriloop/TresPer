@@ -1,12 +1,11 @@
 package uri.dam.tresper.equips;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -26,9 +25,9 @@ import com.google.android.flexbox.JustifyContent;
 
 import java.util.List;
 
-import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentEquipBinding;
 
+import uri.dam.tresper.models.User;
 import uri.dam.tresper.torneigs.TorneigsViewModel;
 
 
@@ -47,6 +46,15 @@ public class EquipFragment extends Fragment {
         navController = Navigation.findNavController(view);
         EquipAdapter equipAdapter = new EquipAdapter();
         recyclerView = binding.recyclerUsers;
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }else{
+            binding.equipImatge.setMinimumHeight(300);
+            binding.equipImatge.setMaxHeight(300);
+         /*   binding.equipImatge.setScaleX(0.5f);
+            binding.equipImatge.setScaleY(0.5f);*/
+        }
+
 
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this.getContext());
         layoutManager.setFlexDirection(FlexDirection.ROW);
@@ -64,6 +72,7 @@ public class EquipFragment extends Fragment {
         });
 
         binding.recyclerUsers.setAdapter(equipAdapter);
+
 
     }
 
@@ -102,8 +111,12 @@ public class EquipFragment extends Fragment {
             User userElement = usersElementList.get(position);
 
 
+
             binding.nomEquipView.setText(torneigsViewModel.getEquipElement().getNom());
             binding.descripcioEquipView.setText(torneigsViewModel.getEquipElement().getDescripcio());
+            Glide.with(getContext()).load(torneigsViewModel.getEquipElement().getImatge())
+                    .centerInside()
+                    .into(binding.equipImatge);
 
             holder.binding.nomUser.setText(userElement.getNom());
             Glide.with(getContext()).load(userElement.getImatge())

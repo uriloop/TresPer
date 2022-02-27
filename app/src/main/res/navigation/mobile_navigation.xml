@@ -120,7 +120,7 @@
     </fragment>
     <fragment
         android:id="@+id/classiTorneigFragment"
-        android:name="uri.dam.tresper.torneigs.ClassiTorneigFragment"
+        android:name="uri.dam.tresper.partits.ClassiTorneigFragment"
         android:label="fragment_classi_torneig"
         tools:layout="@layout/fragment_classi_torneig">
         <action

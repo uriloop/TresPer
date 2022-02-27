@@ -8,13 +8,15 @@ import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
 
-import uri.dam.tresper.equips.EquipElement;
-import uri.dam.tresper.equips.User;
+import uri.dam.tresper.models.EquipElement;
+import uri.dam.tresper.models.RepositoriTorneigs;
+import uri.dam.tresper.models.TorneigElement;
+import uri.dam.tresper.models.User;
 
 public class TorneigsViewModel extends AndroidViewModel {
 
     RepositoriTorneigs repositoriTorneigs;
-    TorneigElement torneigElement;
+    public TorneigElement torneigElement;
 
     MutableLiveData<List<TorneigElement>> listTorneigsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<TorneigElement> torneigSeleccionat = new MutableLiveData<>();
@@ -45,7 +47,7 @@ public class TorneigsViewModel extends AndroidViewModel {
         return torneigElement;
     }
 
-    MutableLiveData<TorneigElement> seleccionat() {
+    public MutableLiveData<TorneigElement> seleccionat() {
         return torneigSeleccionat;
     }
 
