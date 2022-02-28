@@ -28,7 +28,8 @@
     <color name="text_fosc">#252525</color>
     <color name="text_clar">#363636</color>
     <color name="text_tronja">#BAFF6F00</color>
-    <color name="text_especial">#2196F3</color>
+    <color name="text_tronja_brillant">#FF6F00</color>
+    <color name="text_especial">#F7BD0000</color>
 
     <color name="background2">#BAFFFFFF</color>
     <color name="targeta">#F9ECD4</color>

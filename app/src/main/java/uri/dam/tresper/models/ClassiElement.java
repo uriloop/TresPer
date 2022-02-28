@@ -10,4 +10,8 @@ public class ClassiElement {
     public ClassiElement(List<Ronda> rondes) {
         this.rondes = rondes;
     }
+
+    public List<Ronda> getRondes() {
+        return rondes;
+    }
 }

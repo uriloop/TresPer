@@ -19,6 +19,7 @@
 
 
         <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:alignContent="space_around"
@@ -130,32 +131,63 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:id="@+id/ronda_prev"
                     android:layout_marginEnd="20dp"
                     android:padding="13dp"
                     android:src="@drawable/circle_left" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ronda: "
-                    android:textAlignment="center"
-                    android:textColor="@color/text_fosc"
-                    android:textSize="26dp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ronda: "
+                        android:fontFamily="@font/caveat_bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_clar"
+                        android:textSize="26dp" />
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:id="@+id/ronda_num"
+                        android:text="4"
+                        android:textColor="@color/text_clar"
+                        android:fontFamily="@font/caveat_regular"
+                        android:textSize="40dp"
+                        />
+
+
+                </LinearLayout>
 
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:id="@+id/ronda_next"
+
                     android:layout_marginStart="20dp"
                     android:padding="13dp"
                     android:src="@drawable/circle_right" />
             </LinearLayout>
 
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerPartits"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/viewholder_partit"
+                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
+
+
         </com.google.android.flexbox.FlexboxLayout>
+
 
 
     </ScrollView>

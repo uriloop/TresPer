@@ -20,6 +20,11 @@ public class RepositoriTorneigs  {
         return users;
     }
 
+    public ClassiElement obtenerClassi() {
+
+        return classi;
+    }
+
     interface Callback {
         void cuandoFinalice(List<TorneigElement> torneigsList);
     }
@@ -74,12 +79,12 @@ public class RepositoriTorneigs  {
 
 
         List<Partit> partits= new ArrayList<>();
-        partits.add(new Partit(equips.get(0), equips.get(1),"10:00","p. central",0,0, Partit.quart.PRIMER,"2:10" ));
-        partits.add(new Partit(equips.get(2), equips.get(3),"10:00","p. 2",0,0, Partit.quart.PRIMER,"2:44" ));
+        partits.add(new Partit(equips.get(0), equips.get(1),"10:00","p. central",0,0, Partit.quart.SEGON,"2:10" ));
+        partits.add(new Partit(equips.get(2), equips.get(3),"10:00","pista 2",0,0, Partit.quart.TERCER,"2:44" ));
         partits.add(new Partit(equips.get(4), equips.get(5),"10:15","p. central",0,0, Partit.quart.PRIMER,"3:00" ));
-        partits.add(new Partit(equips.get(6), equips.get(7),"10:15","p. 2",0,0, Partit.quart.PRIMER,"3:00" ));
+        partits.add(new Partit(equips.get(6), equips.get(7),"10:15","pista 2",0,0, Partit.quart.PRIMER,"3:00" ));
         partits.add(new Partit(equips.get(8), equips.get(9),"10:30","p. central",0,0, Partit.quart.PRIMER,"3:00" ));
-        partits.add(new Partit(equips.get(10), equips.get(11),"10:30","p. 2",0,0, Partit.quart.PRIMER,"3:00" ));
+        partits.add(new Partit(equips.get(10), equips.get(11),"10:30","pista 2",0,0, Partit.quart.PRIMER,"3:00" ));
         List<Ronda> rondes=new ArrayList<>();
         rondes.add(new Ronda(partits));
                 classi= new ClassiElement(rondes);

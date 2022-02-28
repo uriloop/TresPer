@@ -8,7 +8,9 @@ import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
 
+import uri.dam.tresper.models.ClassiElement;
 import uri.dam.tresper.models.EquipElement;
+import uri.dam.tresper.models.Partit;
 import uri.dam.tresper.models.RepositoriTorneigs;
 import uri.dam.tresper.models.TorneigElement;
 import uri.dam.tresper.models.User;
@@ -20,6 +22,7 @@ public class TorneigsViewModel extends AndroidViewModel {
 
     MutableLiveData<List<TorneigElement>> listTorneigsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<TorneigElement> torneigSeleccionat = new MutableLiveData<>();
+    ClassiElement classi;
 
     public TorneigsViewModel(@NonNull Application application) {
         super(application);
@@ -28,6 +31,7 @@ public class TorneigsViewModel extends AndroidViewModel {
         listTorneigsMutableLiveData.setValue(repositoriTorneigs.obtener());
         listEquipsMutableLiveData.setValue(repositoriTorneigs.obtenerEquipos());
         listUsersMutableLiveData.setValue(repositoriTorneigs.obtenerUsers());
+        classi=repositoriTorneigs.obtenerClassi();
 
     }
 
@@ -50,7 +54,6 @@ public class TorneigsViewModel extends AndroidViewModel {
     public MutableLiveData<TorneigElement> seleccionat() {
         return torneigSeleccionat;
     }
-
 
 
 /////   equips
@@ -99,6 +102,37 @@ public class TorneigsViewModel extends AndroidViewModel {
         this.user=userElement;
     }
 
+
+
+    ///////////   PARTITS
+
+
+    Partit partitElement;
+
+    public Partit getPartitElement() {
+        return partitElement;
+    }
+
+    MutableLiveData<Integer> ronda= new MutableLiveData<>();
+
+
+    MutableLiveData<List<Partit>> listPartitsMutableLiveData = new MutableLiveData<>();
+
+    MutableLiveData<Partit> partitSeleccionat = new MutableLiveData<>();
+
+
+    public MutableLiveData<List<Partit>> obtenerPartidos(MutableLiveData<Integer> ronda) {
+        this.ronda=ronda;
+        listPartitsMutableLiveData.setValue( classi.getRondes().get(ronda.getValue()-1).getPartits());
+        return listPartitsMutableLiveData;
+    }
+
+
+
+    public void seleccionarPartit(Partit partitElement) {
+        partitSeleccionat.setValue(partitElement);
+        this.partitElement=partitElement;
+    }
 
 
 

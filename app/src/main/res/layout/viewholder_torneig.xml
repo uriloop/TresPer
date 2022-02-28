@@ -13,15 +13,15 @@
         android:layout_height="wrap_content"
         android:elevation="22dp"
         android:maxLines="1"
-        android:paddingHorizontal="30dp"
-        android:paddingTop="7dp"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="9dp"
         android:fontFamily="@font/chunk_five_regular"
 
         android:text="text mostra blabla"
         android:textAlignment="center"
 
         android:textColor="@color/text_tronja"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:elevation="10dp"
-
+android:scaleX="1.2"
         android:src="@drawable/titol_torneig_frame" />
 
     <LinearLayout
@@ -63,7 +63,7 @@
             android:src="@drawable/ic_launcher_background"
             app:civ_border_color="@color/text_especial"
             app:civ_border_overlay="true"
-            app:civ_border_width="2dp" />
+            app:civ_border_width="4dp" />
         <!--    <ImageView
                 android:id="@+id/cartellView"
                 android:layout_width="145dp"

@@ -9,4 +9,8 @@ public class Ronda {
     public Ronda(List<Partit> partits) {
         this.partits = partits;
     }
+
+    public List<Partit> getPartits() {
+        return partits;
+    }
 }

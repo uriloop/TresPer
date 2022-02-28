@@ -21,8 +21,8 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_launcher_background"
         android:layout_height="120dp"
-        app:civ_border_width="2dp"
-        app:civ_border_color="@color/text_especial"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/vermell_tauler"
         app:civ_border_overlay="true"/>
 
 <!--    <ImageView
@@ -59,9 +59,12 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal|bottom"
         android:text="Nom Equip"
+        android:textColor="@color/text_clar"
+        android:maxLength="12"
+        android:maxLines="1"
         android:elevation="18dp"
-
-        android:textSize="18sp"
+android:fontFamily="@font/sport_font"
+        android:textSize="14sp"
         android:layout_marginBottom="8dp"
 
         />

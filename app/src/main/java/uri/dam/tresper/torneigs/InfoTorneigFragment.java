@@ -78,6 +78,33 @@ public class InfoTorneigFragment extends Fragment {
             binding.equipImatge.setScaleY(0.5f);*/
         }
 
+/*        binding.fotoTorneig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(binding.fotoTorneig.getMaxHeight()==600||binding.fotoTorneig.getMinimumHeight()==600||binding.fotoTorneig.getMaxHeight()==800||binding.fotoTorneig.getMinimumHeight()==800){
+                    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                        binding.fotoTorneig.setMinimumHeight(400);
+                        binding.fotoTorneig.setMaxHeight(400);
+                    }else{
+                        binding.fotoTorneig.setMinimumHeight(300);
+                        binding.fotoTorneig.setMaxHeight(300);
+         *//*   binding.equipImatge.setScaleX(0.5f);
+            binding.equipImatge.setScaleY(0.5f);*//*
+                    }
+                }else{
+                    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                        binding.fotoTorneig.setMinimumHeight(800);
+                        binding.fotoTorneig.setMaxHeight(800);
+                    }else {
+                        binding.fotoTorneig.setMinimumHeight(600);
+                        binding.fotoTorneig.setMaxHeight(600);
+                    }
+
+                }
+            }
+        });*/
+
+
 
         Glide.with(getContext()).load(torneigsViewModel.seleccionat().getValue().getImatgeCartell())
                 .centerInside()
