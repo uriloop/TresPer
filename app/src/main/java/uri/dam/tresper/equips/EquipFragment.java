@@ -10,8 +10,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,7 @@ import com.google.android.flexbox.JustifyContent;
 
 import java.util.List;
 
+import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentEquipBinding;
 
 import uri.dam.tresper.models.User;
@@ -122,6 +125,24 @@ public class EquipFragment extends Fragment {
             Glide.with(getContext()).load(userElement.getImatge())
                     .centerInside()
                     .into(holder.binding.imatgeUser);
+
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    binding.progressBar.setVisibility(View.VISIBLE);
+                    binding.recyclerUsers.setVisibility(View.GONE);
+                    new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
+                        @Override
+                        public void run() {
+                            torneigsViewModel.seleccionarUser(userElement);
+                            NavHostFragment.findNavController(EquipFragment.this)
+                                    .navigate(R.id.action_go_to_perfil);
+                        }
+                    }, 500);
+                }
+            });
 
 
         }

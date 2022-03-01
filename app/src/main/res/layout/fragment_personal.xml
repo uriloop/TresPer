@@ -86,6 +86,8 @@
             app:flexWrap="wrap"
             app:justifyContent="center">
 
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layoutConstrained"
                 android:layout_width="wrap_content"
@@ -105,15 +107,24 @@
                         android:id="@+id/imatge_fons_perfil"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:minHeight="200dp"
                         android:scaleType="centerCrop" />
-
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="200dp"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="22dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separador_llarg" />
                     <FrameLayout
                         android:id="@+id/nom_user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|top"
                         android:layout_marginTop="180dp"
-                        android:elevation="10dp"
+                        android:elevation="28dp"
 
                         >
 
@@ -138,6 +149,7 @@
                             android:src="@drawable/titol_equip_frame" />
 
 
+
                     </FrameLayout>
 
                     <!-- <ImageView
@@ -155,27 +167,37 @@
                         android:layout_height="120dp"
                         android:layout_gravity="center|top"
                         android:layout_marginTop="80dp"
-                        android:elevation="5dp"
+                        android:elevation="25dp"
                         android:padding="5dp"
+
                         android:src="@drawable/ic_launcher_background"
                         app:civ_border_color="@color/tauler_clar"
                         app:civ_border_overlay="true"
                         app:civ_border_width="2dp" />
 
 
-                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|top"
-                        android:layout_marginTop="170dp"
+                        android:layout_marginTop="200dp"
                         android:elevation="20dp"
                         card_view:cardBackgroundColor="@color/background2"
                         card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="10dp"
                         card_view:contentPadding="10dp">
 
+                        <ImageView
+                            android:id="@+id/CardviewFalse"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:cropToPadding="true"
+                            android:visibility="visible"
+
+                            android:scaleType="fitXY"
+                            android:src="@drawable/frame_torneig" />
 
                         <LinearLayout
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -188,7 +210,7 @@
                                 android:id="@+id/titol_card"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="57dp"
+                                android:layout_marginTop="17dp"
                                 android:fontFamily="@font/osw_regular"
                                 android:text="Em dic Albert i gaudeixo d'aquest esport. Si voleu quedar solc baixar pel polideportiu del carrer carrasco IV. Bona smashada! ;)"
                                 android:textAlignment="center"
@@ -198,7 +220,7 @@
                                 android:id="@+id/text_card"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="15dp"
                                 android:fontFamily="@font/osw_regular"
                                 android:paddingBottom="10dp"
                                 android:text="Usuari desde:     126 dies"
@@ -208,7 +230,7 @@
                         </LinearLayout>
 
 
-                    </androidx.cardview.widget.CardView>
+                    </FrameLayout>
 
 
                 </FrameLayout>
@@ -234,9 +256,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="20dp"
+                    android:orientation="vertical"
 
-                    android:orientation="vertical">
+                    android:padding="20dp">
 
                     <TextView
 
@@ -244,16 +266,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
-                        android:text="Inscrit"
                         android:paddingBottom="5dp"
+                        android:text="Inscrit"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/trofeu_color"
-                        />
+                        android:src="@drawable/trofeu_color" />
 
                     <!-- <TextView
                          android:id="@+id/text_card2"
@@ -287,53 +308,53 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-android:padding="20dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <TextView
-                        android:paddingBottom="5dp"
-
                         android:id="@+id/titol_card3"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
+                        android:paddingBottom="5dp"
                         android:text="Amics"
                         android:textAlignment="center"
                         android:textSize="18sp" />
+
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/team"
-                        />
-                  <!--  <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/osw_regular"
-                        android:text="killer_miller"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
+                        android:src="@drawable/team" />
+                    <!--  <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:fontFamily="@font/osw_regular"
+                          android:text="killer_miller"
+                          android:textAlignment="center"
+                          android:textSize="15sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/osw_regular"
-                        android:text="rata_1"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/osw_regular"
-                        android:text="xatungo"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/osw_regular"
-                        android:text="a_tonito"
-                        android:textAlignment="center"
-                        android:textSize="15sp" />-->
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:fontFamily="@font/osw_regular"
+                          android:text="rata_1"
+                          android:textAlignment="center"
+                          android:textSize="15sp" />
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:fontFamily="@font/osw_regular"
+                          android:text="xatungo"
+                          android:textAlignment="center"
+                          android:textSize="15sp" />
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:fontFamily="@font/osw_regular"
+                          android:text="a_tonito"
+                          android:textAlignment="center"
+                          android:textSize="15sp" />-->
 
 
                 </LinearLayout>
@@ -359,17 +380,17 @@ android:padding="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="20dp"
+                    android:orientation="vertical"
 
-                    android:orientation="vertical">
+                    android:padding="20dp">
 
                     <TextView
-                        android:paddingBottom="5dp"
-
                         android:id="@+id/titol_card4"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
+                        android:paddingBottom="5dp"
                         android:text="Missatges"
                         android:textAlignment="center"
                         android:textSize="18sp" />
@@ -377,13 +398,14 @@ android:padding="20dp"
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/new_message_not_seen"
-                        />
+                        android:src="@drawable/new_message_not_seen" />
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -401,17 +423,17 @@ android:padding="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="20dp"
+                    android:orientation="vertical"
 
-                    android:orientation="vertical">
+                    android:padding="20dp">
 
                     <TextView
-                        android:paddingBottom="5dp"
-
                         android:id="@+id/titol_card5"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
+                        android:paddingBottom="5dp"
                         android:text="Invitacions"
                         android:textAlignment="center"
                         android:textSize="18sp" />
@@ -419,13 +441,14 @@ android:padding="20dp"
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@android:drawable/ic_menu_share"
-                        />
+                        android:src="@android:drawable/ic_menu_share" />
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -443,17 +466,17 @@ android:padding="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="20dp"
+                    android:orientation="vertical"
 
-                    android:orientation="vertical">
+                    android:padding="20dp">
 
                     <TextView
-                        android:paddingBottom="5dp"
-
                         android:id="@+id/titol_card6"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
+                        android:paddingBottom="5dp"
                         android:text="Invitacions"
                         android:textAlignment="center"
                         android:textSize="18sp" />
@@ -461,8 +484,7 @@ android:padding="20dp"
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@android:drawable/ic_menu_share"
-                        />
+                        android:src="@android:drawable/ic_menu_share" />
 
                 </LinearLayout>
 

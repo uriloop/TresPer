@@ -39,6 +39,10 @@ listNovetatMutableLiveData.setValue(repositoriTorneigs.getNovetats());
 
     }
 
+    public User getUser() {
+        return user;
+    }
+
     public MutableLiveData<List<TorneigElement>> obtener() {
         return listTorneigsMutableLiveData;
     }

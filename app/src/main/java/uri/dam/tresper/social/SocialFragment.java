@@ -196,7 +196,7 @@ FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this.getContext())
 
                 case "RECORDATORI_AUTO" :
                     myImageView = (ImageView) holder.binding.iconoNovetat;
-                    myImageView.setImageResource(R.drawable.ic_notifications_black_24dp);
+                    myImageView.setImageResource(R.drawable.bell_icon);
                     break;
 
                 case "NOVA_AMISTAT" :

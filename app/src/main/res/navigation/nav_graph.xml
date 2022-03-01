@@ -18,7 +18,9 @@
 
         <action
             android:id="@+id/action_log_in_to_register"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_to_helpFragment"
             app:destination="@id/helpFragment" />

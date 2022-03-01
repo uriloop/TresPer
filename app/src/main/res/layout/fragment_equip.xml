@@ -12,7 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
 
+            android:outlineSpotShadowColor="@color/background"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:mk_color="@color/text_especial"
+            app:mk_type="Whirlpool" />
         <ImageView
             android:id="@+id/equipImatge"
             android:layout_width="match_parent"

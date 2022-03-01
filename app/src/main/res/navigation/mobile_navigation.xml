@@ -179,6 +179,9 @@
             android:id="@+id/action_go_to_equips"
             app:destination="@id/equipsTorneigFragment" />
         <action
+            android:id="@+id/action_go_to_perfil"
+            app:destination="@id/perfilUsuariFragment" />
+        <action
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
         <action
@@ -271,6 +274,11 @@
         android:name="uri.dam.tresper.PerfilUsuariFragment"
         android:label="fragment_perfil_usuari"
         tools:layout="@layout/fragment_perfil_usuari" />
+    <fragment
+        android:id="@+id/mapaTorneigsFragment"
+        android:name="uri.dam.tresper.MapaTorneigsFragment"
+        android:label="fragment_mapa_torneigs"
+        tools:layout="@layout/fragment_mapa_torneigs" />
 
 
 </navigation>

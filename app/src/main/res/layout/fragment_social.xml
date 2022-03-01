@@ -3,26 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:elevation="10dp"
     android:layout_height="match_parent"
+    android:elevation="10dp"
     tools:context=".social.SocialFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
         android:paddingStart="15dp">
-
 
 
         <ImageView
 
             android:id="@+id/icono_busqueda"
             android:layout_width="10dp"
-            android:layout_gravity="center"
             android:layout_height="40dp"
+            android:layout_gravity="center"
             android:layout_marginHorizontal="8dp"
             android:layout_weight="1"
             android:paddingVertical="5dp"
@@ -38,8 +37,9 @@
 
             android:layout_weight="2"
             android:paddingVertical="20dp"
-            android:popupTheme="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
         <SearchView
             android:layout_width="1dp"
             android:layout_height="40dp"
@@ -48,6 +48,7 @@
             android:layout_weight="9" />
 
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,12 +58,11 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerNovetats"
-            android:paddingTop="0dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/viewholder_novetat"
+            android:paddingTop="0dp"
             app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-            />
+            tools:listitem="@layout/viewholder_novetat" />
 
 
     </ScrollView>

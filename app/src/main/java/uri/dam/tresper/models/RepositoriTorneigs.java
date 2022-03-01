@@ -58,15 +58,21 @@ public class RepositoriTorneigs  {
         users.add(new User("gasoil","https://img.europapress.es/fotoweb/fotonoticia_20210223172852_420_v2.jpg"));
 
         equips.add(new EquipElement("The future team","El Club Bàsquet Santa Coloma (CBSC) és un club català de basquetbol de la ciutat de Santa Coloma de Gramenet.",new User("uriloop", "https://meridiano.net/fotos_meridiano/16451037451325344105.jpg"),"https://cdn5.f-cdn.com/contestentries/1538916/27211451/5d2f59fbd6e6b_thumb900.jpg",users));
-        equips.add(new EquipElement("Sharks","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://previews.123rf.com/images/pixelogan/pixelogan1802/pixelogan180200050/95825930-vecteur-de-logo-d-%C3%A9quipe-de-basket-ball-de-requin.jpg",users));
+        equips.add(new EquipElement("Sharks","El basquetbol, popularment conegut com a bàsquet, és un esport practicat entre dos equips de cinc jugadors en joc cadascun, que cerquen d'introduir una pilota dins de la cistella defensada per l'equip contrari, amb l'objectiu d'aconseguir més punts que l'adversari, tot respectant les regles del joc.\n" +
+                "\n" +
+                "El bàsquet va néixer als Estats Units l'any 1891, inventat per James Naismith,[1] professor d'educació física de la YMCA",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://previews.123rf.com/images/pixelogan/pixelogan1802/pixelogan180200050/95825930-vecteur-de-logo-d-%C3%A9quipe-de-basket-ball-de-requin.jpg",users));
         equips.add(new EquipElement("Draft Grmnt","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.gramenet.cat/fileadmin/user_upload/draftexp.jpg",users));
-        equips.add(new EquipElement("The masters","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.nicepng.com/png/detail/141-1416028_master-basketball-logo-de-equipo-de-los-baloncesto.png",users));
+        equips.add(new EquipElement("The masters","El basquetbol, popularment conegut com a bàsquet, és un esport practicat entre dos equips de cinc jugadors en joc cadascun, que cerquen d'introduir una pilota dins de la cistella defensada per l'equip contrari, amb l'objectiu d'aconseguir més punts que l'adversari, tot respectant les regles del joc.\n" +
+                "\n" +
+                "El bàsquet va néixer als Estats Units l'any 1891, inventat per James Naismith,[1] professor d'educació física de la YMCA",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.nicepng.com/png/detail/141-1416028_master-basketball-logo-de-equipo-de-los-baloncesto.png",users));
         equips.add(new EquipElement("FustaDura team","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://i.pinimg.com/originals/f3/79/38/f379385c99470dc84fbbdaf5f89fa4f1.png",users));
         equips.add(new EquipElement("Gigantes","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://sites.google.com/site/basketfansvenezuela/_/rsrc/1470332658307/liga-profesional-de-baloncesto/gigan.jpg",users));
         equips.add(new EquipElement("Waves team","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/4/2019/03/0007_t_iowa-waves-logo_8.png",users));
         equips.add(new EquipElement("Santos sant Luis","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://imagenes.milenio.com/uj9lbMgYIFa7n4Ba9HeNWHc8VGE=/0x530/https://www.milenio.com/uploads/media/2015/10/21/logo-equipo-santos-san-luis.png",users));
         equips.add(new EquipElement("SNTK team","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.viasona.cat/imatges/clubsesportius/club-basquet-santa-coloma-escut.jpg",users));
-        equips.add(new EquipElement("SNTK team","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.viasona.cat/imatges/clubsesportius/club-basquet-santa-coloma-escut.jpg",users));
+        equips.add(new EquipElement("SNTK team","El basquetbol, popularment conegut com a bàsquet, és un esport practicat entre dos equips de cinc jugadors en joc cadascun, que cerquen d'introduir una pilota dins de la cistella defensada per l'equip contrari, amb l'objectiu d'aconseguir més punts que l'adversari, tot respectant les regles del joc.\n" +
+                "\n" +
+                "El bàsquet va néixer als Estats Units l'any 1891, inventat per James Naismith,[1] professor d'educació física de la YMCA",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.viasona.cat/imatges/clubsesportius/club-basquet-santa-coloma-escut.jpg",users));
         equips.add(new EquipElement("SNTK team","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.viasona.cat/imatges/clubsesportius/club-basquet-santa-coloma-escut.jpg",users));
         equips.add(new EquipElement("SNTK team","Som els millors",new User("uriloop", "https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"),"https://www.viasona.cat/imatges/clubsesportius/club-basquet-santa-coloma-escut.jpg",users));
 
@@ -87,10 +93,15 @@ public class RepositoriTorneigs  {
 
 
         novetats= new ArrayList<>();
+        novetats.add(new Novetat("AVÍS IMPORTANT","https://robertorico.es/wp-content/uploads/2016/11/12-400x600.jpg","SNTK 3x3","EL torneig SNTK 3x3 queda anulat degut al temporal recent que ha deixat desperfectes al camp.","NOTICIA"));
         novetats.add(new Novetat("Nou torneig a la vista!","https://www.sfericbasquet.cat/wp-content/uploads/2020/03/post-per-xarxes.jpg","Torneig Sntk","Hi ha un nou torneig creat fes-li una ullada ;)","NOU_TORNEIG"));
         novetats.add(new Novetat("Ens apuntem?!","https://robertorico.es/wp-content/uploads/2016/11/12-400x600.jpg","jugon_90","Eiii! és el cap de setmana que entra, ja som 2 endevina qui...","MP"));
-        novetats.add(new Novetat("Recordatori inscripció","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","RoboBall"," 1d 21h 10m  Queda molt poc per a que comenci el torneig, no facis tard ;) ","RECORDATORI_AUTO"));
-        novetats.add(new Novetat("Tens un nou amic","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","RoboBall","En jugon_90 t'ha afegit a la seva llista d'amics ;)","NOVA_AMISTAT"));
+        novetats.add(new Novetat("Recordatori inscripció","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","BasquetBot"," 1d 21h 10m  Queda molt poc per a que comenci el torneig, no facis tard ;) ","RECORDATORI_AUTO"));
+        novetats.add(new Novetat("Tens un nou amic","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","BasquetBot","En jugon_90 t'ha afegit a la seva llista d'amics ;)","NOVA_AMISTAT"));
+        novetats.add(new Novetat("Nou torneig a la vista!","https://www.sfericbasquet.cat/wp-content/uploads/2020/03/post-per-xarxes.jpg","Torneig Sntk","Hi ha un nou torneig creat fes-li una ullada ;)","NOU_TORNEIG"));
+        novetats.add(new Novetat("Ens apuntem?!","https://robertorico.es/wp-content/uploads/2016/11/12-400x600.jpg","jugon_90","Eiii! és el cap de setmana que entra, ja som 2 endevina qui...","MP"));
+        novetats.add(new Novetat("Recordatori inscripció","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","BasquetBot"," 1d 21h 10m  Queda molt poc per a que comenci el torneig, no facis tard ;) ","RECORDATORI_AUTO"));
+        novetats.add(new Novetat("Tens un nou amic","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","BasquetBot","En jugon_90 t'ha afegit a la seva llista d'amics ;)","NOVA_AMISTAT"));
 
 
         List<Partit> partits= new ArrayList<>();
