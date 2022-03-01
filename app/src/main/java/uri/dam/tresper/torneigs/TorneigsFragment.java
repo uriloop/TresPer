@@ -42,12 +42,16 @@ public class TorneigsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+       torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
         recyclerView = binding.recyclerView;
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this.getContext());
         layoutManager.setFlexDirection(FlexDirection.ROW);
         layoutManager.setJustifyContent(JustifyContent.SPACE_AROUND);
         layoutManager.setAlignItems(AlignItems.CENTER);
         layoutManager.setFlexWrap(FlexWrap.WRAP);
+        Glide.with(getContext()).load(torneigsViewModel.getFonsPerfil())
+                .centerInside()
+                .into(binding.fotoFonsMur);
 
         recyclerView.setLayoutManager(layoutManager);
 
@@ -123,6 +127,7 @@ public class TorneigsFragment extends Fragment {
         public void onBindViewHolder(@NonNull TorneigViewHolder holder, int position) {
 
             TorneigElement torneigElement = torneigElementList.get(position);
+
 
             holder.binding.nomTorneigView.setText(torneigElement.getNomTorneig());
             holder.binding.llocTorneigView.setText(torneigElement.getLocalitzacio());

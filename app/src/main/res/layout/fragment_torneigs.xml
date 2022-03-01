@@ -1,40 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".torneigs.TorneigsFragment"
-    android:orientation="vertical"
-    android:paddingTop="10dp">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    >
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-        tools:listitem="@layout/viewholder_torneig"
-        android:layout_marginBottom="55dp"
+        tools:context=".torneigs.TorneigsFragment"
         android:orientation="vertical"
-        />
+        >
 
-    <com.tuyenmonkey.mkloader.MKLoader
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:background="@color/background"
-        android:fitsSystemWindows="true"
-        android:visibility="gone"
+        <ImageView
+            android:id="@+id/fotoFonsMur"
 
-        android:outlineSpotShadowColor="@color/background"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cropToPadding="false"
+            android:minHeight="100dp"
 
-        app:mk_color="@color/text_especial"
-        app:mk_type="Whirlpool" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
 
-</LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-44dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="20dp"
+                android:elevation="2dp"
+                android:src="@drawable/separador_llarg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:elevation="5dp"
+                android:scaleY="1.4"
+                android:scaleX="1.5"
+                android:src="@drawable/titol_torneig_frame" />
+
+            <TextView
+                android:id="@+id/textTitol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:elevation="6dp"
+                android:paddingVertical="10dp"
+                android:text="Torneigs 3x3"
+                android:fontFamily="@font/chunk_five_regular"
+
+                android:textAlignment="center"
+                android:textColor="@color/text_tronja"
+                android:textSize="36dp" />
+
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            tools:listitem="@layout/viewholder_torneig"
+            android:layout_marginBottom="55dp"
+            android:orientation="vertical"
+            />
+
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+
+            android:outlineSpotShadowColor="@color/background"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:mk_color="@color/text_especial"
+            app:mk_type="Whirlpool" />
+
+    </LinearLayout>
+   <FrameLayout
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:elevation="10dp"
+       android:layout_marginEnd="23dp"
+       android:layout_marginBottom="77dp"
+
+
+       android:layout_gravity="end|bottom"
+       >
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/floatingMaps"
+           android:background="@color/teal_700"
+           app:elevation="10dp"
+           android:layout_gravity="center"
+           android:alpha="0.7"
+           android:backgroundTint="@color/bottom_fons_focus"
+           android:outlineAmbientShadowColor="@color/bottom_icono_focus"
+
+           />
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:elevation="20dp"
+android:elevation="20dp"
+           android:padding="10dp"
+           android:scaleType="fitXY"
+
+           android:src="@drawable/icono_mapa"/>
+   </FrameLayout>
+</FrameLayout>
