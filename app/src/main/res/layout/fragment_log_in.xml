@@ -7,35 +7,74 @@
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:alignContent="space_around"
     app:alignItems="center"
-    app:layout_flexGrow="@integer/material_motion_duration_long_1"
-    app:flexDirection="row"
+    android:padding="2dp"
+    app:flexDirection="column"
     app:flexWrap="wrap"
-    app:justifyContent="space_around">
+    app:justifyContent="center"
+    app:layout_flexGrow="@integer/material_motion_duration_long_2">
 
 
-    <TextView
-        android:id="@+id/benvinguda"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:minWidth="300dp"
-        android:fontFamily="@font/chunk_five_regular"
+        app:layout_maxHeight="300dp"
+        app:layout_maxWidth="300dp">
 
-        android:padding="10dp"
-        android:text="Welcome back!"
-        android:textAlignment="center"
-        android:textColor="@color/purple_200"
-        android:textColorHint="@color/purple_200"
-        android:textSize="28sp" />
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="100dp"
+
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/team" />
+
+        <TextView
+            android:id="@+id/benvinguda"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/chunk_five_regular"
+            android:gravity="center"
+            android:minWidth="300dp"
+
+            android:padding="10dp"
+            android:text="Bàsquet 3x3"
+            android:textAlignment="center"
+            android:textColor="@color/bottom_icono"
+            android:textColorHint="@color/bottom_icono"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/slogan"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="118dp"
+            android:fontFamily="@font/caveat_regular"
+            android:gravity="center_horizontal"
+            android:minWidth="300dp"
+
+            android:text="En estat pur!"
+            android:textAlignment="center"
+            android:textColor="@color/bottom_icono"
+            android:textColorHint="@color/bottom_icono"
+            android:textSize="34sp" />
+
+    </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/emailLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="300dp"
-        android:id="@+id/emailLayout"
+        android:minWidth="280dp"
         android:orientation="horizontal"
-        android:paddingStart="10dp">
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -46,6 +85,7 @@
         <EditText
             android:id="@+id/editTextEmailAddress"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:backgroundTint="@color/text_tronja"
@@ -54,20 +94,21 @@
             android:minWidth="280dp"
             android:paddingStart="10dp"
             android:paddingLeft="5dp"
-            android:textColor="@color/text_especial"
+            android:textColor="@color/text_clar"
+
             android:textColorHint="@color/text_clar" />
 
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/passLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="300dp"
-        android:id="@+id/passLayout"
-
+        android:minWidth="280dp"
         android:orientation="horizontal"
-        android:paddingStart="10dp">
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -88,18 +129,18 @@
             android:minWidth="280dp"
             android:paddingStart="10dp"
             android:paddingLeft="5dp"
-            android:textColor="@color/text_especial"
+            android:textColor="@color/text_clar"
             android:textColorHint="@color/text_clar" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/forgetPasswd"
-        android:paddingVertical="7dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:minWidth="600dp"
+        android:minWidth="300dp"
+        android:paddingVertical="7dp"
         android:paddingStart="35dp"
         android:paddingEnd="20dp"
         android:text="forget password"
@@ -112,8 +153,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxHeight="20dp"
-        android:minWidth="300dp"
-        android:minHeight="50dp"
+        android:minWidth="280dp"
+        android:minHeight="55dp"
         android:text="Log in"
 
         android:textSize="18sp" />
@@ -123,15 +164,19 @@
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
         android:maxHeight="20dp"
-        android:minWidth="300dp"
-        android:minHeight="50dp"
+        android:minWidth="280dp"
+        android:minHeight="55dp"
         android:text="Register"
         android:textSize="18sp"
+        app:layout_wrapBefore="false"
 
         />
 
     <TextView
+        android:id="@+id/or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -139,7 +184,6 @@
         android:text="- or -"
         android:textAlignment="center"
         android:textColor="@color/text_clar"
-android:id="@+id/or"
         android:textSize="16sp" />
 
     <ImageView
@@ -147,6 +191,8 @@ android:id="@+id/or"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:maxWidth="300dp"
+        android:maxHeight="55dp"
         android:src="@drawable/google_button"
 
         />

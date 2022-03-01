@@ -12,7 +12,6 @@ android:layout_margin="10dp"
     >
 
     <TextView
-        android:visibility="gone"
         android:id="@+id/vs"
         android:layout_width="32dp"
         android:layout_height="50dp"
@@ -98,7 +97,6 @@ android:layout_margin="10dp"
 
 
     <FrameLayout
-        android:visibility="gone"
         android:id="@+id/cronoFrame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -143,7 +141,6 @@ android:layout_margin="10dp"
 
 
     <FrameLayout
-        android:visibility="gone"
         android:id="@+id/frameLayoutpunts1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -187,7 +184,6 @@ android:layout_margin="10dp"
     </FrameLayout>
 
     <FrameLayout
-        android:visibility="gone"
         android:id="@+id/frameLayoutpunts2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -248,7 +244,6 @@ android:elevation="14dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <FrameLayout
-        android:visibility="gone"
         android:id="@+id/quartFrame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

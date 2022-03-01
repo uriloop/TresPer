@@ -25,6 +25,15 @@ public class RepositoriTorneigs  {
         return classi;
     }
 
+    public String getFotoFonsPerfil() {
+        String urlFotoFonsperfil="https://as1.ftcdn.net/v2/jpg/02/77/95/04/1000_F_277950498_PrtIbgrtxoiyD9vkGNsYOqIwWNQeF8mV.jpg" ;
+        return  urlFotoFonsperfil;
+    }
+
+    public String getFotoPerfil() {
+        return  "https://robertorico.es/wp-content/uploads/2016/11/12-400x600.jpg";
+    }
+
     interface Callback {
         void cuandoFinalice(List<TorneigElement> torneigsList);
     }
@@ -33,6 +42,7 @@ public class RepositoriTorneigs  {
     List<EquipElement> equips= new ArrayList<>();
     List<User> users = new ArrayList<>();
     ClassiElement classi;
+    List<Novetat> novetats;
 
     public RepositoriTorneigs(){
 
@@ -76,6 +86,11 @@ public class RepositoriTorneigs  {
         torneigsList.add(new TorneigElement("U13 3x3", "Es un átomo con moléculas, aquella sustancia que no puede ser descompuesta mediante una reacción químicas y, ensus isótopos.","10/02/2022","https://www.basquetgironi.cat/wp-content/uploads/2018/08/ii-torneig-u13-vilafant.jpg","-Not Found-","C/Victor Hugo nº45, Santa Coloma de Gramenet, a l'institut Puig Castellar","A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots","A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots","A part de molta diversio, els guanyadors s'emportaran una samarreta d’obsequi, l’entrada a la piscina del recinte i altres premis per a tots",imatges,equips));
 
 
+        novetats= new ArrayList<>();
+        novetats.add(new Novetat("Nou torneig a la vista!","https://www.sfericbasquet.cat/wp-content/uploads/2020/03/post-per-xarxes.jpg","Torneig Sntk","Hi ha un nou torneig creat fes-li una ullada ;)","NOU_TORNEIG"));
+        novetats.add(new Novetat("Ens apuntem?!","https://robertorico.es/wp-content/uploads/2016/11/12-400x600.jpg","jugon_90","Eiii! és el cap de setmana que entra, ja som 2 endevina qui...","MP"));
+        novetats.add(new Novetat("Recordatori inscripció","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","RoboBall"," 1d 21h 10m  Queda molt poc per a que comenci el torneig, no facis tard ;) ","RECORDATORI_AUTO"));
+        novetats.add(new Novetat("Tens un nou amic","https://pbs.twimg.com/media/DU3oWNgU8AEZXWW.jpg","RoboBall","En jugon_90 t'ha afegit a la seva llista d'amics ;)","NOVA_AMISTAT"));
 
 
         List<Partit> partits= new ArrayList<>();
@@ -91,7 +106,9 @@ public class RepositoriTorneigs  {
 
     }
 
-
+    public List<Novetat> getNovetats() {
+        return novetats;
+    }
 
     public List<TorneigElement> obtener() {
         return torneigsList;

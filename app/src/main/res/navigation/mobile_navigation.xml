@@ -49,21 +49,7 @@
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
     </fragment>
-    <fragment
-        android:id="@+id/navigation_personal"
-        android:name="uri.dam.tresper.personal.PersonalFragment"
-        android:label="fragment_personal"
-        tools:layout="@layout/fragment_personal">
-        <action
-            android:id="@+id/action_go_to_crear_equip"
-            app:destination="@id/crearEquipFragment" />
-        <action
-            android:id="@+id/action_go_to_crear_torneig"
-            app:destination="@id/crearTorneigFragment" />
-        <action
-            android:id="@+id/action_go_to_helpFragment2"
-            app:destination="@id/helpFragment2" />
-    </fragment>
+
     <!--            -->
 
     <fragment
@@ -202,6 +188,89 @@
             android:id="@+id/action_go_to_crear_torneig"
             app:destination="@id/crearTorneigFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/personalAdminFragment"
+        android:name="uri.dam.tresper.personal.PersonalAdminFragment"
+        android:label="fragment_personal_admin"
+        tools:layout="@layout/fragment_personal_admin" >
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+
+
+        <action
+            android:id="@+id/action_go_to_personal_torneigs"
+            app:destination="@id/personalTorneigsFragment" />
+        <action
+            android:id="@+id/action_go_to_personal_novetats"
+            app:destination="@id/navigation_personal" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalTorneigsFragment"
+        android:name="uri.dam.tresper.personal.PersonalTorneigsFragment"
+        android:label="fragment_personal_torneigs"
+        tools:layout="@layout/fragment_personal_torneigs" >
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_personal_admin"
+            app:destination="@id/personalAdminFragment" />
+
+                <action
+            android:id="@+id/action_go_to_personal_novetats"
+            app:destination="@id/navigation_personal" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_personal"
+        android:name="uri.dam.tresper.personal.PersonalFragment"
+        android:label="fragment_personal"
+        tools:layout="@layout/fragment_personal">
+        <action
+            android:id="@+id/action_go_to_crear_equip"
+            app:destination="@id/crearEquipFragment" />
+        <action
+            android:id="@+id/action_go_to_crear_torneig"
+            app:destination="@id/crearTorneigFragment" />
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+
+        <action
+            android:id="@+id/action_go_to_personal_admin"
+            app:destination="@id/personalAdminFragment" />
+        <action
+            android:id="@+id/action_go_to_personal_torneigs"
+            app:destination="@id/personalTorneigsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/avisNewTorneigFragment"
+        android:name="uri.dam.tresper.AvisNewTorneigFragment"
+        android:label="fragment_avis_new_torneig"
+        tools:layout="@layout/fragment_avis_new_torneig" />
+    <fragment
+        android:id="@+id/perfilUsuariFragment"
+        android:name="uri.dam.tresper.PerfilUsuariFragment"
+        android:label="fragment_perfil_usuari"
+        tools:layout="@layout/fragment_perfil_usuari" />
 
 
 </navigation>

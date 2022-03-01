@@ -217,6 +217,7 @@
             android:text="Info"
             android:textColor="@color/tab_no_pulsat_text" />
 
+
         <Button
             android:id="@+id/equips_button"
             android:layout_width="1dp"
@@ -231,7 +232,6 @@
             android:paddingBottom="10dp"
             android:text="Equips"
             android:textColor="@color/tab_no_pulsat_text" />
-
         <Button
             android:id="@+id/partits_button"
             android:layout_width="1dp"

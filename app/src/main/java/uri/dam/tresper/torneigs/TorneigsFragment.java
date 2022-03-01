@@ -133,20 +133,31 @@ public class TorneigsFragment extends Fragment {
                     .into(holder.binding.cartellView);
 
 
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+
+
+            holder.itemView     // Akí el       binding.id_del_progressBar    en vez del holder.itemView
+                    .setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
+                    // lo que passa antes de el run
                     binding.progressBar.setVisibility(View.VISIBLE);
                     binding.recyclerView.setVisibility(View.GONE);
+
+
+
+
                     new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                         @Override
                         public void run() {
+                            // lo que passa despues de x tiempo
+
                             torneigsViewModel.seleccionar(torneigElement);
                             NavHostFragment.findNavController(TorneigsFragment.this)
                                     .navigate(R.id.action_go_to_Info);
                         }
-                    }, 500);
+                    }, 500);  // el tiempo en milisegundos
                 }
             });
             /*

@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import uri.dam.tresper.AppActivity;
@@ -66,8 +67,9 @@ public class LogInFragment extends Fragment {
 
         }else{
 
-           binding.benvinguda.setVisibility(View.GONE);
-           binding.or.setVisibility(View.GONE);
+
+           /*binding.benvinguda.setVisibility(View.GONE);
+           binding.or.setVisibility(View.GONE);*/
 
 
         }

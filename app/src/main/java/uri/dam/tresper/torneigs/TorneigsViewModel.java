@@ -10,6 +10,7 @@ import java.util.List;
 
 import uri.dam.tresper.models.ClassiElement;
 import uri.dam.tresper.models.EquipElement;
+import uri.dam.tresper.models.Novetat;
 import uri.dam.tresper.models.Partit;
 import uri.dam.tresper.models.RepositoriTorneigs;
 import uri.dam.tresper.models.TorneigElement;
@@ -23,6 +24,7 @@ public class TorneigsViewModel extends AndroidViewModel {
     MutableLiveData<List<TorneigElement>> listTorneigsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<TorneigElement> torneigSeleccionat = new MutableLiveData<>();
     ClassiElement classi;
+    String fotoPerfilFons;
 
     public TorneigsViewModel(@NonNull Application application) {
         super(application);
@@ -32,6 +34,8 @@ public class TorneigsViewModel extends AndroidViewModel {
         listEquipsMutableLiveData.setValue(repositoriTorneigs.obtenerEquipos());
         listUsersMutableLiveData.setValue(repositoriTorneigs.obtenerUsers());
         classi=repositoriTorneigs.obtenerClassi();
+fotoPerfilFons= repositoriTorneigs.getFotoFonsPerfil();
+listNovetatMutableLiveData.setValue(repositoriTorneigs.getNovetats());
 
     }
 
@@ -133,6 +137,49 @@ public class TorneigsViewModel extends AndroidViewModel {
         partitSeleccionat.setValue(partitElement);
         this.partitElement=partitElement;
     }
+
+
+    ///// VARIAT
+
+
+    public String getFonsPerfil() {
+        return repositoriTorneigs.getFotoFonsPerfil();
+    }
+
+
+    /////////  NOVETATS
+    Novetat novetat;
+
+    public Novetat getNovetat() {
+        return novetat;
+    }
+
+
+
+
+    MutableLiveData<List<Novetat>> listNovetatMutableLiveData = new MutableLiveData<>();
+
+    MutableLiveData<Novetat> novetatSeleccionat = new MutableLiveData<>();
+
+
+    public MutableLiveData<List<Novetat>> obtenerNovedades() {
+
+        return listNovetatMutableLiveData;
+    }
+
+
+
+    public void seleccionarNovetat(Novetat novetat) {
+        novetatSeleccionat.setValue(novetat);
+        this.novetat=novetat;
+    }
+
+    public String getImatgePerfil() {
+        return repositoriTorneigs.getFotoPerfil();
+    }
+
+
+
 
 
 
