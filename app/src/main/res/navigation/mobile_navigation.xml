@@ -271,7 +271,7 @@
 
     <fragment
         android:id="@+id/perfilUsuariFragment"
-        android:name="uri.dam.tresper.PerfilUsuariFragment"
+        android:name="uri.dam.tresper.personal.PerfilUsuariFragment"
         android:label="fragment_perfil_usuari"
         tools:layout="@layout/fragment_perfil_usuari" >
 
@@ -279,7 +279,7 @@
     </fragment>
     <fragment
         android:id="@+id/mapaTorneigsFragment"
-        android:name="uri.dam.tresper.MapaTorneigsFragment"
+        android:name="uri.dam.tresper.torneigs.MapaTorneigsFragment"
         android:label="fragment_mapa_torneigs"
         tools:layout="@layout/fragment_mapa_torneigs" >
 

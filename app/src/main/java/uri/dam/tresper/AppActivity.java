@@ -50,6 +50,7 @@ public class AppActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
 getWindow().setNavigationBarColor(getResources().getColor(R.color.tab_no_pulsat_text));
+getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 

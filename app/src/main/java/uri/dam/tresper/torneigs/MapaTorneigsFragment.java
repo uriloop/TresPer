@@ -1,9 +1,10 @@
-package uri.dam.tresper;
+package uri.dam.tresper.torneigs;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,8 +22,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
 
+import uri.dam.tresper.R;
+
 import uri.dam.tresper.databinding.FragmentMapaTorneigsBinding;
-import uri.dam.tresper.databinding.FragmentTorneigsBinding;
 import uri.dam.tresper.models.TorneigElement;
 import uri.dam.tresper.models.TorneigsViewModel;
 
@@ -53,6 +55,18 @@ public class MapaTorneigsFragment extends Fragment {
                 googleMap.addMarker(new MarkerOptions().position(pos).title(torneigsList.get(i).getNomTorneig()));
 
             }
+           /* googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                @Override
+                public void onInfoWindowClick(@NonNull Marker marker) {
+                    for (TorneigElement torneig :
+                            torneigsList) {
+                        if (marker.getTitle().equals(torneig.getNomTorneig())){
+                            NavHostFragment.findNavController(MapaTorneigsFragment.this)
+                                    .navigate(R.id.action_go_to_equips);
+                        }
+                    }
+                }
+            });*/
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(pos));
             googleMap.getUiSettings().setCompassEnabled(true);
 
