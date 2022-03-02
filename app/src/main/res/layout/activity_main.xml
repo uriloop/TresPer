@@ -17,7 +17,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            app:title="@string/app_name"
+            android:background="@color/tab_no_pulsat"
             app:popupTheme="@style/Theme.TresPer.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

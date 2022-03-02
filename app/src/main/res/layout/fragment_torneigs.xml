@@ -1,133 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".torneigs.TorneigsFragment"
-        android:orientation="vertical"
         >
 
-        <ImageView
-            android:id="@+id/fotoFonsMur"
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:cropToPadding="false"
-            android:minHeight="100dp"
+            android:layout_height="wrap_content">
 
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-44dp">
-
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".torneigs.TorneigsFragment">
 
-                android:layout_marginTop="20dp"
-                android:elevation="2dp"
-                android:src="@drawable/separador_llarg" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:elevation="5dp"
-                android:scaleY="1.4"
-                android:scaleX="1.5"
-                android:src="@drawable/titol_torneig_frame" />
-
-            <TextView
-                android:id="@+id/textTitol"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:elevation="6dp"
-                android:paddingVertical="10dp"
-                android:text="Torneigs 3x3"
-                android:fontFamily="@font/chunk_five_regular"
-
-                android:textAlignment="center"
-                android:textColor="@color/text_tronja"
-                android:textSize="36dp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
 
-        </FrameLayout>
+                    <SearchView
+                        android:alpha="0.7"
+                        android:focusedByDefault="true"
+                        android:layout_marginTop="10dp"
+                        android:elevation="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+android:background="@color/background"
+                        />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+                    <ImageView
+                        android:id="@+id/fotoFonsMur"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </FrameLayout>
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-44dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="20dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/separador_llarg" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:elevation="5dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.4"
+                        android:src="@drawable/titol_torneig_frame" />
+
+                    <TextView
+                        android:id="@+id/textTitol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="6dp"
+                        android:fontFamily="@font/chunk_five_regular"
+                        android:paddingVertical="10dp"
+                        android:text="Torneigs 3x3"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/text_tronja"
+                        android:textSize="36dp" />
+
+
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="55dp"
+                    android:orientation="vertical"
+                    android:isScrollContainer="false"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                    tools:listitem="@layout/viewholder_torneig" />
+
+                <com.tuyenmonkey.mkloader.MKLoader
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:background="@color/background"
+                    android:fitsSystemWindows="true"
+                    android:outlineSpotShadowColor="@color/background"
+
+                    android:padding="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:mk_color="@color/text_especial"
+                    app:mk_type="Whirlpool" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="77dp"
+
+
+        android:elevation="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingMaps"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-            tools:listitem="@layout/viewholder_torneig"
-            android:layout_marginBottom="55dp"
-            android:orientation="vertical"
-            />
-
-        <com.tuyenmonkey.mkloader.MKLoader
-            android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:background="@color/background"
-            android:fitsSystemWindows="true"
-            android:visibility="gone"
+            android:backgroundTint="@color/tab_pulsat_text"
 
-            android:outlineSpotShadowColor="@color/background"
-            android:padding="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:elevation="10dp"
+            app:rippleColor="@color/bottom_fons_focus"
 
-            app:mk_color="@color/text_especial"
-            app:mk_type="Whirlpool" />
+            />
 
-    </LinearLayout>
-   <FrameLayout
-       android:layout_width="60dp"
-       android:layout_height="60dp"
-       android:elevation="10dp"
-       android:layout_marginEnd="23dp"
-       android:layout_marginBottom="77dp"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
 
-
-       android:layout_gravity="end|bottom"
-       >
-       <com.google.android.material.floatingactionbutton.FloatingActionButton
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:id="@+id/floatingMaps"
-           android:background="@color/teal_700"
-           app:elevation="10dp"
-           android:layout_gravity="center"
-           android:alpha="0.7"
-           android:backgroundTint="@color/bottom_fons_focus"
-           android:outlineAmbientShadowColor="@color/bottom_icono_focus"
-
-           />
-       <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           app:elevation="20dp"
-android:elevation="20dp"
-           android:padding="10dp"
-           android:scaleType="fitXY"
-
-           android:src="@drawable/icono_mapa"/>
-   </FrameLayout>
+            android:src="@drawable/maps_icon" />
+    </FrameLayout>
 </FrameLayout>

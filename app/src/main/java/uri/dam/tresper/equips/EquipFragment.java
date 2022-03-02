@@ -50,8 +50,9 @@ public class EquipFragment extends Fragment {
         EquipAdapter equipAdapter = new EquipAdapter();
         recyclerView = binding.recyclerUsers;
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-
+           // binding.progressBar.setPadding(0,300,0,0);
         }else{
+           // binding.progressBar.setPadding(0,150,0,0);
             binding.equipImatge.setMinimumHeight(300);
             binding.equipImatge.setMaxHeight(300);
          /*   binding.equipImatge.setScaleX(0.5f);
@@ -133,6 +134,13 @@ public class EquipFragment extends Fragment {
 
                     binding.progressBar.setVisibility(View.VISIBLE);
                     binding.recyclerUsers.setVisibility(View.GONE);
+                    binding.equipImatge.setVisibility(View.GONE);
+                    binding.viewTitolHeader.setVisibility(View.GONE);
+                    binding.descripcioEquipView.setVisibility(View.GONE);
+                    binding.barraSeparadora.setVisibility(View.GONE);
+
+
+
                     new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                         @Override
                         public void run() {

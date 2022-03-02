@@ -58,8 +58,13 @@ getWindow().setNavigationBarColor(getResources().getColor(R.color.tab_no_pulsat_
 
 
         }
+       /*  amaga el contingut de la barra del mobil superior
 
+       View decorView = getWindow().getDecorView();
 
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+*/
     }
 
     @Nullable

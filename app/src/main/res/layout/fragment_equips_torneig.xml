@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:elevation="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -67,21 +68,136 @@
 
 
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerEquips"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/fotoFonsMur"
+android:maxHeight="400dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-44dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="20dp"
+                    android:elevation="2dp"
+                    android:src="@drawable/separador_llarg" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:elevation="5dp"
+                    android:scaleX="1.5"
+                    android:scaleY="1.4"
+                    android:src="@drawable/titol_torneig_frame" />
+
+                <TextView
+                    android:id="@+id/textTitol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/chunk_five_regular"
+                    android:paddingVertical="10dp"
+                    android:text="Els equips"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_tronja"
+                    android:textSize="34dp" />
+
+
+            </FrameLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerEquips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:nestedScrollingEnabled="false"
+
+                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabs"
+                tools:listitem="@layout/viewholder_equip"
+                android:paddingBottom="110dp"
+                android:layout_marginTop="-8dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <FrameLayout
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabs"
-        tools:listitem="@layout/viewholder_equip"
-        android:paddingBottom="110dp"
-        android:layout_marginTop="-8dp"
-      />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="77dp"
+
+
+        android:elevation="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingMaps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bottom_fons_focus"
+
+            app:elevation="10dp"
+            app:rippleColor="@color/bottom_fons"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/pilota2d" />
+    </FrameLayout>
+
+
 
     <com.tuyenmonkey.mkloader.MKLoader
         android:id="@+id/progress_bar"

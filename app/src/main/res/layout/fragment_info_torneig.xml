@@ -8,6 +8,42 @@
     android:orientation="vertical">
 
 
+
+    <FrameLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="42dp"
+
+
+        android:elevation="10dp">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingMaps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bottom_fons_focus"
+
+            app:elevation="10dp"
+            app:rippleColor="@color/bottom_fons"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/pilota2d" />
+    </FrameLayout>
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -73,7 +109,7 @@
                     android:paddingVertical="10dp"
                     android:text="Nom del torneig"
                     android:fontFamily="@font/chunk_five_regular"
-
+android:maxLength="18"
                     android:textAlignment="center"
                     android:textColor="@color/text_tronja"
                     android:textSize="36dp" />
@@ -400,6 +436,7 @@
     <LinearLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 

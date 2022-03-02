@@ -82,6 +82,7 @@ FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this.getContext())
 
 
 
+
         Spinner spinner = (Spinner) binding.spinner;
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(),

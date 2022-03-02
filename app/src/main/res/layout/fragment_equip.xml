@@ -18,16 +18,14 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:layout_marginTop="300dp"
             android:background="@color/background"
             android:fitsSystemWindows="true"
             android:visibility="gone"
-
             android:outlineSpotShadowColor="@color/background"
             android:padding="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+
+
 
             app:mk_color="@color/text_especial"
             app:mk_type="Whirlpool" />
@@ -42,6 +40,7 @@
             android:src="@drawable/ic_launcher_background" />
 
         <FrameLayout
+            android:id="@+id/view_titol_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-42dp">
@@ -97,6 +96,7 @@
             />
 
         <ImageView
+            android:id="@+id/barra_separadora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

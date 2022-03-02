@@ -56,6 +56,10 @@ public class EquipsTorneigFragment extends Fragment {
         layoutManager.setFlexWrap(FlexWrap.WRAP);
         recyclerView.setLayoutManager(layoutManager);
 
+        Glide.with(getContext()).load(torneigsViewModel.torneigElement.getImatgeCartell())
+                .centerInside()
+                .into(binding.fotoFonsMur);
+
 
         binding.recyclerEquips.setAdapter(equipsAdapter);
 
