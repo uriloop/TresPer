@@ -21,6 +21,37 @@ public class TorneigsViewModel extends AndroidViewModel {
     String fotoPerfilFons;
     List<TorneigElement> torneigElementList= new ArrayList<>();
 
+    boolean inscritObert;
+
+    public boolean isInvitacionsObert() {
+        return invitacionsObert;
+    }
+
+    public void setInvitacionsObert(boolean invitacionsObert) {
+        this.invitacionsObert = invitacionsObert;
+    }
+
+    boolean invitacionsObert;
+
+
+    public boolean isAmicsObert() {
+        return amicsObert;
+    }
+
+    public void setAmicsObert(boolean amicsObert) {
+        this.amicsObert = amicsObert;
+    }
+
+    boolean amicsObert;
+
+    public boolean isInscritObert() {
+        return inscritObert;
+    }
+
+    public void setInscritObert(boolean inscritObert) {
+        this.inscritObert = inscritObert;
+    }
+
     public List<TorneigElement> getListTorneigs() {
         return torneigElementList;
     }
@@ -35,6 +66,8 @@ torneigElementList=repositoriTorneigs.getTorneigsList();
         classi=repositoriTorneigs.obtenerClassi();
 fotoPerfilFons= repositoriTorneigs.getFotoFonsPerfil();
 listNovetatMutableLiveData.setValue(repositoriTorneigs.getNovetats());
+inscritObert=false;
+amicsObert=false;
 
     }
 

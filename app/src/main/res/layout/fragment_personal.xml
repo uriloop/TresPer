@@ -24,24 +24,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-3dp"
             android:nestedScrollingEnabled="true"
-            app:alignContent="center"
+            app:alignContent="stretch"
             app:alignItems="flex_start"
             app:flexDirection="row"
             app:flexWrap="wrap"
             app:justifyContent="space_around">
 
+
             <FrameLayout
-                android:id="@+id/nom_user"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_gravity="center|center_horizontal"
 app:layout_alignSelf="center"
                 android:elevation="28dp"
 
                 >
-
+<ImageView
+                android:id="@+id/imatgeFonsPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"/>
                 <TextView
+                    android:layout_marginTop="10dp"
                     android:id="@+id/nom_user_textview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -55,182 +61,56 @@ app:layout_alignSelf="center"
                     android:textSize="25dp" />
 
                 <ImageView
+                    android:layout_marginTop="10dp"
+
                     android:layout_width="150dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="2dp"
                     android:scaleType="fitXY"
+                    android:elevation="1dp"
                     android:src="@drawable/titol_equip_frame" />
+
 
 
 
             </FrameLayout>
 
-           <!-- <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layoutConstrained"
+            <com.tuyenmonkey.mkloader.MKLoader
+                android:id="@+id/progress_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_minWidth="380dp">
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/background"
+                android:fitsSystemWindows="true"
+                android:outlineSpotShadowColor="@color/background"
 
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:elevation="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/layoutConstrained">
-
-                    <ImageView
-                        android:id="@+id/imatge_fons_perfil"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="200dp"
-                        android:src="@drawable/ic_launcher_background"
-                        android:scaleType="centerCrop" />
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:visibility="gone"
-                        android:layout_marginTop="200dp"
-                        android:layout_gravity="center_horizontal"
-                        android:elevation="22dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/separador_llarg" />
-                    <FrameLayout
-                        android:id="@+id/nom_user"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:layout_marginTop="180dp"
-                        android:elevation="28dp"
-
-                        >
-
-                        <TextView
-                            android:id="@+id/nom_user_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="1dp"
-                            android:elevation="12dp"
-                            android:fontFamily="@font/osw_demi_bold"
-                            android:paddingHorizontal="5dp"
-                            android:text="slamDunk"
-                            android:textSize="25dp" />
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="2dp"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/titol_equip_frame" />
-
-
-
-                    </FrameLayout>
-
-                    &lt;!&ndash; <ImageView
-                         android:layout_width="20dp"
-                         android:layout_height="20dp"
-                         android:layout_gravity="end"
-                         android:scaleType="fitXY"
-                         android:src="@drawable/new_message_not_seen"
-
-                         />&ndash;&gt;
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imatgePerfilUser"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_gravity="center|top"
-                        android:layout_marginTop="80dp"
-                        android:elevation="25dp"
-                        android:padding="5dp"
-
-                        android:src="@drawable/ic_launcher_background"
-                        app:civ_border_color="@color/tauler_clar"
-                        app:civ_border_overlay="true"
-                        app:civ_border_width="2dp" />
-
-
-                    <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:layout_marginTop="200dp"
-                        android:elevation="20dp"
-                        card_view:cardBackgroundColor="@color/background2"
-                        card_view:cardCornerRadius="4dp"
-                        card_view:cardElevation="10dp"
-                        card_view:contentPadding="10dp">
-
-                        <ImageView
-                            android:id="@+id/CardviewFalse"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:cropToPadding="true"
-                            android:visibility="visible"
-
-                            android:scaleType="fitXY"
-                            android:src="@drawable/frame_torneig" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-android:paddingHorizontal="20dp"
-                            android:orientation="vertical">
-
-                            <TextView
-
-                                android:id="@+id/titol_card"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="17dp"
-                                android:fontFamily="@font/osw_regular"
-                                android:text="Em dic Albert i gaudeixo d'aquest esport. Si voleu quedar solc baixar pel polideportiu del carrer carrasco IV. Bona smashada! ;)"
-                                android:textAlignment="center"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/text_card"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/osw_regular"
-                                android:text="Usuari desde:     126 dies"
-                                android:textAlignment="center"
-                                android:textSize="15sp" />
-
-                        </LinearLayout>
-
-
-                    </FrameLayout>
-
-
-                </FrameLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
+                android:padding="20dp"
+                app:mk_color="@color/text_especial"
+                app:mk_type="Whirlpool" />
 
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="20dp"
-                card_view:cardBackgroundColor="@color/background2"
+                android:id="@+id/inscritButton"
+                android:layout_margin="15dp"
+                android:elevation="25dp"
+android:background="@color/background2"
                 card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
 
-                <LinearLayout
 
+                <LinearLayout
+android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -240,7 +120,6 @@ android:paddingHorizontal="20dp"
 
                     <TextView
 
-                        android:id="@+id/titol_card2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
@@ -257,7 +136,9 @@ android:paddingHorizontal="20dp"
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false"
                         card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
                         android:id="@+id/recyclerInscrit"
                         tools:listitem="@layout/viewholder_inscrit"
@@ -273,25 +154,27 @@ android:paddingHorizontal="20dp"
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="20dp"
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="4dp"
+                android:id="@+id/amicsButton"
+                android:layout_margin="15dp"
+                android:elevation="25dp"
+                android:background="@color/background2"
+                card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
 
-                <LinearLayout
 
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card3"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -305,35 +188,88 @@ android:paddingHorizontal="20dp"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/team" />
-                    <!--  <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="killer_miller"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />
 
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="rata_1"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="xatungo"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="a_tonito"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        android:id="@+id/recyclerAmics"
+                        android:nestedScrollingEnabled="false"
+
+                        tools:listitem="@layout/viewholder_amic"
+                        android:orientation="vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/invitacionsButton"
+                android:layout_margin="15dp"
+                android:elevation="25dp"
+                android:background="@color/background2"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp"
+
+                card_view:layout_minWidth="150dp">
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    android:padding="30dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/osw_regular"
+                        android:paddingBottom="5dp"
+                        android:text="Invitacions"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/estrella_icon" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/osw_regular"
+                        android:visibility="gone"
+                        android:id="@+id/senseInvitacions"
+                        android:text="No tens cap nova invitació"
+                        android:textAlignment="center"
+                        android:paddingTop="14dp"
+                        android:textSize="18sp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+
+                        android:layout_marginTop="10dp"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        android:id="@+id/recyclerInvitacio"
+                        tools:listitem="@layout/viewholder_inscrit"
+                        android:orientation="vertical"
+                        />
 
 
                 </LinearLayout>
@@ -344,26 +280,27 @@ android:paddingHorizontal="20dp"
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="20dp"
-
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="4dp"
+                android:id="@+id/missatgesButton"
+                android:layout_margin="15dp"
+                android:elevation="25dp"
+                android:background="@color/background2"
+                card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
+
                 card_view:layout_minWidth="150dp">
 
 
-                <LinearLayout
 
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
 
-                    android:padding="20dp">
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card4"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -378,47 +315,76 @@ android:paddingHorizontal="20dp"
                         android:layout_height="50dp"
                         android:src="@drawable/new_message_not_seen" />
 
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+
+                        android:layout_marginTop="10dp"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        android:id="@+id/recyclerMissatges"
+                        tools:listitem="@layout/viewholder_missatge"
+                        android:orientation="vertical"
+                        />
+
+
                 </LinearLayout>
 
 
             </FrameLayout>
-
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="20dp"
-
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="4dp"
+                android:id="@+id/confButton"
+                android:layout_margin="15dp"
+                android:elevation="25dp"
+                android:background="@color/background2"
+                card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
+
                 card_view:layout_minWidth="150dp">
 
 
-                <LinearLayout
 
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
 
-                    android:padding="20dp">
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card5"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
                         android:paddingBottom="5dp"
-                        android:text="Invitacions"
+                        android:text="Edita"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
                     <ImageView
+                        android:padding="2dp"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@android:drawable/ic_menu_share" />
+                        android:src="@drawable/player_color" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+
+                        android:layout_marginTop="10dp"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        android:id="@+id/recyclerPerfilEdit"
+                        tools:listitem="@layout/viewholder_missatge"
+                        android:orientation="vertical"
+                        />
+
 
                 </LinearLayout>
 
@@ -428,7 +394,7 @@ android:paddingHorizontal="20dp"
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="100dp" />
         </com.google.android.flexbox.FlexboxLayout>
 
 
