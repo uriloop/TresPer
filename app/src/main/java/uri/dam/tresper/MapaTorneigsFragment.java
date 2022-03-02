@@ -3,6 +3,7 @@ package uri.dam.tresper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,10 +14,22 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.List;
+
+import uri.dam.tresper.databinding.FragmentMapaTorneigsBinding;
+import uri.dam.tresper.databinding.FragmentTorneigsBinding;
+import uri.dam.tresper.models.TorneigElement;
+import uri.dam.tresper.models.TorneigsViewModel;
+
 public class MapaTorneigsFragment extends Fragment {
+
+    FragmentMapaTorneigsBinding binding;
+    TorneigsViewModel torneigsViewModel;
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -31,9 +44,20 @@ public class MapaTorneigsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng sydney = new LatLng(-34, 151);
-            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+            List<TorneigElement> torneigsList = torneigsViewModel.getListTorneigs();
+            LatLng pos = null;
+            for (int i = 0; i < torneigsList.size(); i++) {
+                pos = new LatLng(torneigsList.get(i).getLatLong()[0], torneigsList.get(i).getLatLong()[1]);
+
+                googleMap.addMarker(new MarkerOptions().position(pos).title(torneigsList.get(i).getNomTorneig()));
+
+            }
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(pos));
+            googleMap.getUiSettings().setCompassEnabled(true);
+
+
+
         }
     };
 
@@ -42,16 +66,25 @@ public class MapaTorneigsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mapa_torneigs, container, false);
+        torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
+
+
+        binding = FragmentMapaTorneigsBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        return root;
+
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         SupportMapFragment mapFragment =
-                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapaTorneigs);
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+
+
     }
 }

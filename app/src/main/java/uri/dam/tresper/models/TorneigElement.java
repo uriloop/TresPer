@@ -7,6 +7,7 @@ import uri.dam.tresper.models.EquipElement;
 public class TorneigElement {
 
 
+    double[] latLong=new double[2];
     String nomTorneig;
     String descripcio;
     String diaIhora;
@@ -21,8 +22,11 @@ public class TorneigElement {
 
     List<EquipElement> equipsParticipants;
 
+    public double[] getLatLong() {
+        return latLong;
+    }
 
-    public TorneigElement(String nomTorneig, String descripcio,String diaIhora,String imatgeCartell,String mapaGoogle,String localitzacio,String premis, String inscripcio,String normes, List<String> imatges, List<EquipElement> equipsParticipants) {
+    public TorneigElement(String nomTorneig, String descripcio, String diaIhora, String imatgeCartell, String mapaGoogle, String localitzacio, String premis, String inscripcio, String normes, List<String> imatges, List<EquipElement> equipsParticipants, double[] latLong) {
                this.nomTorneig = nomTorneig;
         this.descripcio = descripcio;
         this.diaIhora=diaIhora;
@@ -34,7 +38,7 @@ public class TorneigElement {
         this.normes= normes;
         this.imatgesTorneig= imatges;
         this.localitzacio=localitzacio;
-
+        this.latLong=latLong;
     }
 
     public String getLocalitzacio() {

@@ -31,7 +31,7 @@ import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentEquipBinding;
 
 import uri.dam.tresper.models.User;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class EquipFragment extends Fragment {

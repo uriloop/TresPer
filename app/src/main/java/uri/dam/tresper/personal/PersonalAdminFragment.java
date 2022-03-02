@@ -19,8 +19,7 @@ import com.bumptech.glide.Glide;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentPersonalAdminBinding;
-import uri.dam.tresper.databinding.FragmentPersonalBinding;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class PersonalAdminFragment extends Fragment {

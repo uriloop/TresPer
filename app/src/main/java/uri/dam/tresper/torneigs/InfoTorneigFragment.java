@@ -7,39 +7,28 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.DragEvent;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.HorizontalScrollView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.google.android.flexbox.AlignItems;
-import com.google.android.flexbox.FlexDirection;
-import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayout;
-import com.google.android.flexbox.FlexboxLayoutManager;
-import com.google.android.flexbox.JustifyContent;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-
-import java.util.List;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentInfoTorneigBinding;
-import uri.dam.tresper.databinding.FragmentTorneigsBinding;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class InfoTorneigFragment extends Fragment {
@@ -53,25 +42,22 @@ public class InfoTorneigFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        FlexboxLayout flexBox = binding.flexBox;
-        /*flexBox.setFlexDirection(FlexDirection.ROW);
-        flexBox.setJustifyContent(JustifyContent.SPACE_AROUND);
-        flexBox.setAlignItems(AlignItems.CENTER);
-        flexBox.setFlexWrap(FlexWrap.WRAP);*/
+
         navController = Navigation.findNavController(view);
         torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
 
         binding.nomTorneig.setText(torneigsViewModel.seleccionat().getValue().getNomTorneig());
         binding.textBenvinguda.setText(torneigsViewModel.seleccionat().getValue().getDescripcio());
-/*        binding.textData.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());
-       *//* binding.mapa.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());*//*
+        /*        binding.textData.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());
+         *//* binding.mapa.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());*//*
 
         binding.textLloc.setText(torneigsViewModel.seleccionat().getValue().getLocalitzacio());*/
 /*
         binding.webView.loadDataWithBaseURL(null, "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1645763192800!6m8!1m7!1s8S_phpY9th7ILk73H-Xhdg!2m2!1d41.45588230455805!2d2.201101338185295!3f133.03038376116046!4f1.182737709026739!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>", "text/html", "utf-8", null);
-*/    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+*/
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-        }else{
+        } else {
             binding.fotoTorneig.setMinimumHeight(300);
             binding.fotoTorneig.setMaxHeight(300);
          /*   binding.equipImatge.setScaleX(0.5f);
@@ -105,7 +91,6 @@ public class InfoTorneigFragment extends Fragment {
         });*/
 
 
-
         Glide.with(getContext()).load(torneigsViewModel.seleccionat().getValue().getImatgeCartell())
                 .centerInside()
                 .into(binding.fotoTorneig);
@@ -130,14 +115,42 @@ public class InfoTorneigFragment extends Fragment {
         });
 
 
+        View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_inscripcions_completes, null);
+        final PopupWindow popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+
+        binding.floatingMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                PopupWindow pw = popupWindow;
+
+
+                /*pw.setWidth(400);
+                pw.setHeight(180);*/
+
+                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
+                pw.update();
+                new Handler().postDelayed(new Runnable() {   // delay
+
+
+                    @Override
+                    public void run() {
+                        pw.dismiss();
+                    }
+                }, 2000);
+
+            }
+        });
+
 
     }
+
     WebView myBrowser;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
     }

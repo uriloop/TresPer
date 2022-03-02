@@ -5,67 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="5dp"
     android:orientation="vertical"
     tools:context=".personal.PersonalFragment">
 
-    <!--<LinearLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-
-        <Button
-            android:id="@+id/admin_button"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="1dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="-10dp"
-
-            android:layout_weight="1"
-            android:backgroundTint="@color/tab_pulsat"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:text="Perfil"
-            android:textColor="@color/tab_pulsat_text" />
-
-        <Button
-            android:id="@+id/novetats_button"
-            android:layout_width="1dp"
-
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="1dp"
-            android:layout_marginTop="-7dp"
-            android:layout_weight="1"
-
-            android:backgroundTint="@color/tab_no_pulsat"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:text="Novetats"
-            android:textColor="@color/tab_no_pulsat_text" />
-
-        <Button
-            android:id="@+id/torneigs_personal_button"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="1dp"
-            android:layout_marginTop="-7dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/tab_no_pulsat"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:text="Torneigs"
-            android:textColor="@color/tab_no_pulsat_text"
-
-            />
-
-
-    </LinearLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -80,15 +24,49 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-3dp"
             android:nestedScrollingEnabled="true"
-            app:alignContent="stretch"
+            app:alignContent="center"
             app:alignItems="flex_start"
             app:flexDirection="row"
             app:flexWrap="wrap"
-            app:justifyContent="center">
+            app:justifyContent="space_around">
+
+            <FrameLayout
+                android:id="@+id/nom_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center|center_horizontal"
+app:layout_alignSelf="center"
+                android:elevation="28dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/nom_user_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="12dp"
+                    android:fontFamily="@font/osw_demi_bold"
+                    android:paddingHorizontal="5dp"
+                    android:text="slamDunk"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/titol_equip_frame" />
 
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            </FrameLayout>
+
+           <!-- <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layoutConstrained"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,6 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="200dp"
+                        android:src="@drawable/ic_launcher_background"
                         android:scaleType="centerCrop" />
                     <ImageView
                         android:layout_width="match_parent"
@@ -137,12 +116,12 @@
                             android:elevation="12dp"
                             android:fontFamily="@font/osw_demi_bold"
                             android:paddingHorizontal="5dp"
-                            android:text="in_ur_face"
+                            android:text="slamDunk"
                             android:textSize="25dp" />
 
                         <ImageView
                             android:layout_width="150dp"
-                            android:layout_height="30dp"
+                            android:layout_height="35dp"
                             android:layout_gravity="center"
                             android:layout_marginBottom="2dp"
                             android:scaleType="fitXY"
@@ -152,14 +131,14 @@
 
                     </FrameLayout>
 
-                    <!-- <ImageView
+                    &lt;!&ndash; <ImageView
                          android:layout_width="20dp"
                          android:layout_height="20dp"
                          android:layout_gravity="end"
                          android:scaleType="fitXY"
                          android:src="@drawable/new_message_not_seen"
 
-                         />-->
+                         />&ndash;&gt;
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/imatgePerfilUser"
@@ -202,7 +181,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-
+android:paddingHorizontal="20dp"
                             android:orientation="vertical">
 
                             <TextView
@@ -222,7 +201,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
                                 android:fontFamily="@font/osw_regular"
-                                android:paddingBottom="10dp"
                                 android:text="Usuari desde:     126 dies"
                                 android:textAlignment="center"
                                 android:textSize="15sp" />
@@ -236,29 +214,29 @@
                 </FrameLayout>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:elevation="20dp"
                 card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="4dp"
+                card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
-                card_view:layout_maxWidth="150dp"
+
                 card_view:layout_minWidth="150dp">
 
 
                 <LinearLayout
 
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
 
-                    android:padding="20dp">
+                    android:padding="30dp">
 
                     <TextView
 
@@ -276,22 +254,24 @@
                         android:layout_height="50dp"
                         android:src="@drawable/trofeu_color" />
 
-                    <!-- <TextView
-                         android:id="@+id/text_card2"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:fontFamily="@font/osw_regular"
-                         android:text="Usuari desde:     126 dies"
-                         android:textAlignment="center"
-                         android:textSize="15sp" />-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        android:id="@+id/recyclerInscrit"
+                        tools:listitem="@layout/viewholder_inscrit"
+                        android:orientation="vertical"
+                        />
+
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:elevation="20dp"
@@ -299,7 +279,6 @@
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
 
-                card_view:layout_maxWidth="150dp"
                 card_view:layout_minWidth="150dp">
 
 
@@ -360,10 +339,10 @@
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:elevation="20dp"
@@ -371,7 +350,6 @@
                 card_view:cardBackgroundColor="@color/background2"
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
-                card_view:layout_maxWidth="150dp"
                 card_view:layout_minWidth="150dp">
 
 
@@ -403,10 +381,10 @@
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:elevation="20dp"
@@ -414,7 +392,6 @@
                 card_view:cardBackgroundColor="@color/background2"
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
-                card_view:layout_maxWidth="150dp"
                 card_view:layout_minWidth="150dp">
 
 
@@ -446,50 +423,8 @@
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="20dp"
-
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="4dp"
-                card_view:contentPadding="10dp"
-                card_view:layout_maxWidth="150dp"
-                card_view:layout_minWidth="150dp">
-
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-
-                    android:padding="20dp">
-
-                    <TextView
-                        android:id="@+id/titol_card6"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/osw_regular"
-                        android:paddingBottom="5dp"
-                        android:text="Invitacions"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@android:drawable/ic_menu_share" />
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
 
             <Space
                 android:layout_width="match_parent"

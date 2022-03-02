@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/layout/activity_app.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34057971014492755" />
         <entry key="app/src/main/res/layout/activity_torneig_tabs.xml" value="0.20729166666666668" />
+        <entry key="app/src/main/res/layout/avis_inscripcions_completes.xml" value="0.33" />
         <entry key="app/src/main/res/layout/avis_nou_torneig.xml" value="0.5" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.2125340599455041" />
         <entry key="app/src/main/res/layout/content_torneig.xml" value="0.20729166666666668" />
@@ -28,10 +29,11 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.34057971014492755" />
         <entry key="app/src/main/res/layout/fragment_info_torneig.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_mapa_torneigs.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/fragment_mostra_torneig.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.34057971014492755" />
         <entry key="app/src/main/res/layout/fragment_perfil_usuari.xml" value="0.3685185185185185" />
-        <entry key="app/src/main/res/layout/fragment_personal.xml" value="0.3697916666666667" />
+        <entry key="app/src/main/res/layout/fragment_personal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_personal_admin.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_personal_novetats.xml" value="0.3546875" />
         <entry key="app/src/main/res/layout/fragment_personal_torneigs.xml" value="0.3697916666666667" />
@@ -41,6 +43,7 @@
         <entry key="app/src/main/res/layout/fragment_torneig_tabs.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_torneigs.xml" value="0.23634204275534443" />
         <entry key="app/src/main/res/layout/viewholder_equip.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/viewholder_inscrit.xml" value="0.15989583333333332" />
         <entry key="app/src/main/res/layout/viewholder_novetat.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/viewholder_partit.xml" value="0.5" />
         <entry key="app/src/main/res/layout/viewholder_ronda.xml" value="0.3697916666666667" />

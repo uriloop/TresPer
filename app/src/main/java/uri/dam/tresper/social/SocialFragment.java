@@ -9,10 +9,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,12 +29,9 @@ import com.google.android.flexbox.JustifyContent;
 import java.util.List;
 
 import uri.dam.tresper.R;
-import uri.dam.tresper.databinding.FragmentPersonalAdminBinding;
 import uri.dam.tresper.databinding.FragmentSocialBinding;
 import uri.dam.tresper.models.Novetat;
-import uri.dam.tresper.models.TorneigElement;
-import uri.dam.tresper.torneigs.TorneigsFragment;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class SocialFragment extends Fragment {

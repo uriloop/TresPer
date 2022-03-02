@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/nom_user_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="1dp"
+            android:elevation="12dp"
+            android:fontFamily="@font/osw_demi_bold"
+            android:paddingHorizontal="5dp"
+            android:text="slamDunk"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:src="@drawable/titol_equip_frame" />
+        <TextView
+            android:id="@+id/nom_user_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="1dp"
+            android:elevation="12dp"
+            android:fontFamily="@font/osw_demi_bold"
+            android:paddingHorizontal="5dp"
+            android:text="slamDunk"
+            android:textSize="25dp" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

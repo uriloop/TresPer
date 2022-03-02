@@ -23,6 +23,8 @@
             android:id="@+id/action_go_to_Info"
             app:destination="@id/infoTorneigFragment" />
 
+        <action android:id="@+id/action_go_to_maps"
+            app:destination="@+id/mapaTorneigsFragment"/>
 
     </fragment>
 
@@ -278,7 +280,9 @@
         android:id="@+id/mapaTorneigsFragment"
         android:name="uri.dam.tresper.MapaTorneigsFragment"
         android:label="fragment_mapa_torneigs"
-        tools:layout="@layout/fragment_mapa_torneigs" />
+        tools:layout="@layout/fragment_mapa_torneigs" >
+
+    </fragment>
 
 
 </navigation>

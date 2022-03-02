@@ -16,10 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import uri.dam.tresper.R;
-import uri.dam.tresper.databinding.FragmentClassiTorneigBinding;
-import uri.dam.tresper.databinding.FragmentPersonalBinding;
 import uri.dam.tresper.databinding.FragmentPersonalTorneigsBinding;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class PersonalTorneigsFragment extends Fragment {

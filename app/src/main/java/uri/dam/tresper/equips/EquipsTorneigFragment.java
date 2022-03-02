@@ -13,9 +13,12 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Handler;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.PopupWindow;
 
 import com.bumptech.glide.Glide;
 import com.google.android.flexbox.AlignItems;
@@ -29,7 +32,7 @@ import java.util.List;
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentEquipsTorneigBinding;
 import uri.dam.tresper.models.EquipElement;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class EquipsTorneigFragment extends Fragment {
@@ -64,6 +67,33 @@ public class EquipsTorneigFragment extends Fragment {
         binding.recyclerEquips.setAdapter(equipsAdapter);
 
 
+        View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_inscripcions_completes, null);
+        final PopupWindow popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+
+        binding.floatingMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                PopupWindow pw = popupWindow;
+
+
+                /*pw.setWidth(400);
+                pw.setHeight(180);*/
+
+                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
+                pw.update();
+                new Handler().postDelayed(new Runnable() {   // delay
+
+
+                    @Override
+                    public void run() {
+                        pw.dismiss();
+                    }
+                }, 2000);
+
+            }
+        });
 
 
         torneigsViewModel.obtenerEquipos().observe(getViewLifecycleOwner(), new Observer<List<EquipElement>>() {

@@ -29,6 +29,7 @@ import java.util.List;
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentTorneigsBinding;
 import uri.dam.tresper.models.TorneigElement;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 public class TorneigsFragment extends Fragment {
 
@@ -61,6 +62,21 @@ public class TorneigsFragment extends Fragment {
         recyclerView.setLayoutManager(csLayoutManager);
         new CardSnapHelper().attachToRecyclerView(recyclerView);*/
 
+        binding.floatingMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.progressBar.setVisibility(View.VISIBLE);
+                binding.recyclerView.setVisibility(View.GONE);
+
+                new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
+                    @Override
+                    public void run() {
+                        NavHostFragment.findNavController(TorneigsFragment.this)
+                                .navigate(R.id.action_go_to_maps);
+                    }
+                }, 500);
+            }
+        });
 
 
         torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);

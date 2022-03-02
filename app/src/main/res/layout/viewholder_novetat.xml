@@ -55,7 +55,7 @@
             android:id="@+id/icono_novetat"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_gravity="end"
+            android:layout_gravity="start"
             android:scaleType="fitXY"
             android:src="@drawable/new_message_not_seen"
 

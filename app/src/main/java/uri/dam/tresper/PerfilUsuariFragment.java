@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +16,8 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 
-import uri.dam.tresper.databinding.FragmentEquipBinding;
-import uri.dam.tresper.databinding.FragmentEquipsTorneigBinding;
 import uri.dam.tresper.databinding.FragmentPerfilUsuariBinding;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class PerfilUsuariFragment extends Fragment {
@@ -43,7 +40,7 @@ public class PerfilUsuariFragment extends Fragment {
         Glide.with(getContext()).load(torneigsViewModel.getUser().getImatge())
                 .centerInside()
                 .into(binding.imatgePerfilUser);
-        Glide.with(getContext()).load(torneigsViewModel.getFonsPerfil())
+        Glide.with(getContext()).load(torneigsViewModel.getUser().getImatge())
                 .centerInside()
                 .into(binding.imatgeFonsPerfil);
 

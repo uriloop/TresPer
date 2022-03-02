@@ -1,20 +1,14 @@
-package uri.dam.tresper.torneigs;
+package uri.dam.tresper.models;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import uri.dam.tresper.models.ClassiElement;
-import uri.dam.tresper.models.EquipElement;
-import uri.dam.tresper.models.Novetat;
-import uri.dam.tresper.models.Partit;
-import uri.dam.tresper.models.RepositoriTorneigs;
-import uri.dam.tresper.models.TorneigElement;
-import uri.dam.tresper.models.User;
 
 public class TorneigsViewModel extends AndroidViewModel {
 
@@ -25,11 +19,16 @@ public class TorneigsViewModel extends AndroidViewModel {
     MutableLiveData<TorneigElement> torneigSeleccionat = new MutableLiveData<>();
     ClassiElement classi;
     String fotoPerfilFons;
+    List<TorneigElement> torneigElementList= new ArrayList<>();
+
+    public List<TorneigElement> getListTorneigs() {
+        return torneigElementList;
+    }
 
     public TorneigsViewModel(@NonNull Application application) {
         super(application);
         repositoriTorneigs = new RepositoriTorneigs();
-
+torneigElementList=repositoriTorneigs.getTorneigsList();
         listTorneigsMutableLiveData.setValue(repositoriTorneigs.obtener());
         listEquipsMutableLiveData.setValue(repositoriTorneigs.obtenerEquipos());
         listUsersMutableLiveData.setValue(repositoriTorneigs.obtenerUsers());
@@ -181,6 +180,8 @@ listNovetatMutableLiveData.setValue(repositoriTorneigs.getNovetats());
     public String getImatgePerfil() {
         return repositoriTorneigs.getFotoPerfil();
     }
+
+
 
 
 

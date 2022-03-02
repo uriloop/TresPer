@@ -14,7 +14,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,12 +29,8 @@ import java.util.List;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentClassiTorneigBinding;
-import uri.dam.tresper.equips.EquipFragment;
-import uri.dam.tresper.models.ClassiElement;
 import uri.dam.tresper.models.Partit;
-import uri.dam.tresper.models.User;
-import uri.dam.tresper.torneigs.TorneigsFragment;
-import uri.dam.tresper.torneigs.TorneigsViewModel;
+import uri.dam.tresper.models.TorneigsViewModel;
 
 
 public class ClassiTorneigFragment extends Fragment {
