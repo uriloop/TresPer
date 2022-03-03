@@ -31,6 +31,7 @@
     <color name="text_tronja_brillant">#FF6F00</color>
     <color name="text_especial">#F7BD0000</color>
     <color name="tauler_clar">#F7BD4747</color>
+    <color name="transparent">#00000000</color>
 
 
     <color name="background2">#BAFFFFFF</color>

@@ -8,51 +8,37 @@
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3194444444444444" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3194444444444444" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.3194444444444444" />
-        <entry key="app/src/main/res/drawable/navigation_bar.xml" value="0.3859375" />
-        <entry key="app/src/main/res/drawable/navigation_bar_icon.xml" value="0.3859375" />
         <entry key="app/src/main/res/layout-v28/fragment_info_torneig.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/activity_app.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34057971014492755" />
         <entry key="app/src/main/res/layout/activity_torneig_tabs.xml" value="0.20729166666666668" />
-        <entry key="app/src/main/res/layout/avis_chat_en_construccio.xml" value="0.3697916666666667" />
-        <entry key="app/src/main/res/layout/avis_inscripcions_completes.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/avis_nou_torneig.xml" value="0.5" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.2125340599455041" />
         <entry key="app/src/main/res/layout/content_torneig.xml" value="0.20729166666666668" />
-        <entry key="app/src/main/res/layout/fragment_avis_new_torneig.xml" value="0.3015625" />
-        <entry key="app/src/main/res/layout/fragment_classi_torneig.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_classi_torneig.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_crear_equip.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_crear_torneig.xml" value="0.20729166666666668" />
-        <entry key="app/src/main/res/layout/fragment_equip.xml" value="0.20729166666666668" />
-        <entry key="app/src/main/res/layout/fragment_equips_torneig.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_equip.xml" value="0.2933848797250859" />
+        <entry key="app/src/main/res/layout/fragment_equips_torneig.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.34057971014492755" />
-        <entry key="app/src/main/res/layout/fragment_help.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_help.xml" value="0.34057971014492755" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.34057971014492755" />
-        <entry key="app/src/main/res/layout/fragment_info_torneig.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_info_torneig.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_mapa_torneigs.xml" value="0.3697916666666667" />
+        <entry key="app/src/main/res/layout/fragment_mapa_torneigs.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_mostra_torneig.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.34057971014492755" />
-        <entry key="app/src/main/res/layout/fragment_perfil_usuari.xml" value="0.2904446546830653" />
-        <entry key="app/src/main/res/layout/fragment_personal.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_personal_admin.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_personal_novetats.xml" value="0.3546875" />
-        <entry key="app/src/main/res/layout/fragment_personal_torneigs.xml" value="0.3697916666666667" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_perfil_usuari.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_personal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_social.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/fragment_tabbed.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_torneig_tabs.xml" value="0.20729166666666668" />
-        <entry key="app/src/main/res/layout/fragment_torneigs.xml" value="0.23634204275534443" />
-        <entry key="app/src/main/res/layout/imatge_torneig.xml" value="0.3342391304347826" />
-        <entry key="app/src/main/res/layout/viewholder_amic.xml" value="0.3697916666666667" />
-        <entry key="app/src/main/res/layout/viewholder_equip.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/viewholder_inscrit.xml" value="0.15989583333333332" />
-        <entry key="app/src/main/res/layout/viewholder_missatge.xml" value="0.3697916666666667" />
-        <entry key="app/src/main/res/layout/viewholder_novetat.xml" value="0.3697916666666667" />
-        <entry key="app/src/main/res/layout/viewholder_partit.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/viewholder_ronda.xml" value="0.3697916666666667" />
-        <entry key="app/src/main/res/layout/viewholder_torneig.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/viewholder_user.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_torneigs.xml" value="0.13573131955484896" />
+        <entry key="app/src/main/res/layout/viewholder_amic.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/viewholder_equip.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/viewholder_novetat.xml" value="0.6323529411764706" />
+        <entry key="app/src/main/res/layout/viewholder_torneig.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/viewholder_user.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/menu_app.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.22" />

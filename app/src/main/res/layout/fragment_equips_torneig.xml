@@ -172,6 +172,7 @@ android:minHeight="200dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="77dp"
 
+        android:outlineAmbientShadowColor="@color/transparent"
 
         android:elevation="10dp">
 
@@ -184,10 +185,13 @@ android:minHeight="200dp"
 
             app:elevation="10dp"
             app:rippleColor="@color/bottom_fons"
+            android:outlineAmbientShadowColor="@color/transparent"
 
             />
 
-        <ImageView
+        <ImageView        android:outlineAmbientShadowColor="@color/transparent"
+
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="20dp"

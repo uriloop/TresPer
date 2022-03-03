@@ -18,7 +18,7 @@
         android:src="@drawable/ic_launcher_background"
         android:layout_height="match_parent"
         app:civ_border_width="1dp"
-        app:civ_border_color="@color/vermell_tauler"
+        app:civ_border_color="@color/text_clar"
         app:civ_border_overlay="true"/>
 
 

@@ -18,6 +18,7 @@
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="42dp"
 
+        android:outlineAmbientShadowColor="@color/transparent"
 
         android:elevation="10dp">
 
@@ -31,6 +32,7 @@
 
             app:elevation="10dp"
             app:rippleColor="@color/bottom_fons"
+            android:outlineAmbientShadowColor="@color/transparent"
 
             />
 
@@ -38,8 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="20dp"
-
+android:background="@color/transparent"
             android:scaleType="fitCenter"
+            android:outlineAmbientShadowColor="@color/transparent"
 
             android:src="@drawable/pilota2d" />
     </FrameLayout>
@@ -156,8 +159,7 @@ android:maxLength="18"
                 android:layout_height="wrap_content"
                 android:minWidth="200dp"
                 android:orientation="vertical"
-
-                app:layout_maxWidth="320dp">
+                >
 
 
                 <TextView
@@ -172,11 +174,19 @@ android:maxLength="18"
                     android:textColor="@color/text_tronja"
                     android:textSize="28sp" />
 
+                <ImageView
+                    android:id="@+id/imatge_basquet"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:maxHeight="200dp"
+                    android:padding="10dp"
+                    android:src="@drawable/basquet_icon_color" />
+
                 <TextView
                     android:id="@+id/textBenvinguda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxWidth="320dp"
                     android:minWidth="250dp"
                     android:padding="20dp"
                     android:textAlignment="center"
@@ -192,7 +202,54 @@ android:maxLength="18"
                     />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200dp"
+                android:orientation="vertical"
+                >
 
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxWidth="320dp"
+
+                    android:padding="20dp"
+                    android:text="Normes: "
+                    android:textAlignment="center"
+                    android:textColor="@color/text_tronja"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:maxHeight="200dp"
+                    android:padding="10dp"
+                    android:src="@drawable/xiulet_icon" />
+
+                <TextView
+                    android:id="@+id/textNormes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="250dp"
+                    android:padding="20dp"
+                    android:text="@string/text_llarg"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/text_clar"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+
+                    android:src="@drawable/separador_frame"
+                    />
+            </LinearLayout>
 
 <!--
 
@@ -205,54 +262,6 @@ android:maxLength="18"
                 />
 -->
 
-
-            <LinearLayout
-                app:layout_wrapBefore="true"
-
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="300dp"
-                android:orientation="vertical"
-                app:layout_maxWidth="320dp"
-                >
-
-
-                <TextView
-                    android:id="@+id/titolNormes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:maxWidth="320dp"
-
-                    android:padding="20dp"
-                    android:text="Normes: "
-                    android:textAlignment="center"
-                    android:textColor="@color/text_tronja"
-                    android:textSize="28sp" />
-                <!--
-                Aki igual una llista o un recycler
-                -->
-                <TextView
-                    android:id="@+id/textNormes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:text="@string/text_llarg"
-                    android:textAlignment="center"
-                    android:textColor="@color/text_clar"
-                    android:textSize="18sp" />
-
-
-                <ImageView
-
-                    android:layout_marginTop="22dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:src="@drawable/separador_frame"
-                    />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -278,12 +287,12 @@ android:maxLength="18"
 
                 <ImageView
                     android:id="@+id/imatgeTrofeu"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:maxHeight="200dp"
                     android:padding="10dp"
-                    android:src="@drawable/trofeu_color" />
+                    android:src="@drawable/trofeu_color_2" />
 
                 <TextView
                     android:id="@+id/textPremis"
@@ -331,12 +340,12 @@ android:maxLength="18"
 
                 <ImageView
                     android:id="@+id/imatgeinscripcio"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:maxHeight="200dp"
                     android:padding="10dp"
-                    android:src="@drawable/pilota2d" />
+                    android:src="@drawable/form_icon" />
 
 
                 <TextView
@@ -384,12 +393,12 @@ android:maxLength="18"
 
                 <ImageView
                     android:id="@+id/imatgeCalendari"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:maxHeight="200dp"
                     android:padding="10dp"
-                    android:src="@android:drawable/ic_menu_today" />
+                    android:src="@drawable/icon_calendari" />
 
                 <!-- aki un calendari seria genial -->
 

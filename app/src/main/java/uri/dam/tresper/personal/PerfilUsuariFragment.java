@@ -27,6 +27,7 @@ import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -147,6 +148,7 @@ public class PerfilUsuariFragment extends Fragment {
         binding.amicsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 torneigsViewModel.setAmicsObert(!torneigsViewModel.isAmicsObert());
                 if (torneigsViewModel.isAmicsObert()) {
                     binding.recyclerAmics.setVisibility(View.GONE);
@@ -164,6 +166,8 @@ public class PerfilUsuariFragment extends Fragment {
         binding.perfilButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Snackbar.make(view, "S'ha enviat una petició d'amistat a l'usuari : "+torneigsViewModel.getUser().getNom(), Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+
                 binding.perfilButton.setVisibility(View.GONE);
             }
         });
@@ -340,13 +344,13 @@ public class PerfilUsuariFragment extends Fragment {
                     .into(holder.binding.imatgeUser);
             holder.binding.missatgeIconAmics.setOnClickListener(new View.OnClickListener() {
 
+
                 View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_chat_en_construccio, null);
                 final PopupWindow popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
                 @Override
                 public void onClick(View view) {
                     PopupWindow pw = popupWindow;
-
 
           /*      pw.setWidth(400);
                 pw.setHeight(180);*/
@@ -390,6 +394,8 @@ public class PerfilUsuariFragment extends Fragment {
                             Glide.with(getContext()).load(torneigsViewModel.getUser().getImatge())
                                     .centerInside()
                                     .into(binding.imatgeFonsPerfil);
+                            binding.nomUserTextview.setText(user.getNom());
+
 
                             binding.progressBar.setVisibility(View.GONE);
                             binding.missatgesButton.setVisibility(View.VISIBLE);

@@ -13,9 +13,9 @@
         android:id="@+id/imatgeUser"
         android:src="@drawable/ic_launcher_background"
         android:layout_height="100dp"
-        app:civ_border_width="4dp"
+        app:civ_border_width="1dp"
         android:padding="10dp"
-        app:civ_border_color="@color/vermell_tauler"
+        app:civ_border_color="@color/text_clar"
         app:civ_border_overlay="true"/>
 
 

@@ -19,7 +19,8 @@
             android:id="@+id/nom_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start|bottom"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="start"
             android:elevation="10dp"
 
 

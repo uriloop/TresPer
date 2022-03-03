@@ -2,10 +2,13 @@ package uri.dam.tresper.torneigs;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +55,9 @@ public class MapaTorneigsFragment extends Fragment {
             for (int i = 0; i < torneigsList.size(); i++) {
                 pos = new LatLng(torneigsList.get(i).getLatLong()[0], torneigsList.get(i).getLatLong()[1]);
 
+
                 googleMap.addMarker(new MarkerOptions().position(pos).title(torneigsList.get(i).getNomTorneig()));
+
 
             }
            /* googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
@@ -67,6 +72,7 @@ public class MapaTorneigsFragment extends Fragment {
                     }
                 }
             });*/
+
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(pos));
             googleMap.getUiSettings().setCompassEnabled(true);
 
