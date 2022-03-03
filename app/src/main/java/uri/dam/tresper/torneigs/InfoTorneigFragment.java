@@ -2,6 +2,7 @@ package uri.dam.tresper.torneigs;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -113,6 +115,25 @@ public class InfoTorneigFragment extends Fragment {
                         .navigate(R.id.action_go_to_classi);
             }
         });
+        View popupView2 = LayoutInflater.from(getActivity()).inflate(R.layout.imatge_torneig, null);
+        final PopupWindow popupWindow2 = new PopupWindow(popupView2, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+        binding.fotoTorneig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupWindow pw = popupWindow2;
+
+                pw.setClippingEnabled(true);
+
+
+                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
+                pw.update();
+            }
+        });
+
+
+
+
 
 
         View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_inscripcions_completes, null);

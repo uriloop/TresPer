@@ -185,7 +185,9 @@ android:maxLength="18"
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+
                     android:src="@drawable/separador_frame"
                     />
             </LinearLayout>
@@ -207,6 +209,7 @@ android:maxLength="18"
             <LinearLayout
                 app:layout_wrapBefore="true"
 
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="300dp"
@@ -240,10 +243,12 @@ android:maxLength="18"
                     android:textColor="@color/text_clar"
                     android:textSize="18sp" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
 
+                <ImageView
+
+                    android:layout_marginTop="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
                     android:src="@drawable/separador_frame"
                     />
 
@@ -273,12 +278,12 @@ android:maxLength="18"
 
                 <ImageView
                     android:id="@+id/imatgeTrofeu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:maxHeight="200dp"
                     android:padding="10dp"
-                    android:src="@android:drawable/ic_menu_myplaces" />
+                    android:src="@drawable/trofeu_color" />
 
                 <TextView
                     android:id="@+id/textPremis"
@@ -294,7 +299,9 @@ android:maxLength="18"
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+
                     android:src="@drawable/separador_frame"
                     />
 
@@ -324,12 +331,12 @@ android:maxLength="18"
 
                 <ImageView
                     android:id="@+id/imatgeinscripcio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:maxHeight="200dp"
                     android:padding="10dp"
-                    android:src="@android:drawable/ic_menu_myplaces" />
+                    android:src="@drawable/pilota2d" />
 
 
                 <TextView
@@ -346,7 +353,9 @@ android:maxLength="18"
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+
                     android:src="@drawable/separador_frame"
                     />
 
@@ -396,8 +405,10 @@ android:maxLength="18"
                     android:textColor="@color/text_clar"
                     android:textSize="18sp" />
                 <ImageView
+
+                    android:layout_marginTop="22dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
                     android:src="@drawable/separador_frame"
                     />
 

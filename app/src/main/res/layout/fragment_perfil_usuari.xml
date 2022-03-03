@@ -238,35 +238,54 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <com.tuyenmonkey.mkloader.MKLoader
+                android:id="@+id/progress_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="20dp"
-                android:clickable="true"
-                android:focusable="true"
-style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="30dp">
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@color/background"
+                android:fitsSystemWindows="true"
+                android:outlineSpotShadowColor="@color/background"
+                android:padding="20dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:mk_color="@color/text_especial"
+                app:mk_type="Whirlpool" />
+
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/inscritButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@color/background2"
+                android:elevation="25dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp"
+
+                card_view:layout_minWidth="150dp">
 
 
                 <LinearLayout
-
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
-                    android:padding="20dp">
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card2"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
                         android:paddingBottom="5dp"
-                        android:text="Inscrit"
+                        android:text="Torneigs"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -275,50 +294,52 @@ style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
                         android:layout_height="50dp"
                         android:src="@drawable/trofeu_color" />
 
-                    <!-- <TextView
-                         android:id="@+id/text_card2"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:fontFamily="@font/osw_regular"
-                         android:text="Usuari desde:     126 dies"
-                         android:textAlignment="center"
-                         android:textSize="15sp" />-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerInscrit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_inscrit" />
+
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/amicsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@color/background2"
+                android:elevation="25dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp"
 
-                android:elevation="2dp"
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="30dp"
-
-                android:clickable="true"
-                android:focusable="true"
-
-                >
+                card_view:layout_minWidth="150dp">
 
 
                 <LinearLayout
-
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card3"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
                         android:paddingBottom="5dp"
-                        android:text="Amics comuns"
+                        android:text="Amics en comú"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -326,163 +347,233 @@ style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/team" />
-                    <!--  <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="killer_miller"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />
 
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="rata_1"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="xatungo"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:fontFamily="@font/osw_regular"
-                          android:text="a_tonito"
-                          android:textAlignment="center"
-                          android:textSize="15sp" />-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerAmics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_amic" />
 
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/invitacionsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="20dp"
-card_view:cardCornerRadius="30dp"
-                card_view:cardBackgroundColor="@color/background2"
-                android:clickable="true"
-                android:focusable="true"
-                >
+                android:layout_margin="15dp"
+                android:background="@color/background2"
+                android:elevation="25dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp"
+
+                card_view:layout_minWidth="150dp">
 
 
                 <LinearLayout
-
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
-                    android:padding="20dp">
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card4"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
                         android:paddingBottom="5dp"
-                        android:text="Missatge"
+                        android:text="Podis"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/new_message" />
+                        android:src="@drawable/estrella_icon" />
+
+                    <TextView
+                        android:id="@+id/senseInvitacions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/osw_regular"
+                        android:paddingTop="14dp"
+                        android:text="No ha estat en cap podi"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/icon_invitacions_construccio"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_secure"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerInvitacio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_inscrit" />
+
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/missatgesButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="20dp"
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="30dp"
-                android:clickable="true"
-                android:focusable="true"
+                android:layout_margin="15dp"
+                android:background="@color/background2"
+                android:elevation="25dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp"
 
-                >
+                card_view:layout_minWidth="150dp">
 
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp"
 
-                    >
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card5"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
                         android:paddingBottom="5dp"
-                        android:text="Convida"
+                        android:text="Missatges"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@android:drawable/ic_menu_share" />
+                        android:src="@drawable/new_message_not_seen" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerMissatges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_missatge" />
+
+                    <TextView
+                        android:id="@+id/missatges_no_implementats"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/osw_regular"
+                        android:paddingTop="14dp"
+                        android:text="Enacara no està disponible aquesta opció"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/icon_missatges_construccio"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/icon_construction"
+                        android:visibility="gone" />
+
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/perfilButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                card_view:cardBackgroundColor="@color/background2"
-                card_view:cardCornerRadius="30dp">
+                android:layout_margin="15dp"
+                android:background="@color/background2"
+                android:elevation="25dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="10dp"
+
+                card_view:layout_minWidth="150dp">
 
 
                 <LinearLayout
-
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+
+                    android:padding="30dp">
 
                     <TextView
-                        android:id="@+id/titol_card6"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/osw_regular"
                         android:paddingBottom="5dp"
-                        android:text="Invitacions"
+                        android:text="Petició d'amistat"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
                     <ImageView
                         android:layout_width="50dp"
+
                         android:layout_height="50dp"
-                        android:src="@android:drawable/ic_menu_share" />
+                        android:padding="2dp"
+                        android:src="@drawable/player_color" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerPerfilEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_missatge" />
+
 
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
             <Space
                 android:layout_width="match_parent"

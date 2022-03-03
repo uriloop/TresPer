@@ -5,10 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
     android:orientation="vertical"
     tools:context=".personal.PersonalFragment">
-
 
 
     <ScrollView
@@ -35,43 +33,43 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-app:layout_alignSelf="center"
+                android:layout_gravity="bottom|center_horizontal"
                 android:elevation="28dp"
+                app:layout_alignSelf="center"
 
                 >
-<ImageView
-                android:id="@+id/imatgeFonsPersonal"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_launcher_background"
-                android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/imatgeFonsPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background" />
+
                 <TextView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/nom_user_textview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="1dp"
                     android:elevation="12dp"
                     android:fontFamily="@font/osw_demi_bold"
+                    android:gravity="center"
                     android:paddingHorizontal="5dp"
                     android:text="slamDunk"
                     android:textSize="25dp" />
 
                 <ImageView
-                    android:layout_marginTop="10dp"
-
                     android:layout_width="150dp"
+
                     android:layout_height="35dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="2dp"
-                    android:scaleType="fitXY"
                     android:elevation="1dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/titol_equip_frame" />
-
-
 
 
             </FrameLayout>
@@ -82,37 +80,36 @@ app:layout_alignSelf="center"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
+                android:background="@color/background"
+                android:fitsSystemWindows="true"
+                android:outlineSpotShadowColor="@color/background"
+                android:padding="20dp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@color/background"
-                android:fitsSystemWindows="true"
-                android:outlineSpotShadowColor="@color/background"
 
-                android:padding="20dp"
+                app:layout_constraintTop_toTopOf="parent"
                 app:mk_color="@color/text_especial"
                 app:mk_type="Whirlpool" />
 
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/inscritButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/inscritButton"
                 android:layout_margin="15dp"
+                android:background="@color/background2"
                 android:elevation="25dp"
-android:background="@color/background2"
                 card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
 
-
                 <LinearLayout
-android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
@@ -134,16 +131,15 @@ android:layout_gravity="center"
                         android:src="@drawable/trofeu_color" />
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerInscrit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
                         android:layout_marginTop="10dp"
                         android:nestedScrollingEnabled="false"
-                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-                        android:id="@+id/recyclerInscrit"
-                        tools:listitem="@layout/viewholder_inscrit"
                         android:orientation="vertical"
-                        />
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_inscrit" />
 
 
                 </LinearLayout>
@@ -152,23 +148,22 @@ android:layout_gravity="center"
             </FrameLayout>
 
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/amicsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/amicsButton"
                 android:layout_margin="15dp"
-                android:elevation="25dp"
                 android:background="@color/background2"
+                android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
 
-
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
@@ -190,17 +185,16 @@ android:layout_gravity="center"
                         android:src="@drawable/team" />
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerAmics"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
                         android:layout_marginTop="10dp"
-                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-                        android:id="@+id/recyclerAmics"
                         android:nestedScrollingEnabled="false"
-
-                        tools:listitem="@layout/viewholder_amic"
                         android:orientation="vertical"
-                        />
+                        android:visibility="gone"
+
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_amic" />
 
 
                 </LinearLayout>
@@ -210,23 +204,22 @@ android:layout_gravity="center"
 
 
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/invitacionsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/invitacionsButton"
                 android:layout_margin="15dp"
-                android:elevation="25dp"
                 android:background="@color/background2"
+                android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
 
-
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
@@ -246,37 +239,38 @@ android:layout_gravity="center"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/estrella_icon" />
+
                     <TextView
-android:layout_marginTop="20dp"
+                        android:id="@+id/senseInvitacions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
                         android:fontFamily="@font/osw_regular"
-                        android:visibility="gone"
-                        android:id="@+id/senseInvitacions"
+                        android:paddingTop="14dp"
                         android:text="No tens cap nova invitació"
                         android:textAlignment="center"
-                        android:paddingTop="14dp"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
                     <ImageView
-                        android:visibility="gone"
+                        android:id="@+id/icon_invitacions_construccio"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:id="@+id/icon_invitacions_construccio"
+                        android:padding="10dp"
                         android:src="@android:drawable/ic_secure"
-                        android:padding="10dp"/>
+                        android:visibility="gone" />
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerInvitacio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:nestedScrollingEnabled="false"
-
                         android:layout_marginTop="10dp"
-                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-                        android:id="@+id/recyclerInvitacio"
-                        tools:listitem="@layout/viewholder_inscrit"
+
+                        android:nestedScrollingEnabled="false"
                         android:orientation="vertical"
-                        />
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_inscrit" />
 
 
                 </LinearLayout>
@@ -285,23 +279,22 @@ android:layout_marginTop="20dp"
             </FrameLayout>
 
             <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/missatgesButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/missatgesButton"
                 android:layout_margin="15dp"
-                android:elevation="25dp"
                 android:background="@color/background2"
+                android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
                 card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
 
-
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
@@ -323,65 +316,63 @@ android:layout_marginTop="20dp"
                         android:src="@drawable/new_message_not_seen" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:nestedScrollingEnabled="false"
-
-                        android:layout_marginTop="10dp"
-                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
                         android:id="@+id/recyclerMissatges"
-                        tools:listitem="@layout/viewholder_missatge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:nestedScrollingEnabled="false"
                         android:orientation="vertical"
-                        />
+                        android:visibility="gone"
+                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:listitem="@layout/viewholder_missatge" />
+
                     <TextView
-                        android:layout_marginTop="20dp"
+                        android:id="@+id/missatges_no_implementats"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
                         android:fontFamily="@font/osw_regular"
-                        android:visibility="gone"
-                        android:id="@+id/missatges_no_implementats"
+                        android:paddingTop="14dp"
                         android:text="Enacara no està disponible aquesta opció"
                         android:textAlignment="center"
-                        android:paddingTop="14dp"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
                     <ImageView
-                        android:layout_marginTop="20dp"
-                        android:visibility="gone"
+                        android:id="@+id/icon_missatges_construccio"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
                         android:src="@drawable/icon_construction"
-                        android:id="@+id/icon_missatges_construccio"
-                        />
+                        android:visibility="gone" />
 
 
                 </LinearLayout>
 
 
             </FrameLayout>
-            <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+           <!-- <FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/perfilButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/perfilButton"
                 android:layout_margin="15dp"
-                android:elevation="25dp"
                 android:background="@color/background2"
-                card_view:cardCornerRadius="10dp"
-                card_view:contentPadding="10dp"
-
-                card_view:layout_minWidth="150dp">
-
+                android:elevation="25dp"
+               android:minWidth="180dp"
+                >
 
 
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
 
-                    android:padding="30dp">
+                    android:paddingVertical="30dp">
 
                     <TextView
 
@@ -394,30 +385,18 @@ android:layout_marginTop="20dp"
                         android:textSize="18sp" />
 
                     <ImageView
-                        android:padding="2dp"
-
                         android:layout_width="50dp"
+
                         android:layout_height="50dp"
+                        android:padding="2dp"
                         android:src="@drawable/player_color" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:nestedScrollingEnabled="false"
-
-                        android:layout_marginTop="10dp"
-                        card_view:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-                        android:id="@+id/recyclerPerfilEdit"
-                        tools:listitem="@layout/viewholder_missatge"
-                        android:orientation="vertical"
-                        />
 
 
                 </LinearLayout>
 
 
-            </FrameLayout>
+            </FrameLayout>-->
 
 
             <Space

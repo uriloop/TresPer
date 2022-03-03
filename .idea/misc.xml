@@ -28,12 +28,12 @@
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.34057971014492755" />
         <entry key="app/src/main/res/layout/fragment_help.xml" value="0.14" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.34057971014492755" />
-        <entry key="app/src/main/res/layout/fragment_info_torneig.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_info_torneig.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_mapa_torneigs.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/fragment_mostra_torneig.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.34057971014492755" />
-        <entry key="app/src/main/res/layout/fragment_perfil_usuari.xml" value="0.3685185185185185" />
+        <entry key="app/src/main/res/layout/fragment_perfil_usuari.xml" value="0.2904446546830653" />
         <entry key="app/src/main/res/layout/fragment_personal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_personal_admin.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_personal_novetats.xml" value="0.3546875" />
@@ -43,6 +43,7 @@
         <entry key="app/src/main/res/layout/fragment_tabbed.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_torneig_tabs.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_torneigs.xml" value="0.23634204275534443" />
+        <entry key="app/src/main/res/layout/imatge_torneig.xml" value="0.3342391304347826" />
         <entry key="app/src/main/res/layout/viewholder_amic.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/viewholder_equip.xml" value="0.25" />
         <entry key="app/src/main/res/layout/viewholder_inscrit.xml" value="0.15989583333333332" />

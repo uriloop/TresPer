@@ -17,7 +17,7 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_launcher_background"
         android:layout_height="match_parent"
-        app:civ_border_width="4dp"
+        app:civ_border_width="1dp"
         app:civ_border_color="@color/vermell_tauler"
         app:civ_border_overlay="true"/>
 

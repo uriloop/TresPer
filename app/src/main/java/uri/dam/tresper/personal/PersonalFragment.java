@@ -32,6 +32,7 @@ import java.util.List;
 
 import uri.dam.tresper.R;
 import uri.dam.tresper.databinding.FragmentPersonalBinding;
+import uri.dam.tresper.equips.EquipsTorneigFragment;
 import uri.dam.tresper.models.Partit;
 import uri.dam.tresper.models.TorneigElement;
 import uri.dam.tresper.models.TorneigsViewModel;
@@ -148,24 +149,7 @@ recyclerViewAmics = binding.recyclerAmics;
             }
         });
 
-        binding.inscritButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                torneigsViewModel.setInscritObert(!torneigsViewModel.isInscritObert());
-                if (torneigsViewModel.isInscritObert()){
-                    binding.recyclerInscrit.setVisibility(View.GONE);
-                }else{
-                    binding.recyclerInscrit.setVisibility(View.VISIBLE);
 
-
-                    binding.missatgesNoImplementats.setVisibility(View.GONE);
-                    binding.senseInvitacions.setVisibility(View.GONE);
-                    binding.recyclerAmics.setVisibility(View.GONE);
-                    binding.iconMissatgesConstruccio.setVisibility(View.GONE);
-
-                }
-            }
-        });
 
         binding.invitacionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -300,6 +284,9 @@ final FoldingCell fc2 = (FoldingCell) binding.foldingCell2;
                 public void onClick(View v) {
                     // Aki -> Seleccionar el torneig corresponent al viewmodel i viatjar al fragment torneigInfo
 
+                    torneigsViewModel.seleccionar(torneigElement);
+                    NavHostFragment.findNavController(PersonalFragment.this)
+                            .navigate(R.id.action_go_to_Info);
                 }
             });
 
@@ -397,7 +384,7 @@ final FoldingCell fc2 = (FoldingCell) binding.foldingCell2;
                     binding.inscritButton.setVisibility(View.GONE);
                     binding.invitacionsButton.setVisibility(View.GONE);
                     binding.amicsButton.setVisibility(View.GONE);
-                    binding.perfilButton.setVisibility(View.GONE);
+                    //binding.perfilButton.setVisibility(View.GONE);
 
                     binding.progressBar.setVisibility(View.VISIBLE);
 

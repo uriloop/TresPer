@@ -61,9 +61,9 @@ android:scaleX="1.2"
 
             android:padding="10dp"
             android:src="@drawable/ic_launcher_background"
-            app:civ_border_color="@color/text_especial"
+            app:civ_border_color="@color/vermell_tauler"
             app:civ_border_overlay="true"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="1dp" />
         <!--    <ImageView
                 android:id="@+id/cartellView"
                 android:layout_width="145dp"

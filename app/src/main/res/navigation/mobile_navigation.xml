@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_personal">
+    app:startDestination="@id/navigation_torneigs">
 
     <fragment
         android:id="@+id/navigation_torneigs"
@@ -266,6 +266,9 @@
         <action
             android:id="@+id/action_go_to_personal_torneigs"
             app:destination="@id/personalTorneigsFragment" />
+        <action
+            android:id="@+id/action_go_to_Info"
+            app:destination="@id/infoTorneigFragment" />
 
     </fragment>
 
@@ -274,7 +277,9 @@
         android:name="uri.dam.tresper.personal.PerfilUsuariFragment"
         android:label="fragment_perfil_usuari"
         tools:layout="@layout/fragment_perfil_usuari" >
-
+        <action
+            android:id="@+id/action_go_to_Info"
+            app:destination="@id/infoTorneigFragment" />
 
     </fragment>
     <fragment

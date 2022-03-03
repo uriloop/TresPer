@@ -79,9 +79,7 @@
             android:gravity="start"
             android:paddingHorizontal="30dp"
 
-            android:text="A l'equip de B33 ens encantaria ajudar-te en els teus dubtes en el menor temps possible tot i així a vegades no ens és possible així que hem preparat una secció de FAQs on solucionem els dubtes més típics, no dubtis en fer-hi una ullada.
-> Pero si ho prefereixes omple el següent formulari per contactar amb nosaltres i et contestarem tant bon punt poguem. Gràcies per confiar en nosaltres!" />
-
+            android:text="A l'equip de B33 ens encantaria ajudar-te en els teus dubtes en el menor temps possible tot i així a vegades no ens és possible així que hem preparat una secció de FAQs on solucionem els dubtes més típics, no dubtis en fer-hi una ullada."/>
   <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -209,15 +207,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/text_tronja"
             android:hint="El teu missatge"
             android:inputType="textMultiLine"
             android:maxWidth="500dp"
+            android:background="@color/background2"
             android:gravity="start"
-            android:layout_marginHorizontal="40dp"
+            android:paddingHorizontal="40dp"
             android:minWidth="280dp"
             android:minLines="5"
-            android:paddingEnd="30dp"
+            android:paddingVertical="20dp"
 
             android:textColor="@color/text_clar"
             android:textColorHint="@color/text_clar" />
