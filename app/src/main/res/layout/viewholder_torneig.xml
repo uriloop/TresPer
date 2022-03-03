@@ -58,8 +58,7 @@ android:scaleX="1.2"
             android:layout_height="155dp"
             android:layout_gravity="center_horizontal|bottom"
             android:elevation="10dp"
-
-            android:padding="10dp"
+            android:padding="24dp"
             android:src="@drawable/ic_launcher_background"
             app:civ_border_color="@color/vermell_tauler"
             app:civ_border_overlay="true"
@@ -92,6 +91,7 @@ android:scaleX="1.2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dia: "
+                    android:fontFamily="@font/osw_light"
                     android:textAlignment="center"
                     android:textColor="@color/text_tronja"
                     android:textSize="13sp" />
@@ -103,7 +103,8 @@ android:scaleX="1.2"
                     android:text="10-04-2022"
                     android:textAlignment="center"
                     android:textColor="@color/text_clar"
-                    android:textSize="13sp" />
+                    android:fontFamily="@font/osw_regular"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -121,6 +122,8 @@ android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:text="Lloc: "
 android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/osw_light"
+
                     android:textAlignment="center"
                     android:textColor="@color/text_tronja"
                     android:textSize="13sp" />
@@ -130,9 +133,11 @@ android:layout_marginBottom="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Institut Puig Castellar"
+                    android:fontFamily="@font/osw_regular"
+
                     android:textAlignment="center"
                     android:textColor="@color/text_clar"
-                    android:textSize="13sp" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
 
