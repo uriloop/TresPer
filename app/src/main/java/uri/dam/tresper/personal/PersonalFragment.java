@@ -95,6 +95,7 @@ recyclerViewAmics = binding.recyclerAmics;
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
+
         } else {
 
         }
@@ -109,21 +110,22 @@ recyclerViewAmics = binding.recyclerAmics;
         binding.missatgesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PopupWindow pw = popupWindow;
+                torneigsViewModel.setMissatgesObert(!torneigsViewModel.isMissatgesObert());
+                if (torneigsViewModel.isMissatgesObert()){
+                    binding.missatgesNoImplementats.setVisibility(View.GONE);
+                    binding.iconMissatgesConstruccio.setVisibility(View.GONE);
+                }else{
+
+                    binding.missatgesNoImplementats.setVisibility(View.VISIBLE);
+                    binding.iconMissatgesConstruccio.setVisibility(View.VISIBLE);    /// Posar a visible per a mostrar l'icone de construccio
 
 
+                    binding.recyclerInscrit.setVisibility(View.GONE);
+                    binding.senseInvitacions.setVisibility(View.GONE);
+                    binding.recyclerAmics.setVisibility(View.GONE);
 
 
-                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
-                pw.update();
-                new Handler().postDelayed(new Runnable() {   // delay
-
-
-                    @Override
-                    public void run() {
-                        pw.dismiss();
-                    }
-                }, 2000);
+                }
             }
         });
 
@@ -135,6 +137,31 @@ recyclerViewAmics = binding.recyclerAmics;
                     binding.recyclerInscrit.setVisibility(View.GONE);
                 }else{
                     binding.recyclerInscrit.setVisibility(View.VISIBLE);
+
+
+                    binding.missatgesNoImplementats.setVisibility(View.GONE);
+                    binding.senseInvitacions.setVisibility(View.GONE);
+                    binding.recyclerAmics.setVisibility(View.GONE);
+                    binding.iconMissatgesConstruccio.setVisibility(View.GONE);
+
+                }
+            }
+        });
+
+        binding.inscritButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                torneigsViewModel.setInscritObert(!torneigsViewModel.isInscritObert());
+                if (torneigsViewModel.isInscritObert()){
+                    binding.recyclerInscrit.setVisibility(View.GONE);
+                }else{
+                    binding.recyclerInscrit.setVisibility(View.VISIBLE);
+
+
+                    binding.missatgesNoImplementats.setVisibility(View.GONE);
+                    binding.senseInvitacions.setVisibility(View.GONE);
+                    binding.recyclerAmics.setVisibility(View.GONE);
+                    binding.iconMissatgesConstruccio.setVisibility(View.GONE);
 
                 }
             }
@@ -148,7 +175,12 @@ recyclerViewAmics = binding.recyclerAmics;
                     binding.senseInvitacions.setVisibility(View.GONE);
                 }else{
                     binding.senseInvitacions.setVisibility(View.VISIBLE);
+                    binding.missatgesNoImplementats.setVisibility(View.GONE);
+                    binding.recyclerInscrit.setVisibility(View.GONE);
 
+                    binding.recyclerAmics.setVisibility(View.GONE);
+
+                    binding.iconMissatgesConstruccio.setVisibility(View.GONE);
                 }
             }
         });
@@ -161,7 +193,12 @@ binding.amicsButton.setOnClickListener(new View.OnClickListener() {
                     binding.recyclerAmics.setVisibility(View.GONE);
                 }else{
                     binding.recyclerAmics.setVisibility(View.VISIBLE);
+                    binding.missatgesNoImplementats.setVisibility(View.GONE);
+                    binding.senseInvitacions.setVisibility(View.GONE);
 
+                    binding.recyclerInscrit.setVisibility(View.GONE);
+
+                    binding.iconMissatgesConstruccio.setVisibility(View.GONE);
                 }
             }
         });
@@ -336,6 +373,7 @@ final FoldingCell fc2 = (FoldingCell) binding.foldingCell2;
           /*      pw.setWidth(400);
                 pw.setHeight(180);*/
 
+
                     pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
                     pw.update();
                     new Handler().postDelayed(new Runnable() {   // delay
@@ -359,6 +397,8 @@ final FoldingCell fc2 = (FoldingCell) binding.foldingCell2;
                     binding.inscritButton.setVisibility(View.GONE);
                     binding.invitacionsButton.setVisibility(View.GONE);
                     binding.amicsButton.setVisibility(View.GONE);
+                    binding.perfilButton.setVisibility(View.GONE);
+
                     binding.progressBar.setVisibility(View.VISIBLE);
 
 

@@ -29,20 +29,20 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+     /*   if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
 
 
 
         }else{
 
-            /*binding.spacer.setVisibility(View.GONE);*/
+            *//*binding.spacer.setVisibility(View.GONE);*//*
             binding.registerText.setVisibility(View.GONE);
 
 
 
         }
-
+*/
         binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,32 +55,41 @@ public class RegisterFragment extends Fragment {
 
                 if (binding.editTextEmailAddress.getText().length() < 1 ) {
                     binding.editTextEmailAddress.setError("Required.");
-                    Snackbar.make(view, "Completa els camps per registrar-te", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Completa els camps per registrar-te", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                 } else if (noEsMail==0) {
-                    Snackbar.make(view, "Format del mail incorrecte", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Format del mail incorrecte", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
 
                 }
 
                 else if (binding.editTextPassword.getText().length() < 1) {
-                    Snackbar.make(view, "Introdueix un nou password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Introdueix un nou password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                     binding.editTextPassword.setError("Requerit!");
                 }
                 else if (binding.editTextPassword2.getText().length() < 1) {
-                    Snackbar.make(view, "Repeteix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Repeteix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                     binding.editTextPassword2.setError("Requerit!");
                 } else {
 
                     binding.progressBar.setVisibility(View.VISIBLE);
-                    binding.emailLayout.setVisibility(View.GONE);
-                    binding.pass1Layout.setVisibility(View.GONE);
-                    binding.pass2Layout.setVisibility(View.GONE);
+                    binding.editTextEmailAddress.setVisibility(View.GONE);
+                    binding.editTextPassword.setVisibility(View.GONE);
+                    binding.editTextPassword2.setVisibility(View.GONE);
                     binding.buttonRegister.setVisibility(View.GONE);
                     new Handler().postDelayed(new Runnable() {   // delay per a simular la carrega i que es vegi la progressBar
                         @Override
                         public void run() {
                             NavHostFragment.findNavController(RegisterFragment.this)
                                     .navigate(R.id.action_to_logInFragment);
-                            Snackbar.make(view, "T'has registrat amb l'email " + binding.editTextEmailAddress.getText() + "\nBenvingut !!!", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                            Snackbar.make(view, "T'has registrat amb l'email " + binding.editTextEmailAddress.getText() + "\nBenvingut !!!", Snackbar.LENGTH_LONG)
+                                    .setBackgroundTint(getResources()
+                                            .getColor(R.color.tab_no_pulsat, getActivity().getTheme()))
+                                    .setActionTextColor(getResources()
+                                            .getColor(R.color.teal_200,
+                                                    getActivity().getTheme()))
+                                    .setTextColor(getResources()
+                                            .getColor(R.color.black, getActivity().getTheme()))
+                                    .setDuration(2000)
+                                    .show();
 
                         }
                     }, 500);

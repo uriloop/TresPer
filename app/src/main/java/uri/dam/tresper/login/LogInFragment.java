@@ -62,11 +62,12 @@ public class LogInFragment extends Fragment {
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-
+            binding.basquetTitleFrame.setMinimumHeight(300);
 
 
         }else{
 
+            binding.basquetTitleFrame.setMinimumHeight(200);
 
            /*binding.benvinguda.setVisibility(View.GONE);
            binding.or.setVisibility(View.GONE);*/
@@ -137,8 +138,8 @@ public class LogInFragment extends Fragment {
                 */
 
                 binding.progressBar.setVisibility(View.VISIBLE);
-                binding.emailLayout.setVisibility(View.GONE);
-                binding.passLayout.setVisibility(View.GONE);
+               binding.email.setVisibility(View.GONE);
+                binding.editTextPass.setVisibility(View.GONE);
                 binding.forgetPasswd.setVisibility(View.GONE);
                 binding.buttonLogIn.setVisibility(View.GONE);
                 binding.buttonRegister.setVisibility(View.GONE);
@@ -175,13 +176,13 @@ public class LogInFragment extends Fragment {
 
                 if (binding.editTextEmailAddress.getText().length() < 1) {
                     binding.editTextEmailAddress.setError("Requerit!");
-                    Snackbar.make(view, "Completa els camps per entrar", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Completa els camps per entrar", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                 } else if (noEsMail == 0) {
-                    Snackbar.make(view, "Format del mail incorrecte", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Format del mail incorrecte", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                 }
                 //mostrar error doble;
                 else if (binding.editTextPassword.getText().length() < 1) {
-                    Snackbar.make(view, "Introdueix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+                    Snackbar.make(view, "Introdueix el password", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
                     binding.editTextPassword.setError("Requerit!");
                 } else {
 
@@ -200,7 +201,7 @@ public class LogInFragment extends Fragment {
 
     private void recuperarContrasenaGoogle(View view, EditText input) {
 
-        Snackbar.make(view, "S'ha enviat un email de recuperació a:\n " + input.getText().toString(), Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.white, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+        Snackbar.make(view, "S'ha enviat un email de recuperació a:\n " + input.getText().toString(), Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
 
 
     }

@@ -89,9 +89,8 @@ getSupportActionBar().setDisplayShowTitleEnabled(false);
     public boolean onPrepareOptionsMenu(Menu menu) {
 
 // per si volem treure o posar items al menu, un cop s'ha iniciat o creat el menu
-/*
+        menu.removeItem(R.id.action_crear_equip);
         menu.removeItem(R.id.action_crear_torneig);
-*/
         menu.setQwertyMode(true);
 
         return super.onPrepareOptionsMenu(menu);

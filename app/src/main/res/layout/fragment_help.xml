@@ -1,14 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".options.HelpFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Help fragment"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="60dp">
+
+            <ImageView
+                android:id="@+id/logoApp"
+                android:layout_width="100dp"
+
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/team" />
+
+            <TextView
+                android:id="@+id/benvinguda"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="65dp"
+                android:fontFamily="@font/chunk_five_regular"
+                android:gravity="center"
+                android:minWidth="300dp"
+
+                android:padding="10dp"
+                android:text="Bàsquet 3x3"
+                android:textAlignment="center"
+                android:textColor="@color/bottom_icono"
+                android:textColorHint="@color/bottom_icono"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/slogan"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="128dp"
+                android:fontFamily="@font/caveat_regular"
+                android:gravity="center_horizontal"
+                android:minWidth="300dp"
+
+                android:text="En estat pur!"
+                android:textAlignment="center"
+                android:textColor="@color/bottom_icono"
+                android:textColorHint="@color/bottom_icono"
+                android:textSize="34sp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/osw_regular"
+            android:gravity="bottom"
+
+            android:paddingHorizontal="30dp"
+            android:text="Hola!" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/osw_regular"
+            android:gravity="start"
+            android:paddingHorizontal="30dp"
+
+            android:text="A l'equip de B33 ens encantaria ajudar-te en els teus dubtes en el menor temps possible tot i així a vegades no ens és possible així que hem preparat una secció de FAQs on solucionem els dubtes més típics, no dubtis en fer-hi una ullada.
+> Pero si ho prefereixes omple el següent formulari per contactar amb nosaltres i et contestarem tant bon punt poguem. Gràcies per confiar en nosaltres!" />
+
+  <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/osw_regular"
+            android:gravity="start"
+            android:paddingHorizontal="30dp"
+
+            android:text="Pero si ho prefereixes omple el següent formulari per contactar amb nosaltres i et contestarem tant bon punt poguem. Gràcies per confiar en nosaltres!" />
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:outlineSpotShadowColor="@color/background"
+
+            android:padding="20dp"
+            app:mk_color="@color/text_especial"
+            app:mk_type="Whirlpool" />
+        <Button
+            android:id="@+id/faq_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="FAQs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/osw_regular"
+            android:gravity="center_horizontal"
+
+            android:paddingVertical="20dp"
+            android:text="Formulari de contacte:"
+            android:textSize="26dp" />
+
+        <EditText
+            android:id="@+id/nomEdit"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/text_tronja"
+            android:hint="Nom"
+            android:autofillHints="name"
+
+            android:textSize="18dp"
+            android:inputType="textEmailAddress"
+            android:maxWidth="500dp"
+            android:minWidth="280dp"
+            android:paddingEnd="30dp"
+            android:textColor="@color/text_clar"
+            android:textColorHint="@color/text_clar" />
+
+
+
+
+        <EditText
+            android:id="@+id/emailEdit"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/text_tronja"
+            android:hint="Email adress:"
+            android:inputType="textEmailAddress"
+            android:maxWidth="500dp"
+            android:minWidth="280dp"
+            android:paddingEnd="30dp"
+            android:autofillHints="emailAddress"
+
+            android:textColor="@color/text_clar"
+            android:textColorHint="@color/text_clar" />
+
+        <TextView
+   android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/text_tronja"
+            android:text="Missatge: "
+
+            android:layout_marginBottom="10dp"
+            android:inputType="textMultiLine"
+            android:maxWidth="500dp"
+            android:minWidth="280dp"
+            android:paddingEnd="30dp"
+
+            android:textColor="@color/text_tronja"
+      />
+        <EditText
+            android:id="@+id/assumpteEdit"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/text_tronja"
+            android:hint="Asumpte"
+            android:inputType="textEmailAddress"
+            android:maxWidth="500dp"
+            android:minWidth="280dp"
+            android:paddingEnd="30dp"
+            android:textSize="18dp"
+            android:autofillHints="username"
+
+            android:textColor="@color/text_clar"
+
+            android:textColorHint="@color/text_clar" />
+
+        <EditText
+            android:id="@+id/missatgeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/text_tronja"
+            android:hint="El teu missatge"
+            android:inputType="textMultiLine"
+            android:maxWidth="500dp"
+            android:gravity="start"
+            android:layout_marginHorizontal="40dp"
+            android:minWidth="280dp"
+            android:minLines="5"
+            android:paddingEnd="30dp"
+
+            android:textColor="@color/text_clar"
+            android:textColorHint="@color/text_clar" />
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:id="@+id/progress_bar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:outlineSpotShadowColor="@color/background"
+
+            android:padding="20dp"
+            app:mk_color="@color/text_especial"
+            app:mk_type="Whirlpool" />
+        <Button
+            android:id="@+id/enviar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Enviar" />
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:paddingBottom="50dp"
+            android:src="@drawable/pilota" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        </Space>
+    </LinearLayout>
+    
+</ScrollView>

@@ -23,6 +23,16 @@ public class TorneigsViewModel extends AndroidViewModel {
 
     boolean inscritObert;
 
+    public boolean isMissatgesObert() {
+        return missatgesObert;
+    }
+
+    public void setMissatgesObert(boolean missatgesObert) {
+        this.missatgesObert = missatgesObert;
+    }
+
+    boolean missatgesObert;
+
     public boolean isInvitacionsObert() {
         return invitacionsObert;
     }
