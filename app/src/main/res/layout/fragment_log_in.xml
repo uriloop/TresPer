@@ -8,12 +8,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:alignContent="space_around"
+    android:nestedScrollingEnabled="true"
     app:alignItems="center"
-    android:padding="3dp"
+    android:padding="0dp"
     app:flexDirection="column"
     app:flexWrap="wrap"
     app:justifyContent="center"
-    app:layout_flexGrow="@integer/material_motion_duration_long_2">
+    app:layout_flexGrow="1">
 
 
     <FrameLayout
@@ -51,13 +52,12 @@
             android:textSize="40sp" />
 
         <TextView
-            android:layout_marginBottom="10dp"
             android:id="@+id/slogan"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="118dp"
             android:fontFamily="@font/caveat_regular"
             android:gravity="center_horizontal"
             android:minWidth="300dp"
@@ -172,6 +172,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPassword"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"/>
@@ -184,7 +185,6 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:minWidth="280dp"
-        android:paddingVertical="10dp"
         android:paddingStart="35dp"
         android:paddingEnd="20dp"
         android:text="forget password"
@@ -208,7 +208,6 @@
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:maxHeight="20dp"
         android:minWidth="280dp"
         android:minHeight="55dp"
@@ -221,7 +220,6 @@
         android:id="@+id/or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingVertical="5dp"
         android:gravity="center"
         android:minWidth="300dp"
         android:text="- or -"
@@ -232,7 +230,7 @@
     <ImageView
         android:id="@+id/google"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:maxWidth="300dp"
         android:minWidth="54dp"
@@ -250,7 +248,7 @@
         android:layout_margin="20dp"
         android:background="@color/background"
         android:fitsSystemWindows="true"
-        android:outlineSpotShadowColor="@color/background"
+        android:outlineSpotShadowColor="@color/transparent"
         android:padding="20dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"

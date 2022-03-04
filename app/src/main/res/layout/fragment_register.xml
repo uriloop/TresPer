@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     app:alignContent="space_around"
     app:alignItems="center"
-    android:padding="3dp"
+    android:padding="20dp"
+    android:nestedScrollingEnabled="true"
     app:flexDirection="column"
     app:flexWrap="wrap"
     app:justifyContent="center"
@@ -16,7 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_maxHeight="200dp"
-        android:layout_marginBottom="10dp"
         app:layout_maxWidth="280dp">
 
         <ImageView
@@ -51,7 +51,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:minWidth="280dp"
-        android:padding="3dp"
         android:text="Register"
 
         android:fontFamily="@font/chunk_five_regular"
@@ -62,11 +61,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingVertical="3dp"
         android:fontFamily="@font/osw_regular"
         android:gravity="start"
         android:minWidth="280dp"
         android:maxWidth="280dp"
-        android:paddingHorizontal="15dp"
 android:text="Benvingut a Basquet 3x3 App, la app dels amants del bàsquet. Si t'agrada aquest esport registra't i descobreix a fons aquesta app. De part de tot l'equip, "/>
 
     <TextView
@@ -76,7 +75,6 @@ android:text="Benvingut a Basquet 3x3 App, la app dels amants del bàsquet. Si t
         android:gravity="center"
         android:minWidth="280dp"
         android:text="Benvingut!"
-        android:paddingVertical="15dp"
         android:fontFamily="@font/osw_xtr_light"
         android:textAlignment="center"
         android:textColor="@color/text_clar"
@@ -197,7 +195,7 @@ android:text="Benvingut a Basquet 3x3 App, la app dels amants del bàsquet. Si t
         android:minWidth="280dp"
         android:minHeight="55dp"
         android:text="Register"
-android:layout_marginTop="20dp"
+android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
 
@@ -207,16 +205,16 @@ android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:background="@color/black"
+        android:background="@color/transparent"
         android:fitsSystemWindows="true"
-        android:outlineSpotShadowColor="@color/teal_700"
+        android:outlineSpotShadowColor="@color/vermell_tauler"
         android:padding="20dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:mk_color="@color/teal_700"
+        app:mk_color="@color/vermell_tauler"
         app:mk_type="Whirlpool" />
 
 </com.google.android.flexbox.FlexboxLayout>

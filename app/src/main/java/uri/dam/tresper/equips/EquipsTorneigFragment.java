@@ -8,17 +8,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Handler;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.PopupWindow;
 
 import com.bumptech.glide.Glide;
 import com.google.android.flexbox.AlignItems;
@@ -46,9 +42,9 @@ public class EquipsTorneigFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+        // navController = Navigation.findNavController(view);   // treure si s'utilitza view pager
 
         torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
-        navController = Navigation.findNavController(view);
         EquipsAdapter equipsAdapter = new EquipsAdapter();
         recyclerView = binding.recyclerEquips;
 
@@ -67,33 +63,6 @@ public class EquipsTorneigFragment extends Fragment {
         binding.recyclerEquips.setAdapter(equipsAdapter);
 
 
-        View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_inscripcions_completes, null);
-        final PopupWindow popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
-
-
-        binding.floatingMaps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                PopupWindow pw = popupWindow;
-
-
-                /*pw.setWidth(400);
-                pw.setHeight(180);*/
-
-                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
-                pw.update();
-                new Handler().postDelayed(new Runnable() {   // delay
-
-
-                    @Override
-                    public void run() {
-                        pw.dismiss();
-                    }
-                }, 2000);
-
-            }
-        });
 
 
         torneigsViewModel.obtenerEquipos().observe(getViewLifecycleOwner(), new Observer<List<EquipElement>>() {
@@ -103,7 +72,7 @@ public class EquipsTorneigFragment extends Fragment {
             }
         });
 
-        binding.infoButton.setOnClickListener(new View.OnClickListener() {
+        /*binding.infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(EquipsTorneigFragment.this)
@@ -116,7 +85,7 @@ public class EquipsTorneigFragment extends Fragment {
                 NavHostFragment.findNavController(EquipsTorneigFragment.this)
                         .navigate(R.id.action_go_to_classi);
             }
-        });
+        });*/
 
         ///////////////////////////////////////////////////
 

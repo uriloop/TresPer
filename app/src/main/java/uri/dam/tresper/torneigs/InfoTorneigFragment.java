@@ -1,8 +1,10 @@
 package uri.dam.tresper.torneigs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -44,19 +46,46 @@ public class InfoTorneigFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+        // navController = Navigation.findNavController(view);   // treure si s'utilitza view pager
 
-        navController = Navigation.findNavController(view);
         torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
+
+
+        View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_inscripcions_completes, null);
+        final PopupWindow popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+
+        binding.inscripcioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                PopupWindow pw = popupWindow;
+
+
+                /*pw.setWidth(400);
+                pw.setHeight(180);*/
+
+                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
+                pw.update();
+                new Handler().postDelayed(new Runnable() {   // delay
+
+
+                    @Override
+                    public void run() {
+                        pw.dismiss();
+                    }
+                }, 2000);
+
+            }
+        });
+
+
 
         binding.nomTorneig.setText(torneigsViewModel.seleccionat().getValue().getNomTorneig());
         binding.textBenvinguda.setText(torneigsViewModel.seleccionat().getValue().getDescripcio());
-        /*        binding.textData.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());
-         *//* binding.mapa.setText(torneigsViewModel.seleccionat().getValue().getDiaIhora());*//*
-
-        binding.textLloc.setText(torneigsViewModel.seleccionat().getValue().getLocalitzacio());*/
-/*
-        binding.webView.loadDataWithBaseURL(null, "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1645763192800!6m8!1m7!1s8S_phpY9th7ILk73H-Xhdg!2m2!1d41.45588230455805!2d2.201101338185295!3f133.03038376116046!4f1.182737709026739!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>", "text/html", "utf-8", null);
-*/
+         binding.textNormes.setText(torneigsViewModel.seleccionat().getValue().getNormes());
+         binding.textHoraris.setText(torneigsViewModel.seleccionat().getValue().getHoraris());
+        binding.textInscripcio.setText(torneigsViewModel.seleccionat().getValue().getInscripcio());
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
         } else {
@@ -92,6 +121,22 @@ public class InfoTorneigFragment extends Fragment {
             }
         });*/
 
+binding.normesFiba.setOnClickListener(new View.OnClickListener() {
+
+    @Override
+    public void onClick(View view) {
+        binding.normesFiba.setBackground(getResources().getDrawable(R.color.psts_background_tab_pressed_ripple, getActivity().getTheme()));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.fiba.basketball/es/3x3/rules"));
+                startActivity(browserIntent);
+            }
+        },50);
+
+
+    }
+});
 
         Glide.with(getContext()).load(torneigsViewModel.seleccionat().getValue().getImatgeCartell())
                 .centerInside()
@@ -101,6 +146,7 @@ public class InfoTorneigFragment extends Fragment {
                 .centerInside()
                 .into(binding.mapa);*/
 
+/*
         binding.equipsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,6 +154,8 @@ public class InfoTorneigFragment extends Fragment {
                         .navigate(R.id.action_go_to_equips);
             }
         });
+*/
+/*
         binding.partitsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,6 +163,7 @@ public class InfoTorneigFragment extends Fragment {
                         .navigate(R.id.action_go_to_classi);
             }
         });
+*/
         View popupView2 = LayoutInflater.from(getActivity()).inflate(R.layout.imatge_torneig, null);
         final PopupWindow popupWindow2 = new PopupWindow(popupView2, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
@@ -136,45 +185,12 @@ public class InfoTorneigFragment extends Fragment {
 
 
 
-        View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.avis_inscripcions_completes, null);
-        final PopupWindow popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
-
-        binding.floatingMaps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                PopupWindow pw = popupWindow;
-
-
-                /*pw.setWidth(400);
-                pw.setHeight(180);*/
-
-                pw.showAtLocation(binding.getRoot(), Gravity.CENTER, 0, 0);
-                pw.update();
-                new Handler().postDelayed(new Runnable() {   // delay
-
-
-                    @Override
-                    public void run() {
-                        pw.dismiss();
-                    }
-                }, 2000);
-
-            }
-        });
 
 
     }
 
     WebView myBrowser;
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
-    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -183,6 +199,13 @@ public class InfoTorneigFragment extends Fragment {
         binding = FragmentInfoTorneigBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
     }
 
 

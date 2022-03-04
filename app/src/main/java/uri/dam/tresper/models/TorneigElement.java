@@ -26,7 +26,7 @@ public class TorneigElement {
         return latLong;
     }
 
-    public TorneigElement(String nomTorneig, String descripcio, String diaIhora, String imatgeCartell, String mapaGoogle, String localitzacio, String premis, String inscripcio, String normes, List<String> imatges, List<EquipElement> equipsParticipants, double[] latLong) {
+    public TorneigElement(String nomTorneig,String horaris , String descripcio, String diaIhora, String imatgeCartell, String mapaGoogle, String localitzacio, String premis, String inscripcio, String normes, List<String> imatges, List<EquipElement> equipsParticipants, double[] latLong) {
                this.nomTorneig = nomTorneig;
         this.descripcio = descripcio;
         this.diaIhora=diaIhora;

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--
     <LinearLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
@@ -66,6 +67,7 @@
 
     </LinearLayout>
 
+-->
 
 
     <ScrollView
@@ -77,7 +79,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
 
             android:orientation="vertical">
             <FrameLayout
@@ -163,43 +164,6 @@ android:minHeight="200dp"
 
     </ScrollView>
 
-    <FrameLayout
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="end|bottom"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="77dp"
-
-        android:outlineAmbientShadowColor="@color/transparent"
-
-        android:elevation="10dp">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingMaps"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/bottom_fons_focus"
-
-            app:elevation="10dp"
-            app:rippleColor="@color/bottom_fons"
-            android:outlineAmbientShadowColor="@color/transparent"
-
-            />
-
-        <ImageView        android:outlineAmbientShadowColor="@color/transparent"
-
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:elevation="20dp"
-
-            android:scaleType="fitCenter"
-
-            android:src="@drawable/pilota2d" />
-    </FrameLayout>
 
 
 
@@ -214,9 +178,9 @@ android:minHeight="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/background"
+        android:background="@color/transparent"
         android:fitsSystemWindows="true"
-        android:outlineSpotShadowColor="@color/background"
+        android:outlineSpotShadowColor="@color/transparent"
 
         android:padding="20dp"
         app:mk_color="@color/text_especial"

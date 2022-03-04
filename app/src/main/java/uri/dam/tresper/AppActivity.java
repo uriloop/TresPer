@@ -30,6 +30,7 @@ public class AppActivity extends AppCompatActivity {
     private ActivityAppBinding binding;
     NavController navController;
     BottomNavigationView navView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,22 @@ public class AppActivity extends AppCompatActivity {
 /*
         navView.setItemIconTintList(ColorStateList.valueOf(Color.parseColor("#F9ECD4")));
 */
+        binding.hideButton.setButtonDrawable(R.drawable.hide_icon);
+
+        binding.hideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (binding.hideButton.isChecked()){
+                    binding.hideButton.setButtonDrawable(R.drawable.hide_icon);
+
+                    binding.navView.setVisibility(View.GONE);
+                }else{
+                    binding.hideButton.setButtonDrawable(R.drawable.hide_icon_false);
+                    binding.navView.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_torneigs, R.id.navigation_social, R.id.navigation_personal)
                 .build();
@@ -49,12 +66,12 @@ public class AppActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-getWindow().setNavigationBarColor(getResources().getColor(R.color.tab_no_pulsat_text));
-getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.tab_no_pulsat_text));
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-        }else{
+        } else {
             //binding.navView.setItemIconSize(0);
 
 
@@ -81,8 +98,6 @@ getSupportActionBar().setDisplayShowTitleEnabled(false);
         getMenuInflater().inflate(R.menu.menu_app, menu);
         return true;
     }
-
-
 
 
     @Override

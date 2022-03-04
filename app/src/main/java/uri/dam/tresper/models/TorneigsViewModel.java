@@ -166,14 +166,27 @@ amicsObert=false;
     MutableLiveData<Integer> ronda= new MutableLiveData<>();
 
 
+
     MutableLiveData<List<Partit>> listPartitsMutableLiveData = new MutableLiveData<>();
 
     MutableLiveData<Partit> partitSeleccionat = new MutableLiveData<>();
 
 
+public boolean hayMasRondas(){
+    // falta implementar que faci coses de moment sempre retorna false per a que salti l'Snack
+
+    return false;
+
+}
     public MutableLiveData<List<Partit>> obtenerPartidos(MutableLiveData<Integer> ronda) {
         this.ronda=ronda;
+        if(classi.getRondes().size()== ronda.getValue()){
+
+        }
         listPartitsMutableLiveData.setValue( classi.getRondes().get(ronda.getValue()-1).getPartits());
+
+
+
         return listPartitsMutableLiveData;
     }
 

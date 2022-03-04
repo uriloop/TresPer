@@ -24,6 +24,7 @@ import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -59,13 +60,15 @@ public class ClassiTorneigFragment extends Fragment {
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this.getContext());
         layoutManager.setFlexDirection(FlexDirection.ROW);
         layoutManager.setJustifyContent(JustifyContent.SPACE_AROUND);
-        layoutManager.setAlignItems(AlignItems.CENTER);
+        layoutManager.setAlignItems(AlignItems.STRETCH);
         layoutManager.setFlexWrap(FlexWrap.WRAP);
+
         recyclerView.setLayoutManager(layoutManager);
 
 
+
         torneigsViewModel = new ViewModelProvider(requireActivity()).get(TorneigsViewModel.class);
-        navController = Navigation.findNavController(view);
+       // navController = Navigation.findNavController(view);   // treure si s'utilitza view pager
 
 
       /*  binding.rondaNext.setOnClickListener(new View.OnClickListener() {
@@ -87,14 +90,14 @@ public class ClassiTorneigFragment extends Fragment {
             }
         });
 
-        binding.rondaNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    ronda.setValue(ronda.getValue() + 1);
-                    rondaText = String.valueOf(ronda.getValue());
-                } catch (Exception e) {
-                }
+        binding.rondaNext.setOnClickListener(view1 -> {
+            if(
+                torneigsViewModel.hayMasRondas()){
+                ronda.setValue(ronda.getValue() + 1);
+                rondaText = String.valueOf(ronda.getValue());
+            } else {
+                Snackbar.make(view1, "Encara no ha acabat la primera ronda. Pero pots seguir els partits en directe", Snackbar.LENGTH_LONG).setBackgroundTint(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())).setActionTextColor(getResources().getColor(R.color.teal_200, getActivity().getTheme())).setTextColor(getResources().getColor(R.color.black, getActivity().getTheme())).setDuration(2000).show();
+
             }
         });
         binding.rondaPrev.setOnClickListener(new View.OnClickListener() {
@@ -125,6 +128,7 @@ public class ClassiTorneigFragment extends Fragment {
                 .into(binding.imatgeView);
         binding.nomTorneig.setText(torneigsViewModel.seleccionat().getValue().getNomTorneig());
 
+/*
         binding.infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,6 +136,8 @@ public class ClassiTorneigFragment extends Fragment {
                         .navigate(R.id.action_go_to_Info);
             }
         });
+*/
+/*
         binding.equipsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,6 +145,7 @@ public class ClassiTorneigFragment extends Fragment {
                         .navigate(R.id.action_go_to_equips);
             }
         });
+*/
 
     }
 
@@ -177,12 +184,13 @@ public class ClassiTorneigFragment extends Fragment {
             Partit partitElement = partitsElementList.get(position);
 
 
-            holder.binding.scoreboardLayout.setMinHeight(340);
+            holder.binding.scoreboardLayout.setMinHeight(320);
             holder.binding.frameLayoutpunts1.setVisibility(View.GONE);
             holder.binding.frameLayoutpunts2.setVisibility(View.GONE);
             holder.binding.cronoFrame.setVisibility(View.GONE);
             holder.binding.quartFrame.setVisibility(View.GONE);
             holder.binding.vs.setVisibility(View.GONE);
+            holder.binding.touchHere.setVisibility(View.VISIBLE);
 
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -195,6 +203,8 @@ public class ClassiTorneigFragment extends Fragment {
                         holder.binding.quartFrame.setVisibility(View.GONE);
                         holder.binding.vs.setVisibility(View.GONE);
                         holder.binding.sombra1.setVisibility(View.VISIBLE);
+                        holder.binding.touchHere.setVisibility(View.VISIBLE);
+
                         holder.binding.sombra2.setVisibility(View.VISIBLE);
                         holder.binding.guest2.setTextColor(getResources().getColor(R.color.text_tronja_brillant));
                         holder.binding.home.setTextColor(getResources().getColor(R.color.text_tronja_brillant));
@@ -202,6 +212,7 @@ public class ClassiTorneigFragment extends Fragment {
                     }else{
                         holder.binding.guest2.setTextColor(getResources().getColor(R.color.vermell_tauler));
                         holder.binding.home.setTextColor(getResources().getColor(R.color.vermell_tauler));
+                        holder.binding.touchHere.setVisibility(View.GONE);
 
                         holder.binding.scoreboardLayout.setMinHeight(340);
                         holder.binding.frameLayoutpunts1.setVisibility(View.VISIBLE);

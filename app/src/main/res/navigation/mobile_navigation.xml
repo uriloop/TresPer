@@ -21,7 +21,7 @@
             app:destination="@id/crearTorneigFragment" />
         <action
             android:id="@+id/action_go_to_Info"
-            app:destination="@id/infoTorneigFragment" />
+            app:destination="@id/torneigViewPagerFragment" />
 
         <action android:id="@+id/action_go_to_maps"
             app:destination="@+id/mapaTorneigsFragment"/>
@@ -113,7 +113,7 @@
         tools:layout="@layout/fragment_classi_torneig">
         <action
             android:id="@+id/action_go_to_Info"
-            app:destination="@id/infoTorneigFragment" />
+            app:destination="@id/torneigViewPagerFragment" />
         <action
             android:id="@+id/action_go_to_equips"
             app:destination="@id/equipsTorneigFragment" />
@@ -141,7 +141,7 @@
             app:destination="@id/classiTorneigFragment" />
         <action
             android:id="@+id/action_go_to_Info"
-            app:destination="@id/infoTorneigFragment" />
+            app:destination="@id/torneigViewPagerFragment" />
         <action
             android:id="@+id/action_go_to_helpFragment2"
             app:destination="@id/helpFragment2" />
@@ -268,7 +268,7 @@
             app:destination="@id/personalTorneigsFragment" />
         <action
             android:id="@+id/action_go_to_Info"
-            app:destination="@id/infoTorneigFragment" />
+            app:destination="@id/torneigViewPagerFragment" />
 
     </fragment>
 
@@ -279,7 +279,7 @@
         tools:layout="@layout/fragment_perfil_usuari" >
         <action
             android:id="@+id/action_go_to_Info"
-            app:destination="@id/infoTorneigFragment" />
+            app:destination="@id/torneigViewPagerFragment" />
 
     </fragment>
     <fragment
@@ -287,6 +287,24 @@
         android:name="uri.dam.tresper.torneigs.MapaTorneigsFragment"
         android:label="fragment_mapa_torneigs"
         tools:layout="@layout/fragment_mapa_torneigs" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/torneigViewPagerFragment"
+        android:name="uri.dam.tresper.torneigs.TorneigViewPagerFragment"
+        android:label="fragment_torneig_view_pager"
+        tools:layout="@layout/fragment_torneig_view_pager" >
+
+        <action
+            android:id="@+id/action_go_to_helpFragment2"
+            app:destination="@id/helpFragment2" />
+
+        <action
+            android:id="@+id/action_go_to_perfil"
+            app:destination="@id/perfilUsuariFragment" />
+        <action
+            android:id="@+id/action_go_to_participants"
+            app:destination="@+id/equipFragment"/>
 
     </fragment>
 
