@@ -150,7 +150,6 @@ binding.tabLayout.setMinimumHeight(50);
     }
 
 
-    MaterialViewPager mViewPager;
 
 
 
