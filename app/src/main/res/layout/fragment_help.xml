@@ -79,41 +79,168 @@
             android:gravity="start"
             android:paddingHorizontal="30dp"
 
-            android:text="A l'equip de B33 ens encantaria ajudar-te en els teus dubtes en el menor temps possible tot i així a vegades no ens és possible així que hem preparat una secció de FAQs on solucionem els dubtes més típics, no dubtis en fer-hi una ullada."/>
-  <TextView
+            android:text="A l'equip de B33 ens encantaria ajudar-te en els teus dubtes en el menor temps possible tot i així a vegades no ens és possible així que hem preparat una secció de FAQs on solucionem els dubtes més típics, no dubtis en fer-hi una ullada."
+
+            android:textSize="18sp" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/osw_regular"
             android:gravity="start"
             android:paddingHorizontal="30dp"
+            android:text="Pero si ho prefereixes omple el següent formulari per contactar amb nosaltres i et contestarem tant bon punt poguem. Gràcies per confiar en nosaltres!"
 
-            android:text="Pero si ho prefereixes omple el següent formulari per contactar amb nosaltres i et contestarem tant bon punt poguem. Gràcies per confiar en nosaltres!" />
+            android:textSize="18sp" />
+
         <com.tuyenmonkey.mkloader.MKLoader
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:outlineSpotShadowColor="@color/background"
+            android:padding="20dp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/background"
-            android:fitsSystemWindows="true"
-            android:outlineSpotShadowColor="@color/background"
 
-            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent"
             app:mk_color="@color/text_especial"
             app:mk_type="Whirlpool" />
+
         <Button
+
             android:id="@+id/faq_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:text="FAQs" />
+
+        <LinearLayout
+            android:id="@+id/faqs_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <!--// FAQS \\-->
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:id="@+id/faq_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="20dp"
+                android:visibility="visible"
+                app:heading="Com puc crear el meu propi torneig amb els amics?"
+                app:isAnimated="true"
+
+                app:isExpanded="false"
+                app:isPartitioned="false">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Desde el menú superior trobaràs la opció per fer-ho i simplement seguint els passos podràs crear-lo i personalitzar-lo. \n Actualització:\n Pot ser que no estigui disponible la opció en casos de manteniment del servidor, preguem disculpin les molesties." />
+
+
+            </com.riyagayasen.easyaccordion.AccordionView>
+
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:layout_width="match_parent"
+                android:id="@+id/faq_2"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/background"
+                android:visibility="visible"
+                app:heading="Com puc crear el meu equip?"
+                app:isAnimated="true"
+                app:isExpanded="false"
+                app:isPartitioned="false">
+
+                <TextView
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Un cop inscrit en un torneig entrant a la secció de equips del torneig tindràs disponible la opció de crear un nou equip o clicant en els equips ja creats tindràs la opció d'afegir-te disponible i depenent de les opcions que hagi triat l'entrenador (el creador de l'equip) podràs entrar directament, a través de missatge, o amb unacontrassenya." />
+
+
+            </com.riyagayasen.easyaccordion.AccordionView>
+
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/faq_3"
+
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/background"
+                android:visibility="visible"
+                app:heading="He acabat en un equip a l'atzar, com pot ser?"
+                app:isAnimated="true"
+                app:isExpanded="false"
+                app:isPartitioned="false">
+
+                <TextView
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quan s'inicia un torneig, el torneig crea equips aleatoris i distribueix els jugadors dels equips que no compleixin el minim de jugadors. \nEs poden redistribuir aquests equips manualment parlant amb l'administrador del torneig." />
+
+            </com.riyagayasen.easyaccordion.AccordionView>
+
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/faq_4"
+
+                android:background="@color/background"
+                android:visibility="visible"
+                app:heading="He pagat el preu del torneig pero finalment no s'ha realitzat, com puc recuperar els diners?"
+                app:isAnimated="true"
+                app:isExpanded="false"
+                app:isPartitioned="false">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="En els casos en que s'ha pagat l'import de la inscripció desde la app feu click al següent botó per dur a terme la baixa voluntaria del torneig, els diners es retornaran a la mateixa conta desde la que es va fer l'ingrés automàticament.\nSi el pagament es fa per conta dels organitzadors del torneig us haureu de posar en contacte directament amb ells. " />
+            </com.riyagayasen.easyaccordion.AccordionView>
+
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/faq_5"
+
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/background"
+                android:visibility="visible"
+                app:heading="Es pot cambiar la imatge de fons del meu perfil?"
+                app:isAnimated="true"
+                app:isExpanded="false"
+                app:isPartitioned="false">
+
+                <TextView
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Actualment la imatge es posa per defecte. Estem treballant ja en millorar tot l'aspecte gràfic de la app per a fer-la mé interactiva. qualsevol " />
+            </com.riyagayasen.easyaccordion.AccordionView>
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -124,7 +251,7 @@
 
             android:paddingVertical="20dp"
             android:text="Formulari de contacte:"
-            android:textSize="26dp" />
+            android:textSize="22dp" />
 
         <EditText
             android:id="@+id/nomEdit"
@@ -132,19 +259,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
+            android:autofillHints="name"
             android:backgroundTint="@color/text_tronja"
             android:hint="Nom"
-            android:autofillHints="name"
 
-            android:textSize="18dp"
             android:inputType="textEmailAddress"
             android:maxWidth="500dp"
             android:minWidth="280dp"
             android:paddingEnd="30dp"
             android:textColor="@color/text_clar"
-            android:textColorHint="@color/text_clar" />
-
-
+            android:textColorHint="@color/text_clar"
+            android:textSize="18dp" />
 
 
         <EditText
@@ -153,91 +278,93 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
+            android:autofillHints="emailAddress"
             android:backgroundTint="@color/text_tronja"
             android:hint="Email adress:"
             android:inputType="textEmailAddress"
             android:maxWidth="500dp"
             android:minWidth="280dp"
             android:paddingEnd="30dp"
-            android:autofillHints="emailAddress"
 
             android:textColor="@color/text_clar"
             android:textColorHint="@color/text_clar" />
 
         <TextView
-   android:layout_marginTop="5dp"
-            android:paddingStart="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="@color/text_tronja"
-            android:text="Missatge: "
-
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/text_tronja"
             android:inputType="textMultiLine"
+
             android:maxWidth="500dp"
             android:minWidth="280dp"
+            android:paddingStart="10dp"
             android:paddingEnd="30dp"
+            android:text="Missatge: "
 
-            android:textColor="@color/text_tronja"
-      />
+            android:textColor="@color/text_tronja" />
+
         <EditText
             android:id="@+id/assumpteEdit"
             android:layout_width="match_parent"
-            android:layout_marginHorizontal="40dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginHorizontal="40dp"
             android:layout_marginBottom="10dp"
+            android:autofillHints="username"
             android:backgroundTint="@color/text_tronja"
             android:hint="Asumpte"
             android:inputType="textEmailAddress"
             android:maxWidth="500dp"
             android:minWidth="280dp"
             android:paddingEnd="30dp"
-            android:textSize="18dp"
-            android:autofillHints="username"
-
             android:textColor="@color/text_clar"
 
-            android:textColorHint="@color/text_clar" />
+            android:textColorHint="@color/text_clar"
+
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/missatgeEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="10dp"
+            android:background="@color/background2"
+            android:gravity="start"
             android:hint="El teu missatge"
             android:inputType="textMultiLine"
             android:maxWidth="500dp"
-            android:background="@color/background2"
-            android:gravity="start"
-            android:paddingHorizontal="20dp"
-            android:layout_marginHorizontal="30dp"
             android:minWidth="280dp"
             android:minLines="5"
+            android:paddingHorizontal="20dp"
             android:paddingVertical="20dp"
 
             android:textColor="@color/text_clar"
             android:textColorHint="@color/text_clar" />
+
         <com.tuyenmonkey.mkloader.MKLoader
             android:id="@+id/progress_bar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:padding="20dp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/background"
-            android:fitsSystemWindows="true"
-            android:outlineSpotShadowColor="@color/transparent"
 
-            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent"
             app:mk_color="@color/text_especial"
             app:mk_type="Whirlpool" />
+
         <Button
             android:id="@+id/enviar_button"
             android:layout_width="wrap_content"
@@ -247,11 +374,10 @@
             android:text="Enviar" />
 
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
 
-<Space
-    android:layout_width="match_parent"
-    android:layout_height="30dp"
-    />
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -267,5 +393,4 @@
     </LinearLayout>
 
 
-    
 </ScrollView>

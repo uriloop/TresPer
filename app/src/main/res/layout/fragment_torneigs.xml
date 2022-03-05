@@ -36,7 +36,18 @@
                         android:layout_marginHorizontal="20dp"
 android:background="@color/background"
                         />
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="passió per l'esport!"
+                        android:fontFamily="@font/caveat_bold"
+                        android:textColor="@color/text_clar"
+                        android:elevation="20dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:textSize="24dp"/>
                     <ImageView
                         android:id="@+id/fotoFonsMur"
 
@@ -47,6 +58,7 @@ android:background="@color/background"
                         android:scaleType="centerCrop"
                         android:src="@drawable/ic_launcher_background" />
                 </FrameLayout>
+
 
                 <FrameLayout
 

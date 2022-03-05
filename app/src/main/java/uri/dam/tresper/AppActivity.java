@@ -29,7 +29,10 @@ public class AppActivity extends AppCompatActivity {
 
     private ActivityAppBinding binding;
     NavController navController;
+    boolean hided= false;
     BottomNavigationView navView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +46,26 @@ public class AppActivity extends AppCompatActivity {
 /*
         navView.setItemIconTintList(ColorStateList.valueOf(Color.parseColor("#F9ECD4")));
 */
-        binding.hideButton.setButtonDrawable(R.drawable.hide_icon);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        binding.hideButton.setImageResource(R.drawable.hide_icon);
+
 
         binding.hideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (binding.hideButton.isChecked()){
-                    binding.hideButton.setButtonDrawable(R.drawable.hide_icon);
-
+                if (!hided){
+                    binding.hideButton.setImageResource(R.drawable.hide_icon_false);
                     binding.navView.setVisibility(View.GONE);
                 }else{
-                    binding.hideButton.setButtonDrawable(R.drawable.hide_icon_false);
+                    binding.hideButton.setImageResource(R.drawable.hide_icon);
                     binding.navView.setVisibility(View.VISIBLE);
                 }
+                hided=!hided;
             }
         });
+
+
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_torneigs, R.id.navigation_social, R.id.navigation_personal)
@@ -74,7 +82,7 @@ public class AppActivity extends AppCompatActivity {
         } else {
             //binding.navView.setItemIconSize(0);
 
-
+binding.hideButton.setElevation(30);
         }
        /*  amaga el contingut de la barra del mobil superior
 

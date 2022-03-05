@@ -1,6 +1,7 @@
 package uri.dam.tresper.torneigs;
 
 import android.app.ActionBar;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -61,11 +62,14 @@ NavController navController;
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-binding.tabLayout.setMinimumHeight(50);
+binding.tabLayout.setMinimumHeight(60);
+binding.tabLayout.setTabRippleColor(ColorStateList.valueOf(getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())));
+binding.tabLayout.setSelectedTabIndicatorColor((getResources().getColor(R.color.tab_no_pulsat, getActivity().getTheme())));
+
 
         }else{
 
-            binding.tabLayout.setMinimumHeight(50);
+            binding.tabLayout.setMinimumHeight(30);
 
 
         }

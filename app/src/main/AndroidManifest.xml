@@ -15,8 +15,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/trofeu_color"
-        android:label="3x3"
+        android:icon="@drawable/logo_app_3x3_4"
         android:roundIcon="@drawable/trofeu_logo_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.TresPer">
@@ -36,11 +35,11 @@
         <activity
             android:name=".AppActivity"
             android:exported="true"
-            android:label="3x3" />
+            android:label="Bskt 3x3" />
         <activity
             android:name=".login.MainActivity"
             android:exported="true"
-            android:label="3x3"
+            android:label="Bskt 3x3"
             android:theme="@style/Theme.TresPer.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

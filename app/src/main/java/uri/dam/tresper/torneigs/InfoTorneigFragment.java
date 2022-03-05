@@ -80,6 +80,19 @@ public class InfoTorneigFragment extends Fragment {
         });
 
 
+        binding.fotoTorneig.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setDataAndType(Uri.parse(torneigsViewModel.getTorneigElement().getImatgeCartell()),"image/*");
+                startActivity(intent);
+
+
+                return false;
+            }
+        });
 
         binding.nomTorneig.setText(torneigsViewModel.seleccionat().getValue().getNomTorneig());
         binding.textBenvinguda.setText(torneigsViewModel.seleccionat().getValue().getDescripcio());

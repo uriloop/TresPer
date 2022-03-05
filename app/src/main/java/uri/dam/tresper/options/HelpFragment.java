@@ -34,23 +34,47 @@ public class HelpFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.faqsLayout.setVisibility(View.GONE);
 
-
+binding.faq1.setHeadingBackGround(R.color.background);
+binding.faq2.setHeadingBackGround(R.color.background);
+binding.faq3.setHeadingBackGround(R.color.background);
+binding.faq4.setHeadingBackGround(R.color.background);
+binding.faq5.setHeadingBackGround(R.color.background);
+binding.faq1.setBodyBackGround(R.color.background);
+binding.faq2.setBodyBackGround(R.color.background);
+binding.faq3.setBodyBackGround(R.color.background);
+binding.faq4.setBodyBackGround(R.color.background);
+binding.faq5.setBodyBackGround(R.color.background);
 
         binding.faqButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                binding.progressBar.setVisibility(View.VISIBLE);
+
+
+                if (binding.faqsLayout.getVisibility()== View.VISIBLE){
+                    binding.faqButton.setText("FAQs");
+                }else{
+                    binding.faqButton.setText("Hide");
+                    binding.progressBar.setVisibility(View.VISIBLE);
+
+                }
 
 
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://support.wix.com/es/apps-creadas-por-wix/app-preguntas-frecuentes-de-wix"));
-                        startActivity(browserIntent);
                         binding.progressBar.setVisibility(View.GONE);
+
+                        if (binding.faqsLayout.getVisibility()== View.VISIBLE){
+                            binding.faqsLayout.setVisibility(View.GONE);
+
+                        }else {
+                            binding.faqsLayout.setVisibility(View.VISIBLE);
+
+                        }
 
                     }
                 },100);
