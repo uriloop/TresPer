@@ -97,11 +97,10 @@
                 android:id="@+id/inscritButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:background="@color/background2"
                 android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
-                card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
@@ -155,7 +154,6 @@
                 android:background="@color/background2"
                 android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
-                card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
@@ -211,7 +209,6 @@
                 android:background="@color/background2"
                 android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
-                card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 
@@ -286,7 +283,6 @@
                 android:background="@color/background2"
                 android:elevation="25dp"
                 card_view:cardCornerRadius="10dp"
-                card_view:contentPadding="10dp"
 
                 card_view:layout_minWidth="150dp">
 

@@ -133,6 +133,7 @@ recyclerViewAmics = binding.recyclerAmics;
         binding.inscritButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 torneigsViewModel.setInscritObert(!torneigsViewModel.isInscritObert());
                 if (torneigsViewModel.isInscritObert()){
                     binding.recyclerInscrit.setVisibility(View.GONE);
@@ -276,7 +277,23 @@ final FoldingCell fc2 = (FoldingCell) binding.foldingCell2;
             TorneigElement torneigElement = torneigsInscritList.get(position);
 
             holder.binding.nomUserTextview.setText(torneigElement.getNomTorneig());
-            holder.binding.nomUserTextview2.setText(torneigElement.getLocalitzacio());
+            int random=(int)(Math.random()*10);
+            if(random<2){
+
+                holder.binding.nomUserTextview2.setText("elPuig");
+                holder.binding.dia.setText("1ers");
+            }else  if (random<4){
+                holder.binding.nomUserTextview2.setText("Solfamidas");
+                holder.binding.dia.setText("3ers");
+            }else if (random<7){
+                holder.binding.nomUserTextview2.setText("Sntk palomo's");
+                holder.binding.dia.setText("8ens");
+            }else{
+                holder.binding.nomUserTextview2.setText("The Winners");
+                holder.binding.dia.setText("12ens");
+            }
+
+
 
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
