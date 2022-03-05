@@ -54,7 +54,7 @@ public class RepositoriTorneigs  {
         users.add(new User("Shaki_93","https://elgurudelbasket.com/wp-content/uploads/2021/12/shaq-play-button-1.jpg"));
         users.add(new User("brian_lopez","https://library.sportingnews.com/2021-08/kobe-bryant-getty-022720-ftrjpg_133gft6g4mxsu1jg75nkkmcln6.jpg"));
         users.add(new User("riki_bcn","https://robertorico.es/wp-content/uploads/2016/11/12-400x600.jpg"));
-        users.add(new User("noPain","https://www.milenio.com/uploads/media/2021/03/19/michael-jordan-reuters-2.jpg"));
+        users.add(new User("noPain","https://elpuig.xeill.net/custom/img/profes/daniel.webp"));
 
         users.add(new User("julia_bskt","https://cdn4.sportngin.com/attachments/news_article/a291-135350011/blake__2__thumb.png"));
         users.add(new User("gasoil","https://img.europapress.es/fotoweb/fotonoticia_20210223172852_420_v2.jpg"));
